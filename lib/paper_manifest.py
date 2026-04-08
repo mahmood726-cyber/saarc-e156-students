@@ -1891,6 +1891,7 @@ PAKISTAN_PAPERS = PAK_PROVINCIAL + PAK_INSTITUTIONAL + PAK_DISEASE + PAK_SPONSOR
 #  COMBINED MANIFEST
 # ═══════════════════════════════════════════════════════════
 MANIFEST = GEO_PAPERS + HEALTH_PAPERS + GOV_PAPERS + METHODS_PAPERS + PAKISTAN_PAPERS
+PAPERS = MANIFEST  # Alias for build.py compatibility
 
 # Validation
 assert len(MANIFEST) == 190, f"Expected 190 papers, got {len(MANIFEST)}"
