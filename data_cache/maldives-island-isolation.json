@@ -1,0 +1,31 @@
+{
+  "slug": "maldives-island-isolation",
+  "country_counts": {
+    "Maldives": 0
+  },
+  "saarc_total": 0,
+  "metrics": {
+    "total": 0,
+    "statuses": {},
+    "phases": {},
+    "enrollment_values": [],
+    "start_years": [],
+    "countries": {},
+    "cities": {},
+    "designs": {
+      "randomized": 0,
+      "non_randomized": 0,
+      "observational": 0
+    },
+    "conditions_list": [],
+    "sponsors": {},
+    "sponsor_classes": {}
+  },
+  "query": {
+    "condition": null,
+    "countries": [
+      "Maldives"
+    ]
+  },
+  "global_count": 442199
+}

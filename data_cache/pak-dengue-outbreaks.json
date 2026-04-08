@@ -1,0 +1,62 @@
+{
+  "slug": "pak-dengue-outbreaks",
+  "country_counts": {
+    "Pakistan": 2
+  },
+  "saarc_total": 2,
+  "metrics": {
+    "total": 2,
+    "statuses": {
+      "COMPLETED": 1,
+      "ENROLLING_BY_INVITATION": 1
+    },
+    "phases": {
+      "PHASE3": 1,
+      "PHASE2": 1
+    },
+    "enrollment_values": [
+      284,
+      100
+    ],
+    "start_years": [
+      2024,
+      2025
+    ],
+    "countries": {
+      "Pakistan": 5
+    },
+    "cities": {
+      "Peshawar": 2,
+      "Sw\u0101bi": 1,
+      "Kohat": 1,
+      "Karachi": 1
+    },
+    "designs": {
+      "randomized": 2,
+      "non_randomized": 0,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Dengue Fever",
+      "Dengue Hemorrhagic Fever",
+      "Severe Dengue",
+      "Dengue Fever",
+      "Papaya Leaf Extract",
+      "Pediatric Patients"
+    ],
+    "sponsors": {
+      "Khyber Medical University Peshawar": 1,
+      "Ziauddin Hospital": 1
+    },
+    "sponsor_classes": {
+      "OTHER": 2
+    }
+  },
+  "query": {
+    "condition": "Dengue",
+    "countries": [
+      "Pakistan"
+    ]
+  },
+  "global_count": 220
+}

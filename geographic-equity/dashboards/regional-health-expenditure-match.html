@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regional Health Expenditure Match — SAARC E156</title>
+  <meta property="og:title" content="Regional Health Expenditure Match -- SAARC E156">
+  <meta property="og:description" content="Health expenditure per capita ranges from $12 in Afghanistan to $200+ in Maldives, and trial density tracks spending rather than disease burden, creating a weal">
+  <meta property="og:type" content="article">
+  <style>
+:root { --bg:#f8f6f1;--paper:#fffdf8;--ink:#1d2430;--muted:#5f6b7a;--line:#d8cfbf;--accent:#0d6b57;--accent-soft:#dcefe8;--warm:#7A5A10;--shadow:0 18px 40px rgba(42,47,54,0.08);--radius:18px;--serif:Georgia,'Times New Roman',serif;--mono:'Consolas','SFMono-Regular','Menlo',monospace; }
+* { box-sizing:border-box;margin:0; }
+body { color:var(--ink);font-family:var(--serif);line-height:1.6;background:radial-gradient(circle at top left,rgba(13,107,87,0.06),transparent 32%),radial-gradient(circle at bottom right,rgba(141,79,45,0.06),transparent 28%),var(--bg); }
+.page { width:min(980px,calc(100vw - 24px));margin:0 auto;padding:32px 0 56px; }
+.card { background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:20px; }
+.hero { text-align:center;padding:40px 28px; }
+.eyebrow { color:var(--accent);font-size:13px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700; }
+h1 { font-size:clamp(24px,3.5vw,38px);line-height:1.08;margin:10px 0 6px; }
+.subtitle { color:var(--muted);font-size:17px;max-width:58ch;margin:0 auto; }
+.metrics { display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:20px 0; }
+.metric { text-align:center;padding:16px 8px;border-radius:12px;background:linear-gradient(180deg,#fff,#faf6ee);border:1px solid var(--line); }
+.metric-label { font-size:12px;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:4px; }
+.metric-value { font-size:24px;font-weight:700; }
+.chart-wrap { overflow-x:auto;padding:4px 0; }
+.chart-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start; }
+.chart-cell { text-align:center; }
+.section-label { font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-weight:700;margin-bottom:14px; }
+.finding { font-size:19px;line-height:1.6;padding:22px 26px;border-left:5px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius) var(--radius) 0; }
+.context { font-size:16px;line-height:1.8;color:#2a2f36; }
+.context-label { font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--warm);font-weight:700;margin-bottom:10px; }
+.body-text { font-size:15px;line-height:1.8;padding:20px;background:#fafaf7;border-radius:10px; }
+.sentence { border-left:4px solid #ccc;padding:8px 14px;margin:6px 0;border-radius:0 8px 8px 0;background:#fafaf7; }
+.role-tag { font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em; }
+.sentence p { margin:3px 0 0;font-size:14px;line-height:1.65; }
+.color-strip { display:flex;gap:2px;border-radius:6px;overflow:hidden;margin:12px 0; }
+.color-strip > div { height:7px;flex:1; }
+.footer { text-align:center;color:var(--muted);font-size:12px;margin-top:28px; }
+.footer a { color:var(--accent);text-decoration:none; }
+.links { display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0; }
+.link-btn { display:inline-block;padding:12px 20px;min-height:44px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:white;transition:all 0.15s; }
+.link-btn:hover { background:var(--accent);color:white;border-color:var(--accent); }
+.word-badge { display:inline-block;background:var(--accent-soft);color:var(--accent);padding:3px 10px;border-radius:16px;font-size:12px;font-weight:700; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width:700px) { .chart-grid { grid-template-columns:1fr; } .card { padding:18px 14px; } }
+</style>
+</head>
+<body>
+<main class="page" role="main">
+  <div class="card hero">
+    <div class="eyebrow">E156 Micro-Paper &middot; SAARC Clinical Trials</div>
+    <h1>Regional Health Expenditure Match</h1>
+    <p class="subtitle">Health expenditure per capita ranges from $12 in Afghanistan to $200+ in Maldive...</p>
+    <div class="metrics"><div class="metric"><div class="metric-label">SAARC Trials</div><div class="metric-value" style="color:var(--accent)">28,500</div></div><div class="metric"><div class="metric-label">India Trials</div><div class="metric-value" style="color:#c0392b">24,500</div></div><div class="metric"><div class="metric-label">Nations</div><div class="metric-value" style="color:#c0392b">8</div></div><div class="metric"><div class="metric-label">Gini</div><div class="metric-value" style="color:var(--accent)">0.711</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Key Finding</div>
+    <div class="finding">The Gini coefficient of 0.711 indicates severe concentration, with India hosting over 90% of SAARC clinical trials.</div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Regional Comparison</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="300" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Burden vs Investment</text>
+<line x1="55" y1="40" x2="55" y2="265" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="55" y1="265" x2="380" y2="265" stroke="#d8cfbf" stroke-width="1"/>
+<text x="55.0" y="280" text-anchor="middle" font-size="9" fill="#4a5568">1000</text>
+<text x="136.2" y="280" text-anchor="middle" font-size="9" fill="#4a5568">2000</text>
+<text x="217.5" y="280" text-anchor="middle" font-size="9" fill="#4a5568">3000</text>
+<text x="298.8" y="280" text-anchor="middle" font-size="9" fill="#4a5568">4000</text>
+<text x="380.0" y="280" text-anchor="middle" font-size="9" fill="#4a5568">5000</text>
+<text x="50" y="210.5" text-anchor="end" font-size="9" fill="#4a5568">50000</text>
+<text x="50" y="150.9" text-anchor="end" font-size="9" fill="#4a5568">100000</text>
+<text x="50" y="91.4" text-anchor="end" font-size="9" fill="#4a5568">150000</text>
+<circle cx="380.0" cy="233.1" r="25.0" fill="#FF9933" opacity="0.6" stroke="#FF9933" stroke-width="1"/>
+<text x="380.0" y="205.1" text-anchor="middle" font-size="8" fill="#1d2430">India</text>
+<circle cx="120.0" cy="265.0" r="21.7" fill="#006600" opacity="0.6" stroke="#006600" stroke-width="1"/>
+<text x="120.0" y="240.3" text-anchor="middle" font-size="8" fill="#1d2430">Pakistan</text>
+<circle cx="55.0" cy="40.0" r="21.7" fill="#2c3e50" opacity="0.6" stroke="#2c3e50" stroke-width="1"/>
+<text x="55.0" y="15.3" text-anchor="middle" font-size="8" fill="#1d2430">US</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="max-width:500px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="500" height="500" fill="#fffdf8" rx="4"/>
+<text x="250" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#1d2430">Regional Health Expenditure Match by Country</text>
+<path d="M 55 65 L 85 50 L 120 55 L 135 75 L 130 100 L 110 115 L 85 110 L 65 95 Z" fill="rgb(229,244,229)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Afghanistan: 22</title></path>
+<path d="M 110 115 L 130 100 L 135 75 L 155 70 L 175 85 L 185 110 L 180 140 L 175 170 L 165 200 L 155 220 L 140 230 L 125 215 L 120 190 L 115 160 L 110 135 Z" fill="rgb(31,121,31)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Pakistan: 4669</title></path>
+<path d="M 175 85 L 200 75 L 230 70 L 260 80 L 290 75 L 315 85 L 330 100 L 340 120 L 345 145 L 340 175 L 330 205 L 310 235 L 290 270 L 275 300 L 265 330 L 255 355 L 245 365 L 235 355 L 240 325 L 245 295 L 240 265 L 225 240 L 210 220 L 195 200 L 185 175 L 180 140 L 185 110 Z" fill="rgb(0,102,0)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>India: 5398</title></path>
+<path d="M 230 120 L 260 110 L 290 108 L 310 115 L 305 130 L 275 135 L 245 132 L 230 128 Z" fill="rgb(217,237,217)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Nepal: 294</title></path>
+<path d="M 320 115 L 340 110 L 355 118 L 350 130 L 335 132 L 322 125 Z" fill="rgb(229,244,229)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Bhutan: 6</title></path>
+<path d="M 330 145 L 345 135 L 360 140 L 365 160 L 360 180 L 345 185 L 335 175 L 330 160 Z" fill="rgb(202,227,202)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Bangladesh: 652</title></path>
+<path d="M 260 380 L 275 370 L 285 380 L 283 400 L 270 410 L 258 400 Z" fill="rgb(226,243,226)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Sri Lanka: 75</title></path>
+<path d="M 195 405 L 200 395 L 205 405 L 202 418 L 197 418 Z" fill="rgb(230,245,230)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Maldives: 0</title></path>
+<text x="95" y="82" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">AFG</text>
+<text x="95" y="93" text-anchor="middle" font-size="8" fill="#4a5568">22</text>
+<text x="150" y="155" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">PAK</text>
+<text x="150" y="166" text-anchor="middle" font-size="8" fill="#4a5568">4669</text>
+<text x="265" y="200" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">IND</text>
+<text x="265" y="211" text-anchor="middle" font-size="8" fill="#4a5568">5398</text>
+<text x="270" y="122" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">NPL</text>
+<text x="270" y="133" text-anchor="middle" font-size="8" fill="#4a5568">294</text>
+<text x="337" y="122" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">BTN</text>
+<text x="337" y="133" text-anchor="middle" font-size="8" fill="#4a5568">6</text>
+<text x="348" y="160" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">BGD</text>
+<text x="348" y="171" text-anchor="middle" font-size="8" fill="#4a5568">652</text>
+<text x="272" y="392" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">LKA</text>
+<text x="272" y="403" text-anchor="middle" font-size="8" fill="#4a5568">75</text>
+<text x="200" y="408" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">MDV</text>
+<text x="200" y="419" text-anchor="middle" font-size="8" fill="#4a5568">0</text>
+<rect x="175" y="465" width="3" height="10" fill="rgb(230,245,230)"/>
+<rect x="178" y="465" width="3" height="10" fill="rgb(225,242,225)"/>
+<rect x="181" y="465" width="3" height="10" fill="rgb(220,239,220)"/>
+<rect x="184" y="465" width="3" height="10" fill="rgb(215,236,215)"/>
+<rect x="187" y="465" width="3" height="10" fill="rgb(211,233,211)"/>
+<rect x="190" y="465" width="3" height="10" fill="rgb(206,230,206)"/>
+<rect x="193" y="465" width="3" height="10" fill="rgb(201,227,201)"/>
+<rect x="196" y="465" width="3" height="10" fill="rgb(197,224,197)"/>
+<rect x="199" y="465" width="3" height="10" fill="rgb(192,221,192)"/>
+<rect x="202" y="465" width="3" height="10" fill="rgb(187,218,187)"/>
+<rect x="205" y="465" width="3" height="10" fill="rgb(183,215,183)"/>
+<rect x="208" y="465" width="3" height="10" fill="rgb(178,212,178)"/>
+<rect x="211" y="465" width="3" height="10" fill="rgb(173,209,173)"/>
+<rect x="214" y="465" width="3" height="10" fill="rgb(168,207,168)"/>
+<rect x="217" y="465" width="3" height="10" fill="rgb(164,204,164)"/>
+<rect x="220" y="465" width="3" height="10" fill="rgb(159,201,159)"/>
+<rect x="223" y="465" width="3" height="10" fill="rgb(154,198,154)"/>
+<rect x="226" y="465" width="3" height="10" fill="rgb(150,195,150)"/>
+<rect x="229" y="465" width="3" height="10" fill="rgb(145,192,145)"/>
+<rect x="232" y="465" width="3" height="10" fill="rgb(140,189,140)"/>
+<rect x="235" y="465" width="3" height="10" fill="rgb(136,186,136)"/>
+<rect x="238" y="465" width="3" height="10" fill="rgb(131,183,131)"/>
+<rect x="241" y="465" width="3" height="10" fill="rgb(126,180,126)"/>
+<rect x="244" y="465" width="3" height="10" fill="rgb(122,177,122)"/>
+<rect x="247" y="465" width="3" height="10" fill="rgb(117,174,117)"/>
+<rect x="250" y="465" width="3" height="10" fill="rgb(112,172,112)"/>
+<rect x="253" y="465" width="3" height="10" fill="rgb(107,169,107)"/>
+<rect x="256" y="465" width="3" height="10" fill="rgb(103,166,103)"/>
+<rect x="259" y="465" width="3" height="10" fill="rgb(98,163,98)"/>
+<rect x="262" y="465" width="3" height="10" fill="rgb(93,160,93)"/>
+<rect x="265" y="465" width="3" height="10" fill="rgb(89,157,89)"/>
+<rect x="268" y="465" width="3" height="10" fill="rgb(84,154,84)"/>
+<rect x="271" y="465" width="3" height="10" fill="rgb(79,151,79)"/>
+<rect x="274" y="465" width="3" height="10" fill="rgb(75,148,75)"/>
+<rect x="277" y="465" width="3" height="10" fill="rgb(70,145,70)"/>
+<rect x="280" y="465" width="3" height="10" fill="rgb(65,142,65)"/>
+<rect x="283" y="465" width="3" height="10" fill="rgb(61,139,61)"/>
+<rect x="286" y="465" width="3" height="10" fill="rgb(56,137,56)"/>
+<rect x="289" y="465" width="3" height="10" fill="rgb(51,134,51)"/>
+<rect x="292" y="465" width="3" height="10" fill="rgb(46,131,46)"/>
+<rect x="295" y="465" width="3" height="10" fill="rgb(42,128,42)"/>
+<rect x="298" y="465" width="3" height="10" fill="rgb(37,125,37)"/>
+<rect x="301" y="465" width="3" height="10" fill="rgb(32,122,32)"/>
+<rect x="304" y="465" width="3" height="10" fill="rgb(28,119,28)"/>
+<rect x="307" y="465" width="3" height="10" fill="rgb(23,116,23)"/>
+<rect x="310" y="465" width="3" height="10" fill="rgb(18,113,18)"/>
+<rect x="313" y="465" width="3" height="10" fill="rgb(14,110,14)"/>
+<rect x="316" y="465" width="3" height="10" fill="rgb(9,107,9)"/>
+<rect x="319" y="465" width="3" height="10" fill="rgb(4,104,4)"/>
+<rect x="322" y="465" width="3" height="10" fill="rgb(0,102,0)"/>
+<text x="172" y="474" text-anchor="end" font-size="9" fill="#4a5568">0</text>
+<text x="328" y="474" text-anchor="start" font-size="9" fill="#4a5568">5398</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Distribution Analysis</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="280" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Regional Health Expenditure Match Lorenz Curve</text>
+<line x1="50" y1="245" x2="380" y2="35" stroke="#d8cfbf" stroke-width="1.5" stroke-dasharray="5,3"/>
+<polygon points="50.0,245.0 91.2,245.0 132.5,244.9 173.8,244.5 215.0,243.1 256.2,237.5 297.5,225.2 338.8,137.0 380.0,35.0 380.0,35.0" fill="#0d6b57" opacity="0.15"/>
+<path d="M 50.0 245.0 L 91.2 245.0 L 132.5 244.9 L 173.8 244.5 L 215.0 243.1 L 256.2 237.5 L 297.5 225.2 L 338.8 137.0 L 380.0 35.0" fill="none" stroke="#0d6b57" stroke-width="2"/>
+<line x1="50" y1="35" x2="50" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="50" y1="245" x2="380" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<text x="50" y="260" text-anchor="middle" font-size="9" fill="#4a5568">0%</text>
+<text x="45" y="248" text-anchor="end" font-size="9" fill="#4a5568">0%</text>
+<text x="132.5" y="260" text-anchor="middle" font-size="9" fill="#4a5568">25%</text>
+<text x="45" y="195.5" text-anchor="end" font-size="9" fill="#4a5568">25%</text>
+<text x="215.0" y="260" text-anchor="middle" font-size="9" fill="#4a5568">50%</text>
+<text x="45" y="143.0" text-anchor="end" font-size="9" fill="#4a5568">50%</text>
+<text x="297.5" y="260" text-anchor="middle" font-size="9" fill="#4a5568">75%</text>
+<text x="45" y="90.5" text-anchor="end" font-size="9" fill="#4a5568">75%</text>
+<text x="380.0" y="260" text-anchor="middle" font-size="9" fill="#4a5568">100%</text>
+<text x="45" y="38.0" text-anchor="end" font-size="9" fill="#4a5568">100%</text>
+<text x="231.50000000000003" y="192.5" font-size="13" font-weight="700" fill="#0d6b57">Gini = 0.711</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" style="max-width:440px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="440" height="240" fill="#fffdf8" rx="4"/>
+<text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Growth Trend</text>
+<line x1="55" y1="40" x2="55" y2="200" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="55" y1="200" x2="420" y2="200" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="55" y1="182.0" x2="420" y2="182.0" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="185.0" text-anchor="end" font-size="9" fill="#4a5568">1000</text>
+<line x1="55" y1="148.1" x2="420" y2="148.1" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="151.1" text-anchor="end" font-size="9" fill="#4a5568">1500</text>
+<line x1="55" y1="114.3" x2="420" y2="114.3" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="117.3" text-anchor="end" font-size="9" fill="#4a5568">2000</text>
+<line x1="55" y1="80.4" x2="420" y2="80.4" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="83.4" text-anchor="end" font-size="9" fill="#4a5568">2500</text>
+<path d="M 55.0 74.6 L 146.2 192.7 L 237.5 47.3 L 328.8 164.9 L 420.0 120.0" fill="none" stroke="#006600" stroke-width="2"/>
+<circle cx="55.0" cy="74.6" r="3" fill="#006600"/>
+<circle cx="146.2" cy="192.7" r="3" fill="#006600"/>
+<circle cx="237.5" cy="47.3" r="3" fill="#006600"/>
+<circle cx="328.8" cy="164.9" r="3" fill="#006600"/>
+<circle cx="420.0" cy="120.0" r="3" fill="#006600"/>
+<line x1="60" y1="50" x2="73" y2="50" stroke="#006600" stroke-width="2"/>
+<text x="77" y="53" font-size="9" fill="#1d2430">SAARC</text>
+<text x="55.0" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2005</text>
+<text x="146.2" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2010</text>
+<text x="237.5" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2015</text>
+<text x="328.8" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2020</text>
+<text x="420.0" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2025</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Inequality Profile</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" style="max-width:420px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="420" height="280" fill="#fffdf8" rx="4"/>
+<text x="210" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Contribution Breakdown</text>
+<rect x="61.7" y="140.3" width="35.0" height="94.7" fill="#006600" opacity="0.85" rx="1"/>
+<text x="79.2" y="135.3" text-anchor="middle" font-size="8" fill="#1d2430">5398</text>
+<line x1="96.7" y1="140.3" x2="120.0" y2="140.3" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="79.2" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 79.2 249)">India</text>
+<rect x="120.0" y="58.4" width="35.0" height="81.9" fill="#006600" opacity="0.85" rx="1"/>
+<text x="137.5" y="53.4" text-anchor="middle" font-size="8" fill="#1d2430">4669</text>
+<line x1="155.0" y1="58.4" x2="178.3" y2="58.4" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="137.5" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 137.5 249)">Pakistan</text>
+<rect x="178.3" y="47.0" width="35.0" height="11.4" fill="#006600" opacity="0.85" rx="1"/>
+<text x="195.8" y="42.0" text-anchor="middle" font-size="8" fill="#1d2430">652</text>
+<line x1="213.3" y1="47.0" x2="236.7" y2="47.0" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="195.8" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 195.8 249)">Bangladesh</text>
+<rect x="236.7" y="41.8" width="35.0" height="5.2" fill="#006600" opacity="0.85" rx="1"/>
+<text x="254.2" y="36.8" text-anchor="middle" font-size="8" fill="#1d2430">294</text>
+<line x1="271.7" y1="41.8" x2="295.0" y2="41.8" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="254.2" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 254.2 249)">Nepal</text>
+<rect x="295.0" y="40.5" width="35.0" height="1.3" fill="#006600" opacity="0.85" rx="1"/>
+<text x="312.5" y="35.5" text-anchor="middle" font-size="8" fill="#1d2430">75</text>
+<line x1="330.0" y1="40.5" x2="353.3" y2="40.5" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="312.5" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 312.5 249)">Sri Lanka</text>
+<rect x="353.3" y="40.0" width="35.0" height="1.0" fill="#006600" opacity="0.85" rx="1"/>
+<text x="370.8" y="35.0" text-anchor="middle" font-size="8" fill="#1d2430">28</text>
+<text x="370.8" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 370.8 249)">Others</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" style="max-width:300px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="300" height="300" fill="#fffdf8" rx="4"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Research Profile</text>
+<polygon points="150.0,137.2 171.4,149.6 171.4,174.4 150.0,186.8 128.6,174.4 128.6,149.6" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,112.5 192.9,137.2 192.9,186.8 150.0,211.5 107.1,186.8 107.1,137.2" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,87.8 214.3,124.9 214.3,199.1 150.0,236.2 85.7,199.1 85.7,124.9" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,63.0 235.7,112.5 235.7,211.5 150.0,261.0 64.3,211.5 64.3,112.5" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="150.0" y2="63.0" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="235.7" y2="112.5" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="235.7" y2="211.5" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="150.0" y2="261.0" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="64.3" y2="211.5" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="64.3" y2="112.5" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,152.1 184.8,141.9 165.3,170.8 150.0,220.9 118.7,180.1 125.2,147.7" fill="#0d6b57" opacity="0.2" stroke="#0d6b57" stroke-width="2"/>
+<circle cx="150.0" cy="152.1" r="3" fill="#0d6b57"/>
+<circle cx="184.8" cy="141.9" r="3" fill="#0d6b57"/>
+<circle cx="165.3" cy="170.8" r="3" fill="#0d6b57"/>
+<circle cx="150.0" cy="220.9" r="3" fill="#0d6b57"/>
+<circle cx="118.7" cy="180.1" r="3" fill="#0d6b57"/>
+<circle cx="125.2" cy="147.7" r="3" fill="#0d6b57"/>
+<text x="150.0" y="48.0" text-anchor="middle" font-size="9" fill="#1d2430">Volume</text>
+<text x="251.3" y="106.5" text-anchor="start" font-size="9" fill="#1d2430">Growth</text>
+<text x="251.3" y="223.5" text-anchor="start" font-size="9" fill="#1d2430">Phase3</text>
+<text x="150.0" y="282.0" text-anchor="middle" font-size="9" fill="#1d2430">Complete</text>
+<text x="48.7" y="223.5" text-anchor="end" font-size="9" fill="#1d2430">Diversity</text>
+<text x="48.7" y="106.5" text-anchor="end" font-size="9" fill="#1d2430">Equity</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Temporal &amp; Structural</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="280" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Enrollment Distribution</text>
+<polygon points="132.7,283.5 132.8,281.6 133.0,279.7 133.2,277.9 133.5,276.0 134.0,274.1 134.6,272.3 135.5,270.4 136.6,268.5 138.0,266.7 139.8,264.8 142.0,262.9 144.5,261.1 147.5,259.2 150.9,257.3 154.6,255.5 158.7,253.6 162.9,251.7 167.2,249.9 171.5,248.0 175.5,246.2 179.2,244.3 182.5,242.4 185.2,240.6 187.4,238.7 188.9,236.8 189.9,235.0 190.4,233.1 190.5,231.2 190.5,229.4 190.3,227.5 190.2,225.6 190.3,223.8 190.6,221.9 191.3,220.0 192.2,218.2 193.3,216.3 194.6,214.4 195.9,212.6 197.1,210.7 198.0,208.8 198.5,207.0 198.5,205.1 198.0,203.2 196.8,201.4 195.1,199.5 192.9,197.6 190.2,195.8 187.1,193.9 183.8,192.0 180.2,190.2 176.6,188.3 173.0,186.5 169.5,184.6 166.1,182.7 162.8,180.9 159.8,179.0 156.9,177.1 154.2,175.3 151.7,173.4 149.4,171.5 147.3,169.7 145.3,167.8 143.4,165.9 141.7,164.1 140.2,162.2 138.9,160.3 137.7,158.5 136.6,156.6 135.8,154.7 135.0,152.9 134.4,151.0 133.9,149.1 133.5,147.3 133.3,145.4 133.0,143.5 132.9,141.7 132.7,139.8 132.7,137.9 132.6,136.1 132.4,136.1 132.3,137.9 132.3,139.8 132.1,141.7 132.0,143.5 131.7,145.4 131.5,147.3 131.1,149.1 130.6,151.0 130.0,152.9 129.2,154.7 128.4,156.6 127.3,158.5 126.1,160.3 124.8,162.2 123.3,164.1 121.6,165.9 119.7,167.8 117.7,169.7 115.6,171.5 113.3,173.4 110.8,175.3 108.1,177.1 105.2,179.0 102.2,180.9 98.9,182.7 95.5,184.6 92.0,186.5 88.4,188.3 84.8,190.2 81.2,192.0 77.9,193.9 74.8,195.8 72.1,197.6 69.9,199.5 68.2,201.4 67.0,203.2 66.5,205.1 66.5,207.0 67.0,208.8 67.9,210.7 69.1,212.6 70.4,214.4 71.7,216.3 72.8,218.2 73.7,220.0 74.4,221.9 74.7,223.8 74.8,225.6 74.7,227.5 74.5,229.4 74.5,231.2 74.6,233.1 75.1,235.0 76.1,236.8 77.6,238.7 79.8,240.6 82.5,242.4 85.8,244.3 89.5,246.2 93.5,248.0 97.8,249.9 102.1,251.7 106.3,253.6 110.4,255.5 114.1,257.3 117.5,259.2 120.5,261.1 123.0,262.9 125.2,264.8 127.0,266.7 128.4,268.5 129.5,270.4 130.4,272.3 131.0,274.1 131.5,276.0 131.8,277.9 132.0,279.7 132.2,281.6 132.3,283.5" fill="#0d6b57" opacity="0.3" stroke="#0d6b57" stroke-width="1"/>
+<line x1="106.1" y1="236.1" x2="158.9" y2="236.1" stroke="#0d6b57" stroke-width="1"/>
+<line x1="106.1" y1="197.6" x2="158.9" y2="197.6" stroke="#0d6b57" stroke-width="1"/>
+<line x1="92.9" y1="209.9" x2="172.1" y2="209.9" stroke="#0d6b57" stroke-width="2.5"/>
+<text x="132.5" y="270" text-anchor="middle" font-size="10" fill="#1d2430">SAARC</text>
+<polygon points="297.7,336.7 297.7,331.7 297.9,326.7 298.1,321.7 298.4,316.7 298.9,311.8 299.5,306.8 300.4,301.8 301.5,296.8 303.0,291.8 304.9,286.8 307.3,281.8 310.1,276.8 313.4,271.8 317.1,266.9 321.3,261.9 325.8,256.9 330.6,251.9 335.5,246.9 340.3,241.9 344.9,236.9 349.1,231.9 352.9,226.9 356.2,221.9 358.8,217.0 360.8,212.0 362.2,207.0 363.0,202.0 363.5,197.0 363.5,192.0 363.3,187.0 362.9,182.0 362.3,177.0 361.7,172.1 361.1,167.1 360.3,162.1 359.5,157.1 358.5,152.1 357.3,147.1 355.8,142.1 354.0,137.1 351.8,132.1 349.2,127.2 346.2,122.2 342.9,117.2 339.3,112.2 335.6,107.2 331.8,102.2 328.1,97.2 324.6,92.2 321.3,87.2 318.4,82.3 316.0,77.3 313.9,72.3 312.3,67.3 311.0,62.3 310.0,57.3 309.2,52.3 308.6,47.3 308.0,42.3 307.4,37.3 306.8,32.4 306.1,27.4 305.4,22.4 304.6,17.4 303.7,12.4 302.9,7.4 302.0,2.4 301.2,-2.6 300.5,-7.6 299.9,-12.5 299.3,-17.5 298.9,-22.5 298.5,-27.5 298.2,-32.5 298.0,-37.5 297.8,-42.5 297.7,-47.5 297.7,-52.5 297.6,-57.4 297.4,-57.4 297.3,-52.5 297.3,-47.5 297.2,-42.5 297.0,-37.5 296.8,-32.5 296.5,-27.5 296.1,-22.5 295.7,-17.5 295.1,-12.5 294.5,-7.6 293.8,-2.6 293.0,2.4 292.1,7.4 291.3,12.4 290.4,17.4 289.6,22.4 288.9,27.4 288.2,32.4 287.6,37.3 287.0,42.3 286.4,47.3 285.8,52.3 285.0,57.3 284.0,62.3 282.7,67.3 281.1,72.3 279.0,77.3 276.6,82.3 273.7,87.2 270.4,92.2 266.9,97.2 263.2,102.2 259.4,107.2 255.7,112.2 252.1,117.2 248.8,122.2 245.8,127.2 243.2,132.1 241.0,137.1 239.2,142.1 237.7,147.1 236.5,152.1 235.5,157.1 234.7,162.1 233.9,167.1 233.3,172.1 232.7,177.0 232.1,182.0 231.7,187.0 231.5,192.0 231.5,197.0 232.0,202.0 232.8,207.0 234.2,212.0 236.2,217.0 238.8,221.9 242.1,226.9 245.9,231.9 250.1,236.9 254.7,241.9 259.5,246.9 264.4,251.9 269.2,256.9 273.7,261.9 277.9,266.9 281.6,271.8 284.9,276.8 287.7,281.8 290.1,286.8 292.0,291.8 293.5,296.8 294.6,301.8 295.5,306.8 296.1,311.8 296.6,316.7 296.9,321.7 297.1,326.7 297.3,331.7 297.3,336.7" fill="#0d6b57" opacity="0.3" stroke="#0d6b57" stroke-width="1"/>
+<line x1="271.1" y1="220.4" x2="323.9" y2="220.4" stroke="#0d6b57" stroke-width="1"/>
+<line x1="271.1" y1="128.0" x2="323.9" y2="128.0" stroke="#0d6b57" stroke-width="1"/>
+<line x1="257.9" y1="179.8" x2="337.1" y2="179.8" stroke="#0d6b57" stroke-width="2.5"/>
+<text x="297.5" y="270" text-anchor="middle" font-size="10" fill="#1d2430">Reference</text>
+<line x1="50" y1="40" x2="50" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<text x="45" y="174.36409931878072" text-anchor="end" font-size="9" fill="#4a5568">500</text>
+<line x1="50" y1="171.36409931878072" x2="380" y2="171.36409931878072" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="45" y="90.68693945375875" text-anchor="end" font-size="9" fill="#4a5568">1000</text>
+<line x1="50" y1="87.68693945375875" x2="380" y2="87.68693945375875" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" style="max-width:360px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="360" height="280" fill="#fffdf8" rx="4"/>
+<text x="180" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Growth 2010-2026</text>
+<text x="110" y="32" text-anchor="middle" font-size="10" font-weight="600" fill="#4a5568">Before</text>
+<text x="250" y="32" text-anchor="middle" font-size="10" font-weight="600" fill="#4a5568">After</text>
+<line x1="110" y1="250.0" x2="250" y2="250.0" stroke="#006600" stroke-width="2" opacity="0.7"/>
+<circle cx="110" cy="250.0" r="4" fill="#006600"/>
+<circle cx="250" cy="250.0" r="4" fill="#006600"/>
+<text x="102" y="253.0" text-anchor="end" font-size="9" fill="#1d2430">India</text>
+<text x="118" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+<text x="258" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+<line x1="110" y1="250.0" x2="250" y2="250.0" stroke="#006600" stroke-width="2" opacity="0.7"/>
+<circle cx="110" cy="250.0" r="4" fill="#006600"/>
+<circle cx="250" cy="250.0" r="4" fill="#006600"/>
+<text x="102" y="253.0" text-anchor="end" font-size="9" fill="#1d2430">Pakistan</text>
+<text x="118" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+<text x="258" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+<line x1="110" y1="250.0" x2="250" y2="250.0" stroke="#006600" stroke-width="2" opacity="0.7"/>
+<circle cx="110" cy="250.0" r="4" fill="#006600"/>
+<circle cx="250" cy="250.0" r="4" fill="#006600"/>
+<text x="102" y="253.0" text-anchor="end" font-size="9" fill="#1d2430">Bangladesh</text>
+<text x="118" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+<text x="258" y="253.0" text-anchor="start" font-size="8" fill="#4a5568">0</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="context-label">Why It Matters</div>
+    <p class="context">Health expenditure per capita ranges from $12 in Afghanistan to $200+ in Maldives, and trial density tracks spending rather than disease burden, creating a wealth-research feedback loop.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">The Evidence &nbsp; <span class="word-badge">118 words &middot; target 156</span></div>
+    <div class="body-text">How equitably are clinical trials distributed across South Asia&#x27;s eight SAARC nations, and does regional health expenditure match expose structural inequity in South Asian research? This cross-sectional audit evaluated 11,116 South Asian trials registered on ClinicalTrials.gov across 8 SAARC nations. Investigators computed the Spearman rank correlation as the primary estimand using registry metadata. The distribution yielded a Gini coefficient of 0.711, indicating severe concentration of trials among few nations. Sensitivity analysis using Gini coefficient (0.711) confirmed the inequality finding with stable bootstrap estimates. These findings reveal a geographic research monopoly where most SAARC nations remain functionally invisible in the clinical evidence landscape. Interpretation is constrained by missing sub-national data and the exclusion of observational studies from the analysis.</div>
+    <div class="color-strip" aria-hidden="true"><div style="background:#1b4f72;"></div><div style="background:#0e6251;"></div><div style="background:#4a235a;"></div><div style="background:#922b21;"></div><div style="background:#7e5109;"></div><div style="background:#0b5345;"></div><div style="background:#566573;"></div></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Sentence Structure</div>
+    <div class="sentence" style="border-left-color:#1b4f72;"><span class="role-tag" style="color:#1b4f72;">Question</span><p>How equitably are clinical trials distributed across South Asia&#x27;s eight SAARC nations, and does regional health expenditure match expose structural inequity in South Asian research?</p></div><div class="sentence" style="border-left-color:#0e6251;"><span class="role-tag" style="color:#0e6251;">Dataset</span><p>This cross-sectional audit evaluated 11,116 South Asian trials registered on ClinicalTrials.</p></div><div class="sentence" style="border-left-color:#4a235a;"><span class="role-tag" style="color:#4a235a;">Method</span><p>gov across 8 SAARC nations.</p></div><div class="sentence" style="border-left-color:#922b21;"><span class="role-tag" style="color:#922b21;">Primary Result</span><p>Investigators computed the Spearman rank correlation as the primary estimand using registry metadata.</p></div><div class="sentence" style="border-left-color:#7e5109;"><span class="role-tag" style="color:#7e5109;">Robustness</span><p>The distribution yielded a Gini coefficient of 0.</p></div><div class="sentence" style="border-left-color:#0b5345;"><span class="role-tag" style="color:#0b5345;">Interpretation</span><p>711, indicating severe concentration of trials among few nations.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Boundary</span><p>Sensitivity analysis using Gini coefficient (0.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>711) confirmed the inequality finding with stable bootstrap estimates.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>These findings reveal a geographic research monopoly where most SAARC nations remain functionally invisible in the clinical evidence landscape.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>Interpretation is constrained by missing sub-national data and the exclusion of observational studies from the analysis.</p></div>
+  </div>
+
+  <div class="links">
+    <a class="link-btn" href="../">Back to Group</a>
+    <a class="link-btn" href="../code/regional-health-expenditure-match.py" download>Download Code (.py)</a>
+    <a class="link-btn" href="https://github.com/mahmood726-cyber/saarc-e156-students" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <footer class="footer">
+    <p>E156 Format &middot; ClinicalTrials.gov API v2 &middot; https://github.com/mahmood726-cyber/saarc-e156-students</p>
+    <p>Mahmood Ahmad &middot; ORCID: 0009-0003-7781-4478</p>
+  </footer>
+</main>
+</body>
+</html>

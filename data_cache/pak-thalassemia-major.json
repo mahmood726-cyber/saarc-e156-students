@@ -1,0 +1,109 @@
+{
+  "slug": "pak-thalassemia-major",
+  "country_counts": {
+    "Pakistan": 13
+  },
+  "saarc_total": 13,
+  "metrics": {
+    "total": 13,
+    "statuses": {
+      "COMPLETED": 8,
+      "UNKNOWN": 1,
+      "RECRUITING": 3,
+      "ACTIVE_NOT_RECRUITING": 1
+    },
+    "phases": {
+      "NA": 2,
+      "PHASE2": 9,
+      "PHASE3": 5,
+      "PHASE4": 1
+    },
+    "enrollment_values": [
+      142,
+      20,
+      603,
+      200,
+      100,
+      96,
+      54,
+      30,
+      24,
+      135,
+      121,
+      150,
+      654
+    ],
+    "start_years": [
+      2023,
+      2014,
+      2020,
+      2022,
+      2017,
+      2024,
+      2024,
+      2022,
+      2021,
+      2020,
+      2023,
+      2024,
+      2018
+    ],
+    "countries": {
+      "Pakistan": 21
+    },
+    "cities": {
+      "Multan": 2,
+      "Karachi": 8,
+      "Peshawar": 2,
+      "Islamabad": 1,
+      "Rawalpindi": 8
+    },
+    "designs": {
+      "randomized": 8,
+      "non_randomized": 5,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Pateints of \u03b2-thalassemia Major With Iron Overload",
+      "Thalassemia",
+      "Thalassemia, Beta",
+      "Transfusion-dependent Beta-Thalassemia",
+      "Thalassemia, Beta",
+      "Transfusion Dependent Beta-thalassemia",
+      "Fetal Hemoglobin",
+      "Thalassemia Major",
+      "Genetic Disease",
+      "Fetal Hemoglobin",
+      "Beta-Thalassemia",
+      "Hemoglobinopathies",
+      "Beta-Thalassemia",
+      "Thalassemia, Beta",
+      "Thalassemia",
+      "Transfusion Dependent Beta Thalassemia",
+      "Thalassemia"
+    ],
+    "sponsors": {
+      "RESnTEC, Institute of Research": 1,
+      "Aga Khan University": 1,
+      "Children's Hospital Karachi": 2,
+      "Blood Care Clinic": 1,
+      "Dr.Saqib Hussain Ansari": 1,
+      "Bahria University": 1,
+      "National Institute of Blood and Marrow Transplant (NIBMT), Pakistan": 3,
+      "Muhammad Aamir Latif": 1,
+      "Pakistan Blood and Marrow Transplant (PBMT) Group": 1,
+      "Blood Diseases Clinic": 1
+    },
+    "sponsor_classes": {
+      "OTHER": 10,
+      "OTHER_GOV": 3
+    }
+  },
+  "query": {
+    "condition": "Thalassemia",
+    "countries": [
+      "Pakistan"
+    ]
+  },
+  "global_count": 395
+}

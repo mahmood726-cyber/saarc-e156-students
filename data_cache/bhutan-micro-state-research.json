@@ -1,0 +1,78 @@
+{
+  "slug": "bhutan-micro-state-research",
+  "country_counts": {
+    "Bhutan": 6
+  },
+  "saarc_total": 6,
+  "metrics": {
+    "total": 6,
+    "statuses": {
+      "UNKNOWN": 2,
+      "COMPLETED": 3,
+      "NOT_YET_RECRUITING": 1
+    },
+    "phases": {
+      "NA": 6
+    },
+    "enrollment_values": [
+      500,
+      84,
+      28,
+      360,
+      1043,
+      100
+    ],
+    "start_years": [
+      2021,
+      2022,
+      2023,
+      2025,
+      2019,
+      2023
+    ],
+    "countries": {
+      "Bhutan": 6
+    },
+    "cities": {
+      "Phuentsholing": 3,
+      "Thimphu": 2,
+      "Paro": 1
+    },
+    "designs": {
+      "randomized": 5,
+      "non_randomized": 1,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Induction of Labour",
+      "Music Therapy",
+      "Music Therapy for Pain and Sedation",
+      "Postoperative Period",
+      "Infant, Premature",
+      "School-based Intervention",
+      "H.Pylori",
+      "Gastric Cancer",
+      "H Pylori Eradication",
+      "Transversus Abdominis Plane (TAP) Block",
+      "Wound Infiltration",
+      "Pain Score (VAS)"
+    ],
+    "sponsors": {
+      "Ministry of Health, Bhutan": 3,
+      "JDWNRH": 1,
+      "Centre Hospitalier Universitaire Vaudois": 1,
+      "Zero Helicobacter IGAN Network": 1
+    },
+    "sponsor_classes": {
+      "OTHER_GOV": 3,
+      "OTHER": 3
+    }
+  },
+  "query": {
+    "condition": null,
+    "countries": [
+      "Bhutan"
+    ]
+  },
+  "global_count": 442199
+}

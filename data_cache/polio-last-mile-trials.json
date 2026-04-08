@@ -1,0 +1,102 @@
+{
+  "slug": "polio-last-mile-trials",
+  "country_counts": {
+    "Pakistan": 12,
+    "Afghanistan": 0
+  },
+  "saarc_total": 12,
+  "metrics": {
+    "total": 12,
+    "statuses": {
+      "UNKNOWN": 4,
+      "COMPLETED": 8
+    },
+    "phases": {
+      "PHASE4": 4,
+      "NA": 7,
+      "PHASE3": 1
+    },
+    "enrollment_values": [
+      60000,
+      840,
+      560,
+      320,
+      4560,
+      1442,
+      840,
+      468,
+      500,
+      1000,
+      300,
+      900
+    ],
+    "start_years": [
+      2013,
+      2012,
+      2020,
+      2010,
+      2012,
+      2023,
+      2022,
+      2020,
+      2017,
+      2012,
+      2013,
+      2014
+    ],
+    "countries": {
+      "Pakistan": 14,
+      "Bangladesh": 1
+    },
+    "cities": {
+      "Karachi": 11,
+      "Matiari": 1,
+      "Thatta, Hyderabad": 1,
+      "Dhaka": 1,
+      "Gujranwala": 1
+    },
+    "designs": {
+      "randomized": 12,
+      "non_randomized": 0,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Polio",
+      "Polio Sero Conversion",
+      "Polio Sero Prevalence",
+      "Immunity to Polio Vaccines in Malnourished Infants",
+      "Immunity to Polio Vaccines in Non-malnourished Infants",
+      "Oral Polio Vaccine",
+      "Poliomyelitis",
+      "Polio",
+      "Poliomyelitis",
+      "Polio",
+      "Polio",
+      "Immunization; Infection",
+      "Incentives",
+      "Poliomyelitis",
+      "Poliovirus Vaccine, Inactivated",
+      "Poliomyelitis",
+      "Immunization; Infection",
+      "Polio",
+      "Vaccination Failure",
+      "Poliomyelitis"
+    ],
+    "sponsors": {
+      "Aga Khan University": 11,
+      "Sinovac Biotech Co., Ltd": 1
+    },
+    "sponsor_classes": {
+      "OTHER": 11,
+      "INDUSTRY": 1
+    }
+  },
+  "query": {
+    "condition": "Polio OR Poliomyelitis",
+    "countries": [
+      "Pakistan",
+      "Afghanistan"
+    ]
+  },
+  "global_count": 290
+}

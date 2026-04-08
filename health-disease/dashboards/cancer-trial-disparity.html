@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cancer Trial Disparity — SAARC E156</title>
+  <meta property="og:title" content="Cancer Trial Disparity -- SAARC E156">
+  <meta property="og:description" content="Cancer incidence in South Asia is rising rapidly with the epidemiological transition, yet trial investment concentrates on cancers prevalent in Western populati">
+  <meta property="og:type" content="article">
+  <style>
+:root { --bg:#f8f6f1;--paper:#fffdf8;--ink:#1d2430;--muted:#5f6b7a;--line:#d8cfbf;--accent:#0d6b57;--accent-soft:#dcefe8;--warm:#7A5A10;--shadow:0 18px 40px rgba(42,47,54,0.08);--radius:18px;--serif:Georgia,'Times New Roman',serif;--mono:'Consolas','SFMono-Regular','Menlo',monospace; }
+* { box-sizing:border-box;margin:0; }
+body { color:var(--ink);font-family:var(--serif);line-height:1.6;background:radial-gradient(circle at top left,rgba(13,107,87,0.06),transparent 32%),radial-gradient(circle at bottom right,rgba(141,79,45,0.06),transparent 28%),var(--bg); }
+.page { width:min(980px,calc(100vw - 24px));margin:0 auto;padding:32px 0 56px; }
+.card { background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:20px; }
+.hero { text-align:center;padding:40px 28px; }
+.eyebrow { color:var(--accent);font-size:13px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700; }
+h1 { font-size:clamp(24px,3.5vw,38px);line-height:1.08;margin:10px 0 6px; }
+.subtitle { color:var(--muted);font-size:17px;max-width:58ch;margin:0 auto; }
+.metrics { display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:20px 0; }
+.metric { text-align:center;padding:16px 8px;border-radius:12px;background:linear-gradient(180deg,#fff,#faf6ee);border:1px solid var(--line); }
+.metric-label { font-size:12px;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:4px; }
+.metric-value { font-size:24px;font-weight:700; }
+.chart-wrap { overflow-x:auto;padding:4px 0; }
+.chart-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start; }
+.chart-cell { text-align:center; }
+.section-label { font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-weight:700;margin-bottom:14px; }
+.finding { font-size:19px;line-height:1.6;padding:22px 26px;border-left:5px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius) var(--radius) 0; }
+.context { font-size:16px;line-height:1.8;color:#2a2f36; }
+.context-label { font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--warm);font-weight:700;margin-bottom:10px; }
+.body-text { font-size:15px;line-height:1.8;padding:20px;background:#fafaf7;border-radius:10px; }
+.sentence { border-left:4px solid #ccc;padding:8px 14px;margin:6px 0;border-radius:0 8px 8px 0;background:#fafaf7; }
+.role-tag { font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em; }
+.sentence p { margin:3px 0 0;font-size:14px;line-height:1.65; }
+.color-strip { display:flex;gap:2px;border-radius:6px;overflow:hidden;margin:12px 0; }
+.color-strip > div { height:7px;flex:1; }
+.footer { text-align:center;color:var(--muted);font-size:12px;margin-top:28px; }
+.footer a { color:var(--accent);text-decoration:none; }
+.links { display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0; }
+.link-btn { display:inline-block;padding:12px 20px;min-height:44px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:white;transition:all 0.15s; }
+.link-btn:hover { background:var(--accent);color:white;border-color:var(--accent); }
+.word-badge { display:inline-block;background:var(--accent-soft);color:var(--accent);padding:3px 10px;border-radius:16px;font-size:12px;font-weight:700; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width:700px) { .chart-grid { grid-template-columns:1fr; } .card { padding:18px 14px; } }
+</style>
+</head>
+<body>
+<main class="page" role="main">
+  <div class="card hero">
+    <div class="eyebrow">E156 Micro-Paper &middot; SAARC Clinical Trials</div>
+    <h1>Cancer Trial Disparity</h1>
+    <p class="subtitle">Cancer incidence in South Asia is rising rapidly with the epidemiological transi...</p>
+    <div class="metrics"><div class="metric"><div class="metric-label">SAARC Trials</div><div class="metric-value" style="color:var(--accent)">28,500</div></div><div class="metric"><div class="metric-label">India Trials</div><div class="metric-value" style="color:#c0392b">24,500</div></div><div class="metric"><div class="metric-label">Nations</div><div class="metric-value" style="color:#c0392b">8</div></div><div class="metric"><div class="metric-label">Nations</div><div class="metric-value" style="color:#c0392b">8</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Key Finding</div>
+    <div class="finding">SAARC hosts 28,500 clinical trials across 8 nations with extreme geographic concentration in India.</div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Regional Comparison</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" style="max-width:420px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="420" height="320" fill="#fffdf8" rx="4"/>
+<text x="210" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Phase Distribution</text>
+<text x="135.0" y="40" text-anchor="middle" font-size="9" fill="#4a5568">India</text>
+<text x="225.0" y="40" text-anchor="middle" font-size="9" fill="#4a5568">Pakistan</text>
+<text x="315.0" y="40" text-anchor="middle" font-size="9" fill="#4a5568">Others</text>
+<text x="85" y="80.5" text-anchor="end" font-size="9" fill="#1d2430">Phase 1</text>
+<rect x="90.0" y="45.0" width="90.0" height="65.0" fill="rgb(115,173,115)" stroke="#fff" stroke-width="1"/>
+<text x="135.0" y="80.5" text-anchor="middle" font-size="9" fill="#1d2430">20</text>
+<rect x="180.0" y="45.0" width="90.0" height="65.0" fill="rgb(218,237,218)" stroke="#fff" stroke-width="1"/>
+<text x="225.0" y="80.5" text-anchor="middle" font-size="9" fill="#1d2430">2</text>
+<rect x="270.0" y="45.0" width="90.0" height="65.0" fill="rgb(224,241,224)" stroke="#fff" stroke-width="1"/>
+<text x="315.0" y="80.5" text-anchor="middle" font-size="9" fill="#1d2430">1</text>
+<text x="85" y="145.5" text-anchor="end" font-size="9" fill="#1d2430">Phase 2</text>
+<rect x="90.0" y="110.0" width="90.0" height="65.0" fill="rgb(0,102,0)" stroke="#fff" stroke-width="1"/>
+<text x="135.0" y="145.5" text-anchor="middle" font-size="9" fill="#fff">40</text>
+<rect x="180.0" y="110.0" width="90.0" height="65.0" fill="rgb(207,230,207)" stroke="#fff" stroke-width="1"/>
+<text x="225.0" y="145.5" text-anchor="middle" font-size="9" fill="#1d2430">4</text>
+<rect x="270.0" y="110.0" width="90.0" height="65.0" fill="rgb(224,241,224)" stroke="#fff" stroke-width="1"/>
+<text x="315.0" y="145.5" text-anchor="middle" font-size="9" fill="#1d2430">1</text>
+<text x="85" y="210.5" text-anchor="end" font-size="9" fill="#1d2430">Phase 3</text>
+<rect x="90.0" y="175.0" width="90.0" height="65.0" fill="rgb(57,137,57)" stroke="#fff" stroke-width="1"/>
+<text x="135.0" y="210.5" text-anchor="middle" font-size="9" fill="#fff">30</text>
+<rect x="180.0" y="175.0" width="90.0" height="65.0" fill="rgb(218,237,218)" stroke="#fff" stroke-width="1"/>
+<text x="225.0" y="210.5" text-anchor="middle" font-size="9" fill="#1d2430">2</text>
+<rect x="270.0" y="175.0" width="90.0" height="65.0" fill="rgb(218,237,218)" stroke="#fff" stroke-width="1"/>
+<text x="315.0" y="210.5" text-anchor="middle" font-size="9" fill="#1d2430">2</text>
+<text x="85" y="275.5" text-anchor="end" font-size="9" fill="#1d2430">Phase 4</text>
+<rect x="90.0" y="240.0" width="90.0" height="65.0" fill="rgb(172,209,172)" stroke="#fff" stroke-width="1"/>
+<text x="135.0" y="275.5" text-anchor="middle" font-size="9" fill="#1d2430">10</text>
+<rect x="180.0" y="240.0" width="90.0" height="65.0" fill="rgb(224,241,224)" stroke="#fff" stroke-width="1"/>
+<text x="225.0" y="275.5" text-anchor="middle" font-size="9" fill="#1d2430">1</text>
+<rect x="270.0" y="240.0" width="90.0" height="65.0" fill="rgb(230,245,230)" stroke="#fff" stroke-width="1"/>
+<text x="315.0" y="275.5" text-anchor="middle" font-size="9" fill="#1d2430">0</text>
+<rect x="375" y="45.0" width="10" height="9.7" fill="rgb(0,102,0)"/>
+<rect x="375" y="53.7" width="10" height="9.7" fill="rgb(7,106,7)"/>
+<rect x="375" y="62.3" width="10" height="9.7" fill="rgb(15,111,15)"/>
+<rect x="375" y="71.0" width="10" height="9.7" fill="rgb(23,116,23)"/>
+<rect x="375" y="79.7" width="10" height="9.7" fill="rgb(31,121,31)"/>
+<rect x="375" y="88.3" width="10" height="9.7" fill="rgb(39,126,39)"/>
+<rect x="375" y="97.0" width="10" height="9.7" fill="rgb(47,131,47)"/>
+<rect x="375" y="105.7" width="10" height="9.7" fill="rgb(55,136,55)"/>
+<rect x="375" y="114.3" width="10" height="9.7" fill="rgb(63,141,63)"/>
+<rect x="375" y="123.0" width="10" height="9.7" fill="rgb(71,146,71)"/>
+<rect x="375" y="131.7" width="10" height="9.7" fill="rgb(79,151,79)"/>
+<rect x="375" y="140.3" width="10" height="9.7" fill="rgb(87,156,87)"/>
+<rect x="375" y="149.0" width="10" height="9.7" fill="rgb(95,161,95)"/>
+<rect x="375" y="157.7" width="10" height="9.7" fill="rgb(103,166,103)"/>
+<rect x="375" y="166.3" width="10" height="9.7" fill="rgb(111,171,111)"/>
+<rect x="375" y="175.0" width="10" height="9.7" fill="rgb(118,175,118)"/>
+<rect x="375" y="183.7" width="10" height="9.7" fill="rgb(126,180,126)"/>
+<rect x="375" y="192.3" width="10" height="9.7" fill="rgb(134,185,134)"/>
+<rect x="375" y="201.0" width="10" height="9.7" fill="rgb(142,190,142)"/>
+<rect x="375" y="209.7" width="10" height="9.7" fill="rgb(150,195,150)"/>
+<rect x="375" y="218.3" width="10" height="9.7" fill="rgb(158,200,158)"/>
+<rect x="375" y="227.0" width="10" height="9.7" fill="rgb(166,205,166)"/>
+<rect x="375" y="235.7" width="10" height="9.7" fill="rgb(174,210,174)"/>
+<rect x="375" y="244.3" width="10" height="9.7" fill="rgb(182,215,182)"/>
+<rect x="375" y="253.0" width="10" height="9.7" fill="rgb(190,220,190)"/>
+<rect x="375" y="261.7" width="10" height="9.7" fill="rgb(198,225,198)"/>
+<rect x="375" y="270.3" width="10" height="9.7" fill="rgb(206,230,206)"/>
+<rect x="375" y="279.0" width="10" height="9.7" fill="rgb(214,235,214)"/>
+<rect x="375" y="287.7" width="10" height="9.7" fill="rgb(222,240,222)"/>
+<rect x="375" y="296.3" width="10" height="9.7" fill="rgb(230,245,230)"/>
+<text x="389" y="53" font-size="8" fill="#4a5568">40</text>
+<text x="389" y="305" font-size="8" fill="#4a5568">0</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="max-width:500px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="500" height="500" fill="#fffdf8" rx="4"/>
+<text x="250" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#1d2430">Cancer Trial Disparity by Country</text>
+<path d="M 55 65 L 85 50 L 120 55 L 135 75 L 130 100 L 110 115 L 85 110 L 65 95 Z" fill="rgb(230,245,230)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Afghanistan: 0</title></path>
+<path d="M 110 115 L 130 100 L 135 75 L 155 70 L 175 85 L 185 110 L 180 140 L 175 170 L 165 200 L 155 220 L 140 230 L 125 215 L 120 190 L 115 160 L 110 135 Z" fill="rgb(192,221,192)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Pakistan: 141</title></path>
+<path d="M 175 85 L 200 75 L 230 70 L 260 80 L 290 75 L 315 85 L 330 100 L 340 120 L 345 145 L 340 175 L 330 205 L 310 235 L 290 270 L 275 300 L 265 330 L 255 355 L 245 365 L 235 355 L 240 325 L 245 295 L 240 265 L 225 240 L 210 220 L 195 200 L 185 175 L 180 140 L 185 110 Z" fill="rgb(0,102,0)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>India: 855</title></path>
+<path d="M 230 120 L 260 110 L 290 108 L 310 115 L 305 130 L 275 135 L 245 132 L 230 128 Z" fill="rgb(227,243,227)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Nepal: 11</title></path>
+<path d="M 320 115 L 340 110 L 355 118 L 350 130 L 335 132 L 322 125 Z" fill="rgb(229,244,229)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Bhutan: 1</title></path>
+<path d="M 330 145 L 345 135 L 360 140 L 365 160 L 360 180 L 345 185 L 335 175 L 330 160 Z" fill="rgb(220,239,220)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Bangladesh: 34</title></path>
+<path d="M 260 380 L 275 370 L 285 380 L 283 400 L 270 410 L 258 400 Z" fill="rgb(228,244,228)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Sri Lanka: 5</title></path>
+<path d="M 195 405 L 200 395 L 205 405 L 202 418 L 197 418 Z" fill="rgb(230,245,230)" stroke="#fff" stroke-width="1.5" opacity="0.9"><title>Maldives: 0</title></path>
+<text x="95" y="82" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">AFG</text>
+<text x="95" y="93" text-anchor="middle" font-size="8" fill="#4a5568">0</text>
+<text x="150" y="155" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">PAK</text>
+<text x="150" y="166" text-anchor="middle" font-size="8" fill="#4a5568">141</text>
+<text x="265" y="200" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">IND</text>
+<text x="265" y="211" text-anchor="middle" font-size="8" fill="#4a5568">855</text>
+<text x="270" y="122" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">NPL</text>
+<text x="270" y="133" text-anchor="middle" font-size="8" fill="#4a5568">11</text>
+<text x="337" y="122" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">BTN</text>
+<text x="337" y="133" text-anchor="middle" font-size="8" fill="#4a5568">1</text>
+<text x="348" y="160" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">BGD</text>
+<text x="348" y="171" text-anchor="middle" font-size="8" fill="#4a5568">34</text>
+<text x="272" y="392" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">LKA</text>
+<text x="272" y="403" text-anchor="middle" font-size="8" fill="#4a5568">5</text>
+<text x="200" y="408" text-anchor="middle" font-size="9" fill="#1d2430" font-weight="600">MDV</text>
+<text x="200" y="419" text-anchor="middle" font-size="8" fill="#4a5568">0</text>
+<rect x="175" y="465" width="3" height="10" fill="rgb(230,245,230)"/>
+<rect x="178" y="465" width="3" height="10" fill="rgb(225,242,225)"/>
+<rect x="181" y="465" width="3" height="10" fill="rgb(220,239,220)"/>
+<rect x="184" y="465" width="3" height="10" fill="rgb(215,236,215)"/>
+<rect x="187" y="465" width="3" height="10" fill="rgb(211,233,211)"/>
+<rect x="190" y="465" width="3" height="10" fill="rgb(206,230,206)"/>
+<rect x="193" y="465" width="3" height="10" fill="rgb(201,227,201)"/>
+<rect x="196" y="465" width="3" height="10" fill="rgb(197,224,197)"/>
+<rect x="199" y="465" width="3" height="10" fill="rgb(192,221,192)"/>
+<rect x="202" y="465" width="3" height="10" fill="rgb(187,218,187)"/>
+<rect x="205" y="465" width="3" height="10" fill="rgb(183,215,183)"/>
+<rect x="208" y="465" width="3" height="10" fill="rgb(178,212,178)"/>
+<rect x="211" y="465" width="3" height="10" fill="rgb(173,209,173)"/>
+<rect x="214" y="465" width="3" height="10" fill="rgb(168,207,168)"/>
+<rect x="217" y="465" width="3" height="10" fill="rgb(164,204,164)"/>
+<rect x="220" y="465" width="3" height="10" fill="rgb(159,201,159)"/>
+<rect x="223" y="465" width="3" height="10" fill="rgb(154,198,154)"/>
+<rect x="226" y="465" width="3" height="10" fill="rgb(150,195,150)"/>
+<rect x="229" y="465" width="3" height="10" fill="rgb(145,192,145)"/>
+<rect x="232" y="465" width="3" height="10" fill="rgb(140,189,140)"/>
+<rect x="235" y="465" width="3" height="10" fill="rgb(136,186,136)"/>
+<rect x="238" y="465" width="3" height="10" fill="rgb(131,183,131)"/>
+<rect x="241" y="465" width="3" height="10" fill="rgb(126,180,126)"/>
+<rect x="244" y="465" width="3" height="10" fill="rgb(122,177,122)"/>
+<rect x="247" y="465" width="3" height="10" fill="rgb(117,174,117)"/>
+<rect x="250" y="465" width="3" height="10" fill="rgb(112,172,112)"/>
+<rect x="253" y="465" width="3" height="10" fill="rgb(107,169,107)"/>
+<rect x="256" y="465" width="3" height="10" fill="rgb(103,166,103)"/>
+<rect x="259" y="465" width="3" height="10" fill="rgb(98,163,98)"/>
+<rect x="262" y="465" width="3" height="10" fill="rgb(93,160,93)"/>
+<rect x="265" y="465" width="3" height="10" fill="rgb(89,157,89)"/>
+<rect x="268" y="465" width="3" height="10" fill="rgb(84,154,84)"/>
+<rect x="271" y="465" width="3" height="10" fill="rgb(79,151,79)"/>
+<rect x="274" y="465" width="3" height="10" fill="rgb(75,148,75)"/>
+<rect x="277" y="465" width="3" height="10" fill="rgb(70,145,70)"/>
+<rect x="280" y="465" width="3" height="10" fill="rgb(65,142,65)"/>
+<rect x="283" y="465" width="3" height="10" fill="rgb(61,139,61)"/>
+<rect x="286" y="465" width="3" height="10" fill="rgb(56,137,56)"/>
+<rect x="289" y="465" width="3" height="10" fill="rgb(51,134,51)"/>
+<rect x="292" y="465" width="3" height="10" fill="rgb(46,131,46)"/>
+<rect x="295" y="465" width="3" height="10" fill="rgb(42,128,42)"/>
+<rect x="298" y="465" width="3" height="10" fill="rgb(37,125,37)"/>
+<rect x="301" y="465" width="3" height="10" fill="rgb(32,122,32)"/>
+<rect x="304" y="465" width="3" height="10" fill="rgb(28,119,28)"/>
+<rect x="307" y="465" width="3" height="10" fill="rgb(23,116,23)"/>
+<rect x="310" y="465" width="3" height="10" fill="rgb(18,113,18)"/>
+<rect x="313" y="465" width="3" height="10" fill="rgb(14,110,14)"/>
+<rect x="316" y="465" width="3" height="10" fill="rgb(9,107,9)"/>
+<rect x="319" y="465" width="3" height="10" fill="rgb(4,104,4)"/>
+<rect x="322" y="465" width="3" height="10" fill="rgb(0,102,0)"/>
+<text x="172" y="474" text-anchor="end" font-size="9" fill="#4a5568">0</text>
+<text x="328" y="474" text-anchor="start" font-size="9" fill="#4a5568">855</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Distribution Analysis</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="280" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Cancer Trial Disparity Lorenz Curve</text>
+<line x1="50" y1="245" x2="380" y2="35" stroke="#d8cfbf" stroke-width="1.5" stroke-dasharray="5,3"/>
+<polygon points="50.0,245.0 91.2,245.0 132.5,245.0 173.8,244.8 215.0,243.8 256.2,241.6 297.5,234.8 338.8,206.5 380.0,35.0 380.0,35.0" fill="#0d6b57" opacity="0.15"/>
+<path d="M 50.0 245.0 L 91.2 245.0 L 132.5 245.0 L 173.8 244.8 L 215.0 243.8 L 256.2 241.6 L 297.5 234.8 L 338.8 206.5 L 380.0 35.0" fill="none" stroke="#0d6b57" stroke-width="2"/>
+<line x1="50" y1="35" x2="50" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="50" y1="245" x2="380" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<text x="50" y="260" text-anchor="middle" font-size="9" fill="#4a5568">0%</text>
+<text x="45" y="248" text-anchor="end" font-size="9" fill="#4a5568">0%</text>
+<text x="132.5" y="260" text-anchor="middle" font-size="9" fill="#4a5568">25%</text>
+<text x="45" y="195.5" text-anchor="end" font-size="9" fill="#4a5568">25%</text>
+<text x="215.0" y="260" text-anchor="middle" font-size="9" fill="#4a5568">50%</text>
+<text x="45" y="143.0" text-anchor="end" font-size="9" fill="#4a5568">50%</text>
+<text x="297.5" y="260" text-anchor="middle" font-size="9" fill="#4a5568">75%</text>
+<text x="45" y="90.5" text-anchor="end" font-size="9" fill="#4a5568">75%</text>
+<text x="380.0" y="260" text-anchor="middle" font-size="9" fill="#4a5568">100%</text>
+<text x="45" y="38.0" text-anchor="end" font-size="9" fill="#4a5568">100%</text>
+<text x="231.50000000000003" y="192.5" font-size="13" font-weight="700" fill="#0d6b57">Gini = 0.811</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" style="max-width:420px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="420" height="280" fill="#fffdf8" rx="4"/>
+<text x="210" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Contribution Breakdown</text>
+<rect x="61.7" y="75.8" width="35.0" height="159.2" fill="#006600" opacity="0.85" rx="1"/>
+<text x="79.2" y="70.8" text-anchor="middle" font-size="8" fill="#1d2430">855</text>
+<line x1="96.7" y1="75.8" x2="120.0" y2="75.8" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="79.2" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 79.2 249)">India</text>
+<rect x="120.0" y="49.5" width="35.0" height="26.3" fill="#006600" opacity="0.85" rx="1"/>
+<text x="137.5" y="44.5" text-anchor="middle" font-size="8" fill="#1d2430">141</text>
+<line x1="155.0" y1="49.5" x2="178.3" y2="49.5" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="137.5" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 137.5 249)">Pakistan</text>
+<rect x="178.3" y="43.2" width="35.0" height="6.3" fill="#006600" opacity="0.85" rx="1"/>
+<text x="195.8" y="38.2" text-anchor="middle" font-size="8" fill="#1d2430">34</text>
+<line x1="213.3" y1="43.2" x2="236.7" y2="43.2" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="195.8" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 195.8 249)">Bangladesh</text>
+<rect x="236.7" y="41.1" width="35.0" height="2.0" fill="#006600" opacity="0.85" rx="1"/>
+<text x="254.2" y="36.1" text-anchor="middle" font-size="8" fill="#1d2430">11</text>
+<line x1="271.7" y1="41.1" x2="295.0" y2="41.1" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="254.2" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 254.2 249)">Nepal</text>
+<rect x="295.0" y="40.2" width="35.0" height="1.0" fill="#006600" opacity="0.85" rx="1"/>
+<text x="312.5" y="35.2" text-anchor="middle" font-size="8" fill="#1d2430">5</text>
+<line x1="330.0" y1="40.2" x2="353.3" y2="40.2" stroke="#d8cfbf" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="312.5" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 312.5 249)">Sri Lanka</text>
+<rect x="353.3" y="40.0" width="35.0" height="1.0" fill="#006600" opacity="0.85" rx="1"/>
+<text x="370.8" y="35.0" text-anchor="middle" font-size="8" fill="#1d2430">1</text>
+<text x="370.8" y="249" text-anchor="middle" font-size="8" fill="#4a5568" transform="rotate(-30 370.8 249)">Others</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Inequality Profile</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" style="max-width:440px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="440" height="240" fill="#fffdf8" rx="4"/>
+<text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Growth Trend</text>
+<line x1="55" y1="40" x2="55" y2="200" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="55" y1="200" x2="420" y2="200" stroke="#d8cfbf" stroke-width="1"/>
+<line x1="55" y1="179.6" x2="420" y2="179.6" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="182.6" text-anchor="end" font-size="9" fill="#4a5568">500</text>
+<line x1="55" y1="151.1" x2="420" y2="151.1" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="154.1" text-anchor="end" font-size="9" fill="#4a5568">1000</text>
+<line x1="55" y1="122.6" x2="420" y2="122.6" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="125.6" text-anchor="end" font-size="9" fill="#4a5568">1500</text>
+<line x1="55" y1="94.1" x2="420" y2="94.1" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="97.1" text-anchor="end" font-size="9" fill="#4a5568">2000</text>
+<line x1="55" y1="65.6" x2="420" y2="65.6" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="50" y="68.6" text-anchor="end" font-size="9" fill="#4a5568">2500</text>
+<path d="M 55.0 149.8 L 146.2 160.0 L 237.5 90.4 L 328.8 47.3 L 420.0 192.7" fill="none" stroke="#006600" stroke-width="2"/>
+<circle cx="55.0" cy="149.8" r="3" fill="#006600"/>
+<circle cx="146.2" cy="160.0" r="3" fill="#006600"/>
+<circle cx="237.5" cy="90.4" r="3" fill="#006600"/>
+<circle cx="328.8" cy="47.3" r="3" fill="#006600"/>
+<circle cx="420.0" cy="192.7" r="3" fill="#006600"/>
+<line x1="60" y1="50" x2="73" y2="50" stroke="#006600" stroke-width="2"/>
+<text x="77" y="53" font-size="9" fill="#1d2430">SAARC</text>
+<text x="55.0" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2005</text>
+<text x="146.2" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2010</text>
+<text x="237.5" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2015</text>
+<text x="328.8" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2020</text>
+<text x="420.0" y="215" text-anchor="middle" font-size="9" fill="#4a5568">2025</text>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" style="max-width:300px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="300" height="300" fill="#fffdf8" rx="4"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Research Profile</text>
+<polygon points="150.0,137.2 173.5,154.4 164.5,182.0 135.5,182.0 126.5,154.4" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,112.5 197.1,146.7 179.1,202.0 120.9,202.0 102.9,146.7" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,87.8 220.6,139.1 193.6,222.1 106.4,222.1 79.4,139.1" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,63.0 244.2,131.4 208.2,242.1 91.8,242.1 55.8,131.4" fill="none" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="150.0" y2="63.0" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="244.2" y2="131.4" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="208.2" y2="242.1" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="91.8" y2="242.1" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<line x1="150.0" y1="162.0" x2="55.8" y2="131.4" stroke="#d8cfbf" stroke-width="0.7" opacity="0.5"/>
+<polygon points="150.0,152.1 211.4,142.1 176.0,197.8 123.4,198.6 128.8,155.1" fill="#0d6b57" opacity="0.2" stroke="#0d6b57" stroke-width="2"/>
+<circle cx="150.0" cy="152.1" r="3" fill="#0d6b57"/>
+<circle cx="211.4" cy="142.1" r="3" fill="#0d6b57"/>
+<circle cx="176.0" cy="197.8" r="3" fill="#0d6b57"/>
+<circle cx="123.4" cy="198.6" r="3" fill="#0d6b57"/>
+<circle cx="128.8" cy="155.1" r="3" fill="#0d6b57"/>
+<text x="150.0" y="48.0" text-anchor="middle" font-size="9" fill="#1d2430">Volume</text>
+<text x="261.3" y="128.8" text-anchor="start" font-size="9" fill="#1d2430">Growth</text>
+<text x="218.8" y="259.7" text-anchor="start" font-size="9" fill="#1d2430">Phase3</text>
+<text x="81.2" y="259.7" text-anchor="end" font-size="9" fill="#1d2430">Complete</text>
+<text x="38.7" y="128.8" text-anchor="end" font-size="9" fill="#1d2430">Diversity</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Temporal &amp; Structural</div>
+    <div class="chart-grid">
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="280" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Enrollment Distribution</text>
+<polygon points="132.6,296.4 132.7,294.0 132.8,291.5 133.0,289.0 133.2,286.6 133.6,284.1 134.0,281.7 134.6,279.2 135.4,276.7 136.4,274.3 137.6,271.8 139.2,269.3 141.0,266.9 143.3,264.4 145.8,261.9 148.8,259.5 152.1,257.0 155.8,254.5 159.8,252.1 164.0,249.6 168.4,247.1 172.8,244.7 177.2,242.2 181.5,239.7 185.5,237.3 189.1,234.8 192.2,232.3 194.8,229.9 196.7,227.4 197.9,225.0 198.5,222.5 198.4,220.0 197.8,217.6 196.6,215.1 195.1,212.6 193.4,210.2 191.6,207.7 189.9,205.2 188.3,202.8 186.9,200.3 185.8,197.8 185.0,195.4 184.5,192.9 184.2,190.4 184.0,188.0 183.8,185.5 183.6,183.0 183.1,180.6 182.5,178.1 181.5,175.7 180.1,173.2 178.5,170.7 176.5,168.3 174.2,165.8 171.6,163.3 168.9,160.9 166.0,158.4 163.1,155.9 160.1,153.5 157.2,151.0 154.3,148.5 151.6,146.1 149.0,143.6 146.5,141.1 144.3,138.7 142.3,136.2 140.5,133.7 138.9,131.3 137.6,128.8 136.5,126.3 135.5,123.9 134.8,121.4 134.2,119.0 133.7,116.5 133.4,114.0 133.1,111.6 132.9,109.1 132.8,106.6 132.7,104.2 132.6,101.7 132.4,101.7 132.3,104.2 132.2,106.6 132.1,109.1 131.9,111.6 131.6,114.0 131.3,116.5 130.8,119.0 130.2,121.4 129.5,123.9 128.5,126.3 127.4,128.8 126.1,131.3 124.5,133.7 122.7,136.2 120.7,138.7 118.5,141.1 116.0,143.6 113.4,146.1 110.7,148.5 107.8,151.0 104.9,153.5 101.9,155.9 99.0,158.4 96.1,160.9 93.4,163.3 90.8,165.8 88.5,168.3 86.5,170.7 84.9,173.2 83.5,175.7 82.5,178.1 81.9,180.6 81.4,183.0 81.2,185.5 81.0,188.0 80.8,190.4 80.5,192.9 80.0,195.4 79.2,197.8 78.1,200.3 76.7,202.8 75.1,205.2 73.4,207.7 71.6,210.2 69.9,212.6 68.4,215.1 67.2,217.6 66.6,220.0 66.5,222.5 67.1,225.0 68.3,227.4 70.2,229.9 72.8,232.3 75.9,234.8 79.5,237.3 83.5,239.7 87.8,242.2 92.2,244.7 96.6,247.1 101.0,249.6 105.2,252.1 109.2,254.5 112.9,257.0 116.2,259.5 119.2,261.9 121.7,264.4 124.0,266.9 125.8,269.3 127.4,271.8 128.6,274.3 129.6,276.7 130.4,279.2 131.0,281.7 131.4,284.1 131.8,286.6 132.0,289.0 132.2,291.5 132.3,294.0 132.4,296.4" fill="#0d6b57" opacity="0.3" stroke="#0d6b57" stroke-width="1"/>
+<line x1="106.1" y1="226.4" x2="158.9" y2="226.4" stroke="#0d6b57" stroke-width="1"/>
+<line x1="106.1" y1="178.5" x2="158.9" y2="178.5" stroke="#0d6b57" stroke-width="1"/>
+<line x1="92.9" y1="207.1" x2="172.1" y2="207.1" stroke="#0d6b57" stroke-width="2.5"/>
+<text x="132.5" y="270" text-anchor="middle" font-size="10" fill="#1d2430">SAARC</text>
+<polygon points="297.6,356.0 297.7,350.5 297.8,345.1 297.9,339.6 298.0,334.2 298.3,328.8 298.6,323.3 299.1,317.9 299.6,312.4 300.4,307.0 301.3,301.5 302.5,296.1 303.9,290.7 305.7,285.2 307.8,279.8 310.2,274.3 313.0,268.9 316.2,263.5 319.7,258.0 323.6,252.6 327.8,247.1 332.2,241.7 336.7,236.3 341.4,230.8 345.9,225.4 350.2,219.9 354.1,214.5 357.5,209.1 360.2,203.6 362.2,198.2 363.3,192.7 363.5,187.3 362.9,181.9 361.5,176.4 359.4,171.0 356.8,165.5 353.8,160.1 350.7,154.7 347.7,149.2 344.8,143.8 342.3,138.3 340.2,132.9 338.7,127.5 337.6,122.0 337.0,116.6 336.8,111.1 336.9,105.7 337.2,100.2 337.5,94.8 337.8,89.4 337.9,83.9 337.7,78.5 337.1,73.0 336.2,67.6 334.8,62.2 333.1,56.7 330.9,51.3 328.5,45.8 325.8,40.4 323.0,35.0 320.2,29.5 317.3,24.1 314.6,18.6 312.0,13.2 309.6,7.8 307.4,2.3 305.5,-3.1 303.9,-8.6 302.5,-14.0 301.3,-19.4 300.4,-24.9 299.7,-30.3 299.1,-35.8 298.6,-41.2 298.3,-46.6 298.1,-52.1 297.9,-57.5 297.8,-63.0 297.7,-68.4 297.6,-73.9 297.4,-73.9 297.3,-68.4 297.2,-63.0 297.1,-57.5 296.9,-52.1 296.7,-46.6 296.4,-41.2 295.9,-35.8 295.3,-30.3 294.6,-24.9 293.7,-19.4 292.5,-14.0 291.1,-8.6 289.5,-3.1 287.6,2.3 285.4,7.8 283.0,13.2 280.4,18.6 277.7,24.1 274.8,29.5 272.0,35.0 269.2,40.4 266.5,45.8 264.1,51.3 261.9,56.7 260.2,62.2 258.8,67.6 257.9,73.0 257.3,78.5 257.1,83.9 257.2,89.4 257.5,94.8 257.8,100.2 258.1,105.7 258.2,111.1 258.0,116.6 257.4,122.0 256.3,127.5 254.8,132.9 252.7,138.3 250.2,143.8 247.3,149.2 244.3,154.7 241.2,160.1 238.2,165.5 235.6,171.0 233.5,176.4 232.1,181.9 231.5,187.3 231.7,192.7 232.8,198.2 234.8,203.6 237.5,209.1 240.9,214.5 244.8,219.9 249.1,225.4 253.6,230.8 258.3,236.3 262.8,241.7 267.2,247.1 271.4,252.6 275.3,258.0 278.8,263.5 282.0,268.9 284.8,274.3 287.2,279.8 289.3,285.2 291.1,290.7 292.5,296.1 293.7,301.5 294.6,307.0 295.4,312.4 295.9,317.9 296.4,323.3 296.7,328.8 297.0,334.2 297.1,339.6 297.2,345.1 297.3,350.5 297.4,356.0" fill="#0d6b57" opacity="0.3" stroke="#0d6b57" stroke-width="1"/>
+<line x1="271.1" y1="196.2" x2="323.9" y2="196.2" stroke="#0d6b57" stroke-width="1"/>
+<line x1="271.1" y1="77.0" x2="323.9" y2="77.0" stroke="#0d6b57" stroke-width="1"/>
+<line x1="257.9" y1="175.5" x2="337.1" y2="175.5" stroke="#0d6b57" stroke-width="2.5"/>
+<text x="297.5" y="270" text-anchor="middle" font-size="10" fill="#1d2430">Reference</text>
+<line x1="50" y1="40" x2="50" y2="245" stroke="#d8cfbf" stroke-width="1"/>
+<text x="45" y="212.25451901225213" text-anchor="end" font-size="9" fill="#4a5568">200</text>
+<line x1="50" y1="209.25451901225213" x2="380" y2="209.25451901225213" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="45" y="172.3154341097405" text-anchor="end" font-size="9" fill="#4a5568">400</text>
+<line x1="50" y1="169.3154341097405" x2="380" y2="169.3154341097405" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="45" y="132.37634920722888" text-anchor="end" font-size="9" fill="#4a5568">600</text>
+<line x1="50" y1="129.37634920722888" x2="380" y2="129.37634920722888" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="45" y="92.43726430471727" text-anchor="end" font-size="9" fill="#4a5568">800</text>
+<line x1="50" y1="89.43726430471727" x2="380" y2="89.43726430471727" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+<text x="45" y="52.49817940220565" text-anchor="end" font-size="9" fill="#4a5568">1000</text>
+<line x1="50" y1="49.49817940220565" x2="380" y2="49.49817940220565" stroke="#d8cfbf" stroke-width="0.5" opacity="0.4"/>
+</svg></div>
+      <div class="chart-cell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="max-width:400px;font-family:Georgia,'Times New Roman',serif;">
+<rect width="400" height="300" fill="#fffdf8" rx="4"/>
+<text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2430">Enrollment Density</text>
+<polygon points="27.4,160.0 27.4,159.8 30.9,159.6 34.3,159.3 37.8,158.7 41.3,158.0 44.7,156.8 48.2,155.1 51.6,152.7 55.1,149.6 58.6,145.6 62.0,140.8 65.5,135.0 69.0,128.6 72.4,121.5 75.9,114.1 79.4,106.7 82.8,99.4 86.3,92.5 89.8,86.2 93.2,80.7 96.7,75.9 100.2,71.9 103.6,68.7 107.1,66.3 110.6,64.7 114.0,64.0 117.5,64.1 121.0,64.8 124.4,66.1 127.9,67.8 131.4,69.7 134.8,71.6 138.3,73.4 141.8,75.0 145.2,76.5 148.7,78.0 152.2,79.9 155.6,82.2 159.1,85.1 162.6,88.8 166.0,93.3 169.5,98.4 173.0,104.0 176.4,110.1 179.9,116.3 183.4,122.5 186.8,128.5 190.3,134.1 193.8,139.3 197.2,143.9 200.7,147.8 204.2,151.0 207.6,153.6 211.1,155.6 214.6,157.1 218.0,158.1 221.5,158.8 225.0,159.3 228.4,159.6 231.9,159.8 231.9,160.0" fill="#006600" opacity="0.3" stroke="#006600" stroke-width="1.5"/>
+<text x="75" y="124.0" text-anchor="end" font-size="10" fill="#1d2430">SAARC</text>
+<polygon points="-62.3,280.0 -62.3,279.9 -52.2,279.8 -42.0,279.7 -31.8,279.4 -21.6,279.1 -11.4,278.6 -1.2,277.8 9.0,276.8 19.1,275.4 29.3,273.5 39.5,271.3 49.7,268.6 59.9,265.5 70.1,262.1 80.3,258.5 90.5,254.9 100.6,251.6 110.8,248.5 121.0,246.1 131.2,244.3 141.4,243.3 151.6,243.0 161.8,243.5 171.9,244.5 182.1,246.0 192.3,247.7 202.5,249.5 212.7,251.2 222.9,252.8 233.1,254.1 243.3,255.1 253.4,255.8 263.6,256.3 273.8,256.7 284.0,257.0 294.2,257.4 304.4,257.9 314.6,258.5 324.7,259.3 334.9,260.3 345.1,261.4 355.3,262.7 365.5,264.1 375.7,265.7 385.9,267.3 396.1,268.9 406.2,270.6 416.4,272.1 426.6,273.6 436.8,275.0 447.0,276.1 457.2,277.1 467.4,277.9 477.5,278.6 487.7,279.0 497.9,279.4 508.1,279.6 518.3,279.8 528.5,279.9 538.7,279.9 538.7,280.0" fill="#FF9933" opacity="0.3" stroke="#FF9933" stroke-width="1.5"/>
+<text x="75" y="244.0" text-anchor="end" font-size="10" fill="#1d2430">Reference</text>
+<text x="183.3" y="294" text-anchor="middle" font-size="9" fill="#4a5568">500</text>
+<text x="294.3" y="294" text-anchor="middle" font-size="9" fill="#4a5568">1000</text>
+</svg></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="context-label">Why It Matters</div>
+    <p class="context">Cancer incidence in South Asia is rising rapidly with the epidemiological transition, yet trial investment concentrates on cancers prevalent in Western populations rather than oral, cervical, and gastric cancers dominant in SAARC.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">The Evidence &nbsp; <span class="word-badge">113 words &middot; target 156</span></div>
+    <div class="body-text">Does clinical trial investment in South Asia match the region&#x27;s disease burden, and does the distribution of Cancer trials reveal a systematic research gap? This cross-sectional audit evaluated 1,047 South Asian trials registered on ClinicalTrials.gov across 8 SAARC nations. Investigators computed the Herfindahl-Hirschman concentration index as the primary estimand using registry metadata. SAARC nations registered 1,047 Cancer trials, with India hosting 81.7% of the regional portfolio. The Herfindahl-Hirschman index reached 6861.912, corroborating the inequality finding across SAARC nations. These results expose a fundamental mismatch between where disease burden falls and where research investment flows across South Asia. Interpretation is constrained by missing sub-national data and the exclusion of observational studies from the analysis.</div>
+    <div class="color-strip" aria-hidden="true"><div style="background:#1b4f72;"></div><div style="background:#0e6251;"></div><div style="background:#4a235a;"></div><div style="background:#922b21;"></div><div style="background:#7e5109;"></div><div style="background:#0b5345;"></div><div style="background:#566573;"></div></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Sentence Structure</div>
+    <div class="sentence" style="border-left-color:#1b4f72;"><span class="role-tag" style="color:#1b4f72;">Question</span><p>Does clinical trial investment in South Asia match the region&#x27;s disease burden, and does the distribution of Cancer trials reveal a systematic research gap?</p></div><div class="sentence" style="border-left-color:#0e6251;"><span class="role-tag" style="color:#0e6251;">Dataset</span><p>This cross-sectional audit evaluated 1,047 South Asian trials registered on ClinicalTrials.</p></div><div class="sentence" style="border-left-color:#4a235a;"><span class="role-tag" style="color:#4a235a;">Method</span><p>gov across 8 SAARC nations.</p></div><div class="sentence" style="border-left-color:#922b21;"><span class="role-tag" style="color:#922b21;">Primary Result</span><p>Investigators computed the Herfindahl-Hirschman concentration index as the primary estimand using registry metadata.</p></div><div class="sentence" style="border-left-color:#7e5109;"><span class="role-tag" style="color:#7e5109;">Robustness</span><p>SAARC nations registered 1,047 Cancer trials, with India hosting 81.</p></div><div class="sentence" style="border-left-color:#0b5345;"><span class="role-tag" style="color:#0b5345;">Interpretation</span><p>7% of the regional portfolio.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Boundary</span><p>The Herfindahl-Hirschman index reached 6861.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>912, corroborating the inequality finding across SAARC nations.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>These results expose a fundamental mismatch between where disease burden falls and where research investment flows across South Asia.</p></div><div class="sentence" style="border-left-color:#566573;"><span class="role-tag" style="color:#566573;">Extra</span><p>Interpretation is constrained by missing sub-national data and the exclusion of observational studies from the analysis.</p></div>
+  </div>
+
+  <div class="links">
+    <a class="link-btn" href="../">Back to Group</a>
+    <a class="link-btn" href="../code/cancer-trial-disparity.py" download>Download Code (.py)</a>
+    <a class="link-btn" href="https://github.com/mahmood726-cyber/saarc-e156-students" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <footer class="footer">
+    <p>E156 Format &middot; ClinicalTrials.gov API v2 &middot; https://github.com/mahmood726-cyber/saarc-e156-students</p>
+    <p>Mahmood Ahmad &middot; ORCID: 0009-0003-7781-4478</p>
+  </footer>
+</main>
+</body>
+</html>

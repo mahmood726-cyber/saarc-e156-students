@@ -1,0 +1,122 @@
+{
+  "slug": "snakebite-neglected-crisis",
+  "country_counts": {
+    "India": 4,
+    "Pakistan": 0,
+    "Bangladesh": 1,
+    "Sri Lanka": 1,
+    "Nepal": 1,
+    "Afghanistan": 0,
+    "Bhutan": 0,
+    "Maldives": 0
+  },
+  "saarc_total": 7,
+  "metrics": {
+    "total": 7,
+    "statuses": {
+      "COMPLETED": 5,
+      "UNKNOWN": 1,
+      "TERMINATED": 1
+    },
+    "phases": {
+      "NA": 3,
+      "PHASE4": 2,
+      "PHASE2": 2
+    },
+    "enrollment_values": [
+      41,
+      180000,
+      1000,
+      250,
+      95,
+      50,
+      66
+    ],
+    "start_years": [
+      2004,
+      2022,
+      2005,
+      2011,
+      2021,
+      2016,
+      2016
+    ],
+    "countries": {
+      "India": 11,
+      "Bangladesh": 1,
+      "Sri Lanka": 1,
+      "Nepal": 3,
+      "United States": 8
+    },
+    "cities": {
+      "Chandigarh": 3,
+      "Patuakhali": 1,
+      "Ragama": 1,
+      "Bharatpur": 1,
+      "Charali": 1,
+      "Damak": 1,
+      "Tucson": 1,
+      "Loma Linda": 1,
+      "Jacksonville": 1,
+      "Augusta": 1,
+      "Lexington": 1,
+      "Shreveport": 1,
+      "Jackson": 1,
+      "Durham": 1,
+      "Kozhikode": 1,
+      "Mangalore": 1,
+      "Mysore": 1,
+      "Thrissur": 1,
+      "Puducherry": 2,
+      "Bikaner": 1,
+      "Kolkata": 1
+    },
+    "designs": {
+      "randomized": 6,
+      "non_randomized": 1,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Snake Bite",
+      "Weaning",
+      "Mechanical Ventilation",
+      "Snakebite",
+      "Snake Bites",
+      "Snake Bite",
+      "Snakebites",
+      "Envenoming",
+      "Envenoming, Snake",
+      "Snake Envenomation",
+      "Invasive Mechanical Ventilation",
+      "Adaptive Support Ventilation",
+      "Snake Bites"
+    ],
+    "sponsors": {
+      "Post Graduate Institute of Medical Education and Research, Chandigarh": 2,
+      "Toxicology Society of Bangladesh": 1,
+      "University of Kelaniya": 1,
+      "CTU": 1,
+      "Ophirex, Inc.": 1,
+      "Jawaharlal Institute of Postgraduate Medical Education & Research": 1
+    },
+    "sponsor_classes": {
+      "OTHER": 5,
+      "INDUSTRY": 1,
+      "OTHER_GOV": 1
+    }
+  },
+  "query": {
+    "condition": "Snakebite OR Snake Envenomation",
+    "countries": [
+      "India",
+      "Pakistan",
+      "Bangladesh",
+      "Sri Lanka",
+      "Nepal",
+      "Afghanistan",
+      "Bhutan",
+      "Maldives"
+    ]
+  },
+  "global_count": 20
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "occupational-health",
+  "country_counts": {
+    "India": 5,
+    "Pakistan": 3,
+    "Bangladesh": 3,
+    "Sri Lanka": 0,
+    "Nepal": 2,
+    "Afghanistan": 0,
+    "Bhutan": 0,
+    "Maldives": 0
+  },
+  "saarc_total": 13,
+  "metrics": {
+    "total": 13,
+    "statuses": {
+      "COMPLETED": 8,
+      "RECRUITING": 2,
+      "UNKNOWN": 3
+    },
+    "phases": {
+      "NA": 13
+    },
+    "enrollment_values": [
+      40,
+      140,
+      600,
+      98,
+      1000,
+      400,
+      20,
+      12,
+      330,
+      80,
+      2031,
+      200,
+      2108
+    ],
+    "start_years": [
+      2015,
+      2019,
+      2022,
+      2024,
+      2023,
+      2023,
+      2023,
+      2024,
+      2023,
+      2020,
+      2019,
+      2017,
+      2017
+    ],
+    "countries": {
+      "India": 6,
+      "Belgium": 1,
+      "Hong Kong": 1,
+      "United Kingdom": 1,
+      "Nepal": 3,
+      "United States": 2,
+      "Bangladesh": 3,
+      "Pakistan": 3
+    },
+    "cities": {
+      "Chandigarh": 1,
+      "Brussels": 1,
+      "Hong Kong": 1,
+      "Jaipur": 1,
+      "London": 1,
+      "Kavre": 1,
+      "Sindhupalchok": 1,
+      "Baltimore": 1,
+      "Durham": 1,
+      "Maharajgunj": 1,
+      "Dhaka": 3,
+      "Lahore": 1,
+      "Karachi": 2,
+      "Bhopal": 1,
+      "Ujjain": 1,
+      "Chennai": 1,
+      "New Delhi": 1
+    },
+    "designs": {
+      "randomized": 10,
+      "non_randomized": 3,
+      "observational": 0
+    },
+    "conditions_list": [
+      "Autistic Children With Sensory Processing Abnormalities",
+      "Occupational Stress",
+      "Psychological Stress",
+      "Behavior, Health",
+      "Behavior, Maternal",
+      "Work Related Stress",
+      "Silicosis",
+      "Air Pollution",
+      "mHealth Intervention",
+      "Cardiopulmonary Function",
+      "Work-Related Condition",
+      "Menstrual Discomfort",
+      "Occupational Problems",
+      "Wrist-Drop",
+      "Substance Abuse Disorder",
+      "Work Related Stress",
+      "Burnout, Psychological",
+      "Mental Health Issue",
+      "Insomnia",
+      "Sleep",
+      "Sleep Disorders, Circadian Rhythm",
+      "Occupational Diseases",
+      "Occupational Lung Disease",
+      "Household Air Polution",
+      "Cardiovascular Diseases",
+      "Lung Diseases",
+      "Diabetes",
+      "Heart Disease",
+      "Obesity"
+    ],
+    "sponsors": {
+      "Post Graduate Institute of Medical Education and Research, Chandigarh": 1,
+      "Aarogyam UK": 1,
+      "University of Bern": 1,
+      "Johns Hopkins University": 1,
+      "International Centre for Diarrhoeal Disease Research, Bangladesh": 2,
+      "Hiroshima University": 1,
+      "Superior University": 1,
+      "Hammad Mursaleen": 1,
+      "Templeton World Charity Foundation": 1,
+      "Neurovalens Ltd.": 1,
+      "Aga Khan University": 1,
+      "Emory University": 1
+    },
+    "sponsor_classes": {
+      "OTHER": 12,
+      "INDUSTRY": 1
+    }
+  },
+  "query": {
+    "condition": "Occupational Health OR Occupational Disease",
+    "countries": [
+      "India",
+      "Pakistan",
+      "Bangladesh",
+      "Sri Lanka",
+      "Nepal",
+      "Afghanistan",
+      "Bhutan",
+      "Maldives"
+    ]
+  },
+  "global_count": 1093
+}
