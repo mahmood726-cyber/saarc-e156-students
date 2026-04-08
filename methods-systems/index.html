@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methods, Design &amp; Research Systems — SAARC E156</title>
+<meta property="og:title" content="Methods, Design &amp; Research Systems — SAARC Clinical Trial Equity">
+<meta property="og:description" content="Trial design quality, methodological rigor, and research infrastructure across SAARC.">
+<meta property="og:type" content="website">
+<style>
+
+:root {
+    --bg: #f8f6f1;
+    --paper: #fffdf8;
+    --ink: #1d2430;
+    --muted: #5f6b7a;
+    --line: #d8cfbf;
+    --accent: #0d6b57;
+    --serif: Georgia,'Times New Roman',serif;
+    --mono: Consolas,SFMono-Regular,Menlo,monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0;
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1, h2, h3, h4 { margin-top: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Paper card */
+.paper-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+.paper-card .num {
+    display: inline-block;
+    width: 2rem; height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+.paper-card h3 {
+    display: inline; vertical-align: middle;
+    font-size: 1.15rem;
+}
+.sent-strip {
+    display: flex; gap: 2px;
+    margin: 0.8rem 0;
+    height: 8px; border-radius: 3px; overflow: hidden;
+}
+.sent-strip .seg { flex: 1; }
+.paper-body {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+.actions {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--serif);
+}
+.btn:hover { background: #f0ede5; text-decoration: none; }
+.refs { margin-bottom: 1rem; }
+.refs h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.refs ol { margin: 0; padding-left: 1.4rem; font-size: 0.85rem; color: var(--muted); }
+.note-block {
+    background: #f4f1ea;
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0 4px 4px 0;
+}
+.note-block .row {
+    display: flex; gap: 0.4rem; padding: 0.15rem 0;
+}
+.note-block .key {
+    font-weight: 700; min-width: 90px;
+}
+
+/* Masthead */
+.masthead {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 2rem;
+}
+.masthead h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+.masthead p { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+
+/* Instructions panel */
+.instructions {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.instructions h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.instructions ol { padding-left: 1.4rem; font-size: 0.95rem; }
+.instructions li { margin-bottom: 0.3rem; }
+
+/* E156 rules collapsible */
+details {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+details ol { font-size: 0.9rem; padding-left: 1.4rem; }
+
+.masthead { border-bottom-color: #0b5345; }
+.paper-card .num { background: #0b5345; }
+.note-block { border-left-color: #0b5345; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="masthead">
+  <h1 style="color:#0b5345">Methods, Design &amp; Research Systems</h1>
+  <p>Trial design quality, methodological rigor, and research infrastructure across SAARC.</p>
+  <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted)">
+    35 papers &middot; SAARC Clinical Trial Equity &middot; 8 SAARC nations
+  </p>
+</div>
+
+<div class="instructions">
+  <h2>Student Workflow — Ziauddin Medical University</h2>
+  <ol>
+    <li>Read the AI-drafted abstract carefully (the grey body text).</li>
+    <li>Open the interactive dashboard to explore charts and numbers.</li>
+    <li>Download the Python code to reproduce the analysis yourself.</li>
+    <li>Write your own 7-sentence, at-most-156-word E156 micro-paper.</li>
+    <li>Compare your version against the AI draft — where do they diverge?</li>
+    <li>Review the suggested references and add any you find relevant.</li>
+    <li>Submit your final E156 via the course portal before the deadline.</li>
+  </ol>
+</div>
+
+<article class="paper-card" id="paper-1">
+  <span class="num" aria-hidden="true">1</span>
+  <h3>Phase Distribution Analysis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/phase-distribution-analysis.html" class="btn">View Dashboard</a>
+    <a href="code/phase-distribution-analysis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('phase-distribution-analysis','Phase Distribution Analysis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-2">
+  <span class="num" aria-hidden="true">2</span>
+  <h3>Randomization Quality Audit</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/randomization-quality-audit.html" class="btn">View Dashboard</a>
+    <a href="code/randomization-quality-audit.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('randomization-quality-audit','Randomization Quality Audit')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-3">
+  <span class="num" aria-hidden="true">3</span>
+  <h3>Sample Size Adequacy</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/sample-size-adequacy.html" class="btn">View Dashboard</a>
+    <a href="code/sample-size-adequacy.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('sample-size-adequacy','Sample Size Adequacy')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-4">
+  <span class="num" aria-hidden="true">4</span>
+  <h3>Primary Endpoint Selection</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/primary-endpoint-selection.html" class="btn">View Dashboard</a>
+    <a href="code/primary-endpoint-selection.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('primary-endpoint-selection','Primary Endpoint Selection')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-5">
+  <span class="num" aria-hidden="true">5</span>
+  <h3>Completion Rate Analysis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/completion-rate-analysis.html" class="btn">View Dashboard</a>
+    <a href="code/completion-rate-analysis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('completion-rate-analysis','Completion Rate Analysis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-6">
+  <span class="num" aria-hidden="true">6</span>
+  <h3>Time-to-Completion Trends</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/time-to-completion-trends.html" class="btn">View Dashboard</a>
+    <a href="code/time-to-completion-trends.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('time-to-completion-trends','Time-to-Completion Trends')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-7">
+  <span class="num" aria-hidden="true">7</span>
+  <h3>Adaptive Design Adoption</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/adaptive-design-adoption.html" class="btn">View Dashboard</a>
+    <a href="code/adaptive-design-adoption.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('adaptive-design-adoption','Adaptive Design Adoption')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-8">
+  <span class="num" aria-hidden="true">8</span>
+  <h3>Pragmatic vs Explanatory</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pragmatic-vs-explanatory.html" class="btn">View Dashboard</a>
+    <a href="code/pragmatic-vs-explanatory.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pragmatic-vs-explanatory','Pragmatic vs Explanatory')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-9">
+  <span class="num" aria-hidden="true">9</span>
+  <h3>Biostatistical Method Quality</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/biostatistical-method-quality.html" class="btn">View Dashboard</a>
+    <a href="code/biostatistical-method-quality.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('biostatistical-method-quality','Biostatistical Method Quality')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-10">
+  <span class="num" aria-hidden="true">10</span>
+  <h3>Protocol Amendment Frequency</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/protocol-amendment-frequency.html" class="btn">View Dashboard</a>
+    <a href="code/protocol-amendment-frequency.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('protocol-amendment-frequency','Protocol Amendment Frequency')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-11">
+  <span class="num" aria-hidden="true">11</span>
+  <h3>Recruitment Rate Analysis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/recruitment-rate-analysis.html" class="btn">View Dashboard</a>
+    <a href="code/recruitment-rate-analysis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('recruitment-rate-analysis','Recruitment Rate Analysis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-12">
+  <span class="num" aria-hidden="true">12</span>
+  <h3>Dropout &amp; Attrition Patterns</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/dropout-attrition-patterns.html" class="btn">View Dashboard</a>
+    <a href="code/dropout-attrition-patterns.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('dropout-attrition-patterns','Dropout &amp; Attrition Patterns')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-13">
+  <span class="num" aria-hidden="true">13</span>
+  <h3>Multi-Arm Trial Efficiency</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/multi-arm-trial-efficiency.html" class="btn">View Dashboard</a>
+    <a href="code/multi-arm-trial-efficiency.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('multi-arm-trial-efficiency','Multi-Arm Trial Efficiency')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-14">
+  <span class="num" aria-hidden="true">14</span>
+  <h3>Non-Inferiority Trial Usage</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/non-inferiority-trial-usage.html" class="btn">View Dashboard</a>
+    <a href="code/non-inferiority-trial-usage.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('non-inferiority-trial-usage','Non-Inferiority Trial Usage')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-15">
+  <span class="num" aria-hidden="true">15</span>
+  <h3>Cluster RCT Patterns</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/cluster-rct-patterns.html" class="btn">View Dashboard</a>
+    <a href="code/cluster-rct-patterns.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('cluster-rct-patterns','Cluster RCT Patterns')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-16">
+  <span class="num" aria-hidden="true">16</span>
+  <h3>Interim Analysis Reporting</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/interim-analysis-reporting.html" class="btn">View Dashboard</a>
+    <a href="code/interim-analysis-reporting.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('interim-analysis-reporting','Interim Analysis Reporting')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-17">
+  <span class="num" aria-hidden="true">17</span>
+  <h3>Composite Endpoint Prevalence</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/composite-endpoint-prevalence.html" class="btn">View Dashboard</a>
+    <a href="code/composite-endpoint-prevalence.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('composite-endpoint-prevalence','Composite Endpoint Prevalence')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-18">
+  <span class="num" aria-hidden="true">18</span>
+  <h3>Patient-Reported Outcome Use</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/patient-reported-outcome-use.html" class="btn">View Dashboard</a>
+    <a href="code/patient-reported-outcome-use.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('patient-reported-outcome-use','Patient-Reported Outcome Use')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-19">
+  <span class="num" aria-hidden="true">19</span>
+  <h3>Biomarker-Driven Trial Design</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/biomarker-driven-trial-design.html" class="btn">View Dashboard</a>
+    <a href="code/biomarker-driven-trial-design.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('biomarker-driven-trial-design','Biomarker-Driven Trial Design')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-20">
+  <span class="num" aria-hidden="true">20</span>
+  <h3>Bayesian Design Adoption</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/bayesian-design-adoption.html" class="btn">View Dashboard</a>
+    <a href="code/bayesian-design-adoption.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('bayesian-design-adoption','Bayesian Design Adoption')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Bayesian Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-21">
+  <span class="num" aria-hidden="true">21</span>
+  <h3>Registry Data Quality</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/registry-data-quality.html" class="btn">View Dashboard</a>
+    <a href="code/registry-data-quality.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('registry-data-quality','Registry Data Quality')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-22">
+  <span class="num" aria-hidden="true">22</span>
+  <h3>Cross-Over Design Usage</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/cross-over-design-usage.html" class="btn">View Dashboard</a>
+    <a href="code/cross-over-design-usage.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('cross-over-design-usage','Cross-Over Design Usage')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-23">
+  <span class="num" aria-hidden="true">23</span>
+  <h3>Equivalence Trial Standards</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/equivalence-trial-standards.html" class="btn">View Dashboard</a>
+    <a href="code/equivalence-trial-standards.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('equivalence-trial-standards','Equivalence Trial Standards')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-24">
+  <span class="num" aria-hidden="true">24</span>
+  <h3>Outcome Reporting Bias</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/outcome-reporting-bias.html" class="btn">View Dashboard</a>
+    <a href="code/outcome-reporting-bias.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('outcome-reporting-bias','Outcome Reporting Bias')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-25">
+  <span class="num" aria-hidden="true">25</span>
+  <h3>Subgroup Analysis Practices</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/subgroup-analysis-practices.html" class="btn">View Dashboard</a>
+    <a href="code/subgroup-analysis-practices.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('subgroup-analysis-practices','Subgroup Analysis Practices')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-26">
+  <span class="num" aria-hidden="true">26</span>
+  <h3>Follow-Up Duration Adequacy</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/follow-up-duration-adequacy.html" class="btn">View Dashboard</a>
+    <a href="code/follow-up-duration-adequacy.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('follow-up-duration-adequacy','Follow-Up Duration Adequacy')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-27">
+  <span class="num" aria-hidden="true">27</span>
+  <h3>Real-World Evidence Integration</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/real-world-evidence-integration.html" class="btn">View Dashboard</a>
+    <a href="code/real-world-evidence-integration.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('real-world-evidence-integration','Real-World Evidence Integration')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-28">
+  <span class="num" aria-hidden="true">28</span>
+  <h3>Digital Health Trial Methods</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/digital-health-trial-methods.html" class="btn">View Dashboard</a>
+    <a href="code/digital-health-trial-methods.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('digital-health-trial-methods','Digital Health Trial Methods')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-29">
+  <span class="num" aria-hidden="true">29</span>
+  <h3>Pilot &amp; Feasibility Studies</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pilot-feasibility-studies.html" class="btn">View Dashboard</a>
+    <a href="code/pilot-feasibility-studies.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pilot-feasibility-studies','Pilot &amp; Feasibility Studies')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-30">
+  <span class="num" aria-hidden="true">30</span>
+  <h3>Systematic Review Coverage</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/systematic-review-coverage.html" class="btn">View Dashboard</a>
+    <a href="code/systematic-review-coverage.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('systematic-review-coverage','Systematic Review Coverage')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-31">
+  <span class="num" aria-hidden="true">31</span>
+  <h3>Benford&#x27;s Law Enrollment Audit</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/benford-law-enrollment-audit.html" class="btn">View Dashboard</a>
+    <a href="code/benford-law-enrollment-audit.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('benford-law-enrollment-audit','Benford&#x27;s Law Enrollment Audit')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-32">
+  <span class="num" aria-hidden="true">32</span>
+  <h3>PCA of Trial Characteristics</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pca-trial-characteristics.html" class="btn">View Dashboard</a>
+    <a href="code/pca-trial-characteristics.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pca-trial-characteristics','PCA of Trial Characteristics')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-33">
+  <span class="num" aria-hidden="true">33</span>
+  <h3>Network Analysis of Investigators</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/network-analysis-investigators.html" class="btn">View Dashboard</a>
+    <a href="code/network-analysis-investigators.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('network-analysis-investigators','Network Analysis of Investigators')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Network Centrality</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-34">
+  <span class="num" aria-hidden="true">34</span>
+  <h3>Machine-Readable Protocol Quality</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/machine-readable-protocol-quality.html" class="btn">View Dashboard</a>
+    <a href="code/machine-readable-protocol-quality.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('machine-readable-protocol-quality','Machine-Readable Protocol Quality')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-35">
+  <span class="num" aria-hidden="true">35</span>
+  <h3>Methodological Rigor Composite</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/methodological-rigor-composite.html" class="btn">View Dashboard</a>
+    <a href="code/methodological-rigor-composite.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('methodological-rigor-composite','Methodological Rigor Composite')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+
+
+<details>
+  <summary>E156 Format Rules (click to expand)</summary>
+  <ol>
+    <li>Exactly 7 sentences (S1-S7), at most 156 words, single paragraph.</li>
+    <li>No citations, links, or metadata inside the body text.</li>
+    <li>S1 = Question (population, intervention, endpoint).</li>
+    <li>S2 = Dataset (studies, participants, scope).</li>
+    <li>S3 = Method (synthesis model, effect scale).</li>
+    <li>S4 = Result (lead estimate + confidence interval).</li>
+    <li>S5 = Robustness (heterogeneity, sensitivity).</li>
+    <li>S6 = Interpretation (plain-language meaning).</li>
+    <li>S7 = Boundary (main limitation).</li>
+  </ol>
+</details>
+
+</div>
+<script>
+function downloadMd(slug, title) {
+  var card = document.getElementById('paper-' + slug) ||
+             event.target.closest('.paper-card');
+  var body = card ? card.querySelector('.paper-body').textContent : '';
+  var md = '# ' + (title || slug) + '\n\n' + body.trim() + '\n';
+  var blob = new Blob([md], {type: 'text/markdown'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = slug + '.md';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

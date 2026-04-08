@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pakistan Deep-Dive — SAARC E156</title>
+<meta property="og:title" content="Pakistan Deep-Dive — SAARC Clinical Trial Equity">
+<meta property="og:description" content="Provincial inequity, institutional concentration, disease-specific gaps, and workforce analysis within Pakistan.">
+<meta property="og:type" content="website">
+<style>
+
+:root {
+    --bg: #f8f6f1;
+    --paper: #fffdf8;
+    --ink: #1d2430;
+    --muted: #5f6b7a;
+    --line: #d8cfbf;
+    --accent: #0d6b57;
+    --serif: Georgia,'Times New Roman',serif;
+    --mono: Consolas,SFMono-Regular,Menlo,monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0;
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1, h2, h3, h4 { margin-top: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Paper card */
+.paper-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+.paper-card .num {
+    display: inline-block;
+    width: 2rem; height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+.paper-card h3 {
+    display: inline; vertical-align: middle;
+    font-size: 1.15rem;
+}
+.sent-strip {
+    display: flex; gap: 2px;
+    margin: 0.8rem 0;
+    height: 8px; border-radius: 3px; overflow: hidden;
+}
+.sent-strip .seg { flex: 1; }
+.paper-body {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+.actions {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--serif);
+}
+.btn:hover { background: #f0ede5; text-decoration: none; }
+.refs { margin-bottom: 1rem; }
+.refs h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.refs ol { margin: 0; padding-left: 1.4rem; font-size: 0.85rem; color: var(--muted); }
+.note-block {
+    background: #f4f1ea;
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0 4px 4px 0;
+}
+.note-block .row {
+    display: flex; gap: 0.4rem; padding: 0.15rem 0;
+}
+.note-block .key {
+    font-weight: 700; min-width: 90px;
+}
+
+/* Masthead */
+.masthead {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 2rem;
+}
+.masthead h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+.masthead p { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+
+/* Instructions panel */
+.instructions {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.instructions h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.instructions ol { padding-left: 1.4rem; font-size: 0.95rem; }
+.instructions li { margin-bottom: 0.3rem; }
+
+/* E156 rules collapsible */
+details {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+details ol { font-size: 0.9rem; padding-left: 1.4rem; }
+
+.masthead { border-bottom-color: #4a235a; }
+.paper-card .num { background: #4a235a; }
+.note-block { border-left-color: #4a235a; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="masthead">
+  <h1 style="color:#4a235a">Pakistan Deep-Dive</h1>
+  <p>Provincial inequity, institutional concentration, disease-specific gaps, and workforce analysis within Pakistan.</p>
+  <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted)">
+    50 papers &middot; SAARC Clinical Trial Equity &middot; 8 SAARC nations
+  </p>
+</div>
+
+<div class="instructions">
+  <h2>Student Workflow — Ziauddin Medical University</h2>
+  <ol>
+    <li>Read the AI-drafted abstract carefully (the grey body text).</li>
+    <li>Open the interactive dashboard to explore charts and numbers.</li>
+    <li>Download the Python code to reproduce the analysis yourself.</li>
+    <li>Write your own 7-sentence, at-most-156-word E156 micro-paper.</li>
+    <li>Compare your version against the AI draft — where do they diverge?</li>
+    <li>Review the suggested references and add any you find relevant.</li>
+    <li>Submit your final E156 via the course portal before the deadline.</li>
+  </ol>
+</div>
+
+<article class="paper-card" id="paper-1">
+  <span class="num" aria-hidden="true">1</span>
+  <h3>Punjab Trial Dominance</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/punjab-trial-dominance.html" class="btn">View Dashboard</a>
+    <a href="code/punjab-trial-dominance.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('punjab-trial-dominance','Punjab Trial Dominance')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-2">
+  <span class="num" aria-hidden="true">2</span>
+  <h3>Sindh &amp; Karachi Landscape</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/sindh-karachi-landscape.html" class="btn">View Dashboard</a>
+    <a href="code/sindh-karachi-landscape.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('sindh-karachi-landscape','Sindh &amp; Karachi Landscape')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-3">
+  <span class="num" aria-hidden="true">3</span>
+  <h3>KPK &amp; Tribal Areas</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/kpk-tribal-areas.html" class="btn">View Dashboard</a>
+    <a href="code/kpk-tribal-areas.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('kpk-tribal-areas','KPK &amp; Tribal Areas')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-4">
+  <span class="num" aria-hidden="true">4</span>
+  <h3>Balochistan Research Desert</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/balochistan-research-desert.html" class="btn">View Dashboard</a>
+    <a href="code/balochistan-research-desert.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('balochistan-research-desert','Balochistan Research Desert')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-5">
+  <span class="num" aria-hidden="true">5</span>
+  <h3>Islamabad Capital Advantage</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/islamabad-capital-advantage.html" class="btn">View Dashboard</a>
+    <a href="code/islamabad-capital-advantage.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('islamabad-capital-advantage','Islamabad Capital Advantage')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-6">
+  <span class="num" aria-hidden="true">6</span>
+  <h3>Gilgit-Baltistan &amp; AJK</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/gilgit-baltistan-ajk.html" class="btn">View Dashboard</a>
+    <a href="code/gilgit-baltistan-ajk.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('gilgit-baltistan-ajk','Gilgit-Baltistan &amp; AJK')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-7">
+  <span class="num" aria-hidden="true">7</span>
+  <h3>Provincial Per-Capita Trial Inequality</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/provincial-per-capita-trial-inequality.html" class="btn">View Dashboard</a>
+    <a href="code/provincial-per-capita-trial-inequality.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('provincial-per-capita-trial-inequality','Provincial Per-Capita Trial Inequality')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-8">
+  <span class="num" aria-hidden="true">8</span>
+  <h3>Provincial Health Budget vs Trial Density</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/provincial-health-budget-vs-trial-density.html" class="btn">View Dashboard</a>
+    <a href="code/provincial-health-budget-vs-trial-density.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('provincial-health-budget-vs-trial-density','Provincial Health Budget vs Trial Density')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-9">
+  <span class="num" aria-hidden="true">9</span>
+  <h3>Urban-Rural Punjab Disparity</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/urban-rural-punjab-disparity.html" class="btn">View Dashboard</a>
+    <a href="code/urban-rural-punjab-disparity.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('urban-rural-punjab-disparity','Urban-Rural Punjab Disparity')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-10">
+  <span class="num" aria-hidden="true">10</span>
+  <h3>Inter-Provincial Trend Analysis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/inter-provincial-trend-analysis.html" class="btn">View Dashboard</a>
+    <a href="code/inter-provincial-trend-analysis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('inter-provincial-trend-analysis','Inter-Provincial Trend Analysis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-11">
+  <span class="num" aria-hidden="true">11</span>
+  <h3>Aga Khan University Hospital</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/aga-khan-university-hospital.html" class="btn">View Dashboard</a>
+    <a href="code/aga-khan-university-hospital.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('aga-khan-university-hospital','Aga Khan University Hospital')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-12">
+  <span class="num" aria-hidden="true">12</span>
+  <h3>Ziauddin University</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/ziauddin-university.html" class="btn">View Dashboard</a>
+    <a href="code/ziauddin-university.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('ziauddin-university','Ziauddin University')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-13">
+  <span class="num" aria-hidden="true">13</span>
+  <h3>Military Hospital Network</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/military-hospital-network.html" class="btn">View Dashboard</a>
+    <a href="code/military-hospital-network.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('military-hospital-network','Military Hospital Network')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Network Centrality</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-14">
+  <span class="num" aria-hidden="true">14</span>
+  <h3>Shaukat Khanum Cancer Network</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/shaukat-khanum-cancer-network.html" class="btn">View Dashboard</a>
+    <a href="code/shaukat-khanum-cancer-network.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('shaukat-khanum-cancer-network','Shaukat Khanum Cancer Network')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-15">
+  <span class="num" aria-hidden="true">15</span>
+  <h3>Public Sector Teaching Hospitals</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/public-sector-teaching-hospitals.html" class="btn">View Dashboard</a>
+    <a href="code/public-sector-teaching-hospitals.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('public-sector-teaching-hospitals','Public Sector Teaching Hospitals')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-16">
+  <span class="num" aria-hidden="true">16</span>
+  <h3>Private vs Public Trial Divide</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/private-vs-public-trial-divide.html" class="btn">View Dashboard</a>
+    <a href="code/private-vs-public-trial-divide.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('private-vs-public-trial-divide','Private vs Public Trial Divide')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-17">
+  <span class="num" aria-hidden="true">17</span>
+  <h3>Medical College Research Output</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/medical-college-research-output.html" class="btn">View Dashboard</a>
+    <a href="code/medical-college-research-output.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('medical-college-research-output','Medical College Research Output')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-18">
+  <span class="num" aria-hidden="true">18</span>
+  <h3>Institutional Collaboration Networks</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/institutional-collaboration-networks.html" class="btn">View Dashboard</a>
+    <a href="code/institutional-collaboration-networks.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('institutional-collaboration-networks','Institutional Collaboration Networks')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Network Centrality</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-19">
+  <span class="num" aria-hidden="true">19</span>
+  <h3>Cardiovascular Disease</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-cardiovascular-disease.html" class="btn">View Dashboard</a>
+    <a href="code/pak-cardiovascular-disease.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-cardiovascular-disease','Cardiovascular Disease')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-20">
+  <span class="num" aria-hidden="true">20</span>
+  <h3>Diabetes Tsunami</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-diabetes-tsunami.html" class="btn">View Dashboard</a>
+    <a href="code/pak-diabetes-tsunami.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-diabetes-tsunami','Diabetes Tsunami')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-21">
+  <span class="num" aria-hidden="true">21</span>
+  <h3>Hepatitis C Epidemic</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-hepatitis-c-epidemic.html" class="btn">View Dashboard</a>
+    <a href="code/pak-hepatitis-c-epidemic.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-hepatitis-c-epidemic','Hepatitis C Epidemic')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-22">
+  <span class="num" aria-hidden="true">22</span>
+  <h3>Hepatitis B Burden</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-hepatitis-b-burden.html" class="btn">View Dashboard</a>
+    <a href="code/pak-hepatitis-b-burden.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-hepatitis-b-burden','Hepatitis B Burden')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-23">
+  <span class="num" aria-hidden="true">23</span>
+  <h3>Tuberculosis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-tuberculosis.html" class="btn">View Dashboard</a>
+    <a href="code/pak-tuberculosis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-tuberculosis','Tuberculosis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Bayesian Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-24">
+  <span class="num" aria-hidden="true">24</span>
+  <h3>Polio Eradication Last Mile</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-polio-eradication-last-mile.html" class="btn">View Dashboard</a>
+    <a href="code/pak-polio-eradication-last-mile.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-polio-eradication-last-mile','Polio Eradication Last Mile')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-25">
+  <span class="num" aria-hidden="true">25</span>
+  <h3>Thalassemia Major</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-thalassemia-major.html" class="btn">View Dashboard</a>
+    <a href="code/pak-thalassemia-major.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-thalassemia-major','Thalassemia Major')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-26">
+  <span class="num" aria-hidden="true">26</span>
+  <h3>Dengue Outbreaks</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-dengue-outbreaks.html" class="btn">View Dashboard</a>
+    <a href="code/pak-dengue-outbreaks.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-dengue-outbreaks','Dengue Outbreaks')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-27">
+  <span class="num" aria-hidden="true">27</span>
+  <h3>Maternal &amp; Neonatal Health</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-maternal-neonatal-health.html" class="btn">View Dashboard</a>
+    <a href="code/pak-maternal-neonatal-health.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-maternal-neonatal-health','Maternal &amp; Neonatal Health')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-28">
+  <span class="num" aria-hidden="true">28</span>
+  <h3>Mental Health Chasm</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-mental-health-chasm.html" class="btn">View Dashboard</a>
+    <a href="code/pak-mental-health-chasm.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-mental-health-chasm','Mental Health Chasm')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-29">
+  <span class="num" aria-hidden="true">29</span>
+  <h3>Childhood Pneumonia &amp; Diarrhoea</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-childhood-pneumonia-diarrhoea.html" class="btn">View Dashboard</a>
+    <a href="code/pak-childhood-pneumonia-diarrhoea.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-childhood-pneumonia-diarrhoea','Childhood Pneumonia &amp; Diarrhoea')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-30">
+  <span class="num" aria-hidden="true">30</span>
+  <h3>Oral Cancer &amp; Naswar/Gutka</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-oral-cancer-naswar-gutka.html" class="btn">View Dashboard</a>
+    <a href="code/pak-oral-cancer-naswar-gutka.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-oral-cancer-naswar-gutka','Oral Cancer &amp; Naswar/Gutka')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-31">
+  <span class="num" aria-hidden="true">31</span>
+  <h3>Foreign Sponsor Map</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-foreign-sponsor-map.html" class="btn">View Dashboard</a>
+    <a href="code/pak-foreign-sponsor-map.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-foreign-sponsor-map','Foreign Sponsor Map')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-32">
+  <span class="num" aria-hidden="true">32</span>
+  <h3>DRAP Regulatory Timeline</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-drap-regulatory-timeline.html" class="btn">View Dashboard</a>
+    <a href="code/pak-drap-regulatory-timeline.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-drap-regulatory-timeline','DRAP Regulatory Timeline')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-33">
+  <span class="num" aria-hidden="true">33</span>
+  <h3>Pharma Industry Presence</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-pharma-industry-presence.html" class="btn">View Dashboard</a>
+    <a href="code/pak-pharma-industry-presence.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-pharma-industry-presence','Pharma Industry Presence')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-34">
+  <span class="num" aria-hidden="true">34</span>
+  <h3>Academic vs Industry Ratio</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-academic-vs-industry-ratio.html" class="btn">View Dashboard</a>
+    <a href="code/pak-academic-vs-industry-ratio.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-academic-vs-industry-ratio','Academic vs Industry Ratio')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-35">
+  <span class="num" aria-hidden="true">35</span>
+  <h3>Data Repatriation</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-data-repatriation.html" class="btn">View Dashboard</a>
+    <a href="code/pak-data-repatriation.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-data-repatriation','Data Repatriation')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Hedt-Gauthier BL, et al. &quot;Stuck in the middle: authorship in collaborative health research.&quot; BMJ Glob Health. 2019;4:e001853.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-36">
+  <span class="num" aria-hidden="true">36</span>
+  <h3>Post-Trial Drug Access</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-post-trial-drug-access.html" class="btn">View Dashboard</a>
+    <a href="code/pak-post-trial-drug-access.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-post-trial-drug-access','Post-Trial Drug Access')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>Lang T, Siribaddana S. &quot;Clinical trials have gone global: is this a good thing?&quot; PLoS Med. 2012;9:e1001228.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-37">
+  <span class="num" aria-hidden="true">37</span>
+  <h3>Generic Drug Trial Pipeline</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-generic-drug-trial-pipeline.html" class="btn">View Dashboard</a>
+    <a href="code/pak-generic-drug-trial-pipeline.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-generic-drug-trial-pipeline','Generic Drug Trial Pipeline')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-38">
+  <span class="num" aria-hidden="true">38</span>
+  <h3>HEC Research Funding</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-hec-research-funding.html" class="btn">View Dashboard</a>
+    <a href="code/pak-hec-research-funding.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-hec-research-funding','HEC Research Funding')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Higher Education Commission Pakistan. &quot;R&amp;D Statistics.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-39">
+  <span class="num" aria-hidden="true">39</span>
+  <h3>PI Gender Distribution</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-pi-gender-distribution.html" class="btn">View Dashboard</a>
+    <a href="code/pak-pi-gender-distribution.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-pi-gender-distribution','PI Gender Distribution')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Hedt-Gauthier BL, et al. &quot;Stuck in the middle: authorship in collaborative health research.&quot; BMJ Glob Health. 2019;4:e001853.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Odds Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-40">
+  <span class="num" aria-hidden="true">40</span>
+  <h3>Trial Completion Rate</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-trial-completion-rate.html" class="btn">View Dashboard</a>
+    <a href="code/pak-trial-completion-rate.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-trial-completion-rate','Trial Completion Rate')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-41">
+  <span class="num" aria-hidden="true">41</span>
+  <h3>Registration Quality Audit</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-registration-quality-audit.html" class="btn">View Dashboard</a>
+    <a href="code/pak-registration-quality-audit.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-registration-quality-audit','Registration Quality Audit')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-42">
+  <span class="num" aria-hidden="true">42</span>
+  <h3>Phase Distribution</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-phase-distribution.html" class="btn">View Dashboard</a>
+    <a href="code/pak-phase-distribution.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-phase-distribution','Phase Distribution')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-43">
+  <span class="num" aria-hidden="true">43</span>
+  <h3>Endpoint Appropriateness</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-endpoint-appropriateness.html" class="btn">View Dashboard</a>
+    <a href="code/pak-endpoint-appropriateness.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-endpoint-appropriateness','Endpoint Appropriateness')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-44">
+  <span class="num" aria-hidden="true">44</span>
+  <h3>Sample Size Trends</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-sample-size-trends.html" class="btn">View Dashboard</a>
+    <a href="code/pak-sample-size-trends.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-sample-size-trends','Sample Size Trends')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-45">
+  <span class="num" aria-hidden="true">45</span>
+  <h3>Statistical Methods Reporting</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pak-statistical-methods-reporting.html" class="btn">View Dashboard</a>
+    <a href="code/pak-statistical-methods-reporting.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pak-statistical-methods-reporting','Statistical Methods Reporting')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Chan AW, et al. &quot;SPIRIT 2013 statement.&quot; Ann Intern Med. 2013;158:200-207.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-46">
+  <span class="num" aria-hidden="true">46</span>
+  <h3>Karachi Trial Density Map</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/karachi-trial-density-map.html" class="btn">View Dashboard</a>
+    <a href="code/karachi-trial-density-map.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('karachi-trial-density-map','Karachi Trial Density Map')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-47">
+  <span class="num" aria-hidden="true">47</span>
+  <h3>Karachi Disease Burden Match</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/karachi-disease-burden-match.html" class="btn">View Dashboard</a>
+    <a href="code/karachi-disease-burden-match.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('karachi-disease-burden-match','Karachi Disease Burden Match')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-48">
+  <span class="num" aria-hidden="true">48</span>
+  <h3>Ziauddin vs Aga Khan vs Dow</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/ziauddin-vs-aga-khan-vs-dow.html" class="btn">View Dashboard</a>
+    <a href="code/ziauddin-vs-aga-khan-vs-dow.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('ziauddin-vs-aga-khan-vs-dow','Ziauddin vs Aga Khan vs Dow')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-49">
+  <span class="num" aria-hidden="true">49</span>
+  <h3>Karachi&#x27;s Global Trial Share</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/karachi-global-trial-share.html" class="btn">View Dashboard</a>
+    <a href="code/karachi-global-trial-share.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('karachi-global-trial-share','Karachi&#x27;s Global Trial Share')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-50">
+  <span class="num" aria-hidden="true">50</span>
+  <h3>Karachi Recruitment Velocity</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/karachi-recruitment-velocity.html" class="btn">View Dashboard</a>
+    <a href="code/karachi-recruitment-velocity.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('karachi-recruitment-velocity','Karachi Recruitment Velocity')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+
+
+<details>
+  <summary>E156 Format Rules (click to expand)</summary>
+  <ol>
+    <li>Exactly 7 sentences (S1-S7), at most 156 words, single paragraph.</li>
+    <li>No citations, links, or metadata inside the body text.</li>
+    <li>S1 = Question (population, intervention, endpoint).</li>
+    <li>S2 = Dataset (studies, participants, scope).</li>
+    <li>S3 = Method (synthesis model, effect scale).</li>
+    <li>S4 = Result (lead estimate + confidence interval).</li>
+    <li>S5 = Robustness (heterogeneity, sensitivity).</li>
+    <li>S6 = Interpretation (plain-language meaning).</li>
+    <li>S7 = Boundary (main limitation).</li>
+  </ol>
+</details>
+
+</div>
+<script>
+function downloadMd(slug, title) {
+  var card = document.getElementById('paper-' + slug) ||
+             event.target.closest('.paper-card');
+  var body = card ? card.querySelector('.paper-body').textContent : '';
+  var md = '# ' + (title || slug) + '\n\n' + body.trim() + '\n';
+  var blob = new Blob([md], {type: 'text/markdown'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = slug + '.md';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health &amp; Disease Burden — SAARC E156</title>
+<meta property="og:title" content="Health &amp; Disease Burden — SAARC Clinical Trial Equity">
+<meta property="og:description" content="Alignment between disease burden and clinical trial investment across SAARC&#x27;s epidemiological landscape.">
+<meta property="og:type" content="website">
+<style>
+
+:root {
+    --bg: #f8f6f1;
+    --paper: #fffdf8;
+    --ink: #1d2430;
+    --muted: #5f6b7a;
+    --line: #d8cfbf;
+    --accent: #0d6b57;
+    --serif: Georgia,'Times New Roman',serif;
+    --mono: Consolas,SFMono-Regular,Menlo,monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0;
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1, h2, h3, h4 { margin-top: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Paper card */
+.paper-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+.paper-card .num {
+    display: inline-block;
+    width: 2rem; height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+.paper-card h3 {
+    display: inline; vertical-align: middle;
+    font-size: 1.15rem;
+}
+.sent-strip {
+    display: flex; gap: 2px;
+    margin: 0.8rem 0;
+    height: 8px; border-radius: 3px; overflow: hidden;
+}
+.sent-strip .seg { flex: 1; }
+.paper-body {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+.actions {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--serif);
+}
+.btn:hover { background: #f0ede5; text-decoration: none; }
+.refs { margin-bottom: 1rem; }
+.refs h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.refs ol { margin: 0; padding-left: 1.4rem; font-size: 0.85rem; color: var(--muted); }
+.note-block {
+    background: #f4f1ea;
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0 4px 4px 0;
+}
+.note-block .row {
+    display: flex; gap: 0.4rem; padding: 0.15rem 0;
+}
+.note-block .key {
+    font-weight: 700; min-width: 90px;
+}
+
+/* Masthead */
+.masthead {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 2rem;
+}
+.masthead h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+.masthead p { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+
+/* Instructions panel */
+.instructions {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.instructions h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.instructions ol { padding-left: 1.4rem; font-size: 0.95rem; }
+.instructions li { margin-bottom: 0.3rem; }
+
+/* E156 rules collapsible */
+details {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+details ol { font-size: 0.9rem; padding-left: 1.4rem; }
+
+.masthead { border-bottom-color: #922b21; }
+.paper-card .num { background: #922b21; }
+.note-block { border-left-color: #922b21; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="masthead">
+  <h1 style="color:#922b21">Health &amp; Disease Burden</h1>
+  <p>Alignment between disease burden and clinical trial investment across SAARC&#x27;s epidemiological landscape.</p>
+  <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted)">
+    35 papers &middot; SAARC Clinical Trial Equity &middot; 8 SAARC nations
+  </p>
+</div>
+
+<div class="instructions">
+  <h2>Student Workflow — Ziauddin Medical University</h2>
+  <ol>
+    <li>Read the AI-drafted abstract carefully (the grey body text).</li>
+    <li>Open the interactive dashboard to explore charts and numbers.</li>
+    <li>Download the Python code to reproduce the analysis yourself.</li>
+    <li>Write your own 7-sentence, at-most-156-word E156 micro-paper.</li>
+    <li>Compare your version against the AI draft — where do they diverge?</li>
+    <li>Review the suggested references and add any you find relevant.</li>
+    <li>Submit your final E156 via the course portal before the deadline.</li>
+  </ol>
+</div>
+
+<article class="paper-card" id="paper-1">
+  <span class="num" aria-hidden="true">1</span>
+  <h3>Cardiovascular Trial Gap</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/cardiovascular-trial-gap.html" class="btn">View Dashboard</a>
+    <a href="code/cardiovascular-trial-gap.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('cardiovascular-trial-gap','Cardiovascular Trial Gap')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-2">
+  <span class="num" aria-hidden="true">2</span>
+  <h3>Diabetes Epidemic Mismatch</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/diabetes-epidemic-mismatch.html" class="btn">View Dashboard</a>
+    <a href="code/diabetes-epidemic-mismatch.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('diabetes-epidemic-mismatch','Diabetes Epidemic Mismatch')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-3">
+  <span class="num" aria-hidden="true">3</span>
+  <h3>TB Trial Landscape</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/tb-trial-landscape.html" class="btn">View Dashboard</a>
+    <a href="code/tb-trial-landscape.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('tb-trial-landscape','TB Trial Landscape')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Bayesian Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-4">
+  <span class="num" aria-hidden="true">4</span>
+  <h3>Hepatitis B/C Hotspot</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/hepatitis-bc-hotspot.html" class="btn">View Dashboard</a>
+    <a href="code/hepatitis-bc-hotspot.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('hepatitis-bc-hotspot','Hepatitis B/C Hotspot')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-5">
+  <span class="num" aria-hidden="true">5</span>
+  <h3>Maternal Mortality Crisis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/maternal-mortality-crisis.html" class="btn">View Dashboard</a>
+    <a href="code/maternal-mortality-crisis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('maternal-mortality-crisis','Maternal Mortality Crisis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-6">
+  <span class="num" aria-hidden="true">6</span>
+  <h3>Dengue &amp; Vector-Borne</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/dengue-vector-borne.html" class="btn">View Dashboard</a>
+    <a href="code/dengue-vector-borne.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('dengue-vector-borne','Dengue &amp; Vector-Borne')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-7">
+  <span class="num" aria-hidden="true">7</span>
+  <h3>Polio Last-Mile Trials</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/polio-last-mile-trials.html" class="btn">View Dashboard</a>
+    <a href="code/polio-last-mile-trials.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('polio-last-mile-trials','Polio Last-Mile Trials')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Kaplan Meier Survival</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-8">
+  <span class="num" aria-hidden="true">8</span>
+  <h3>Thalassemia &amp; Haemoglobinopathies</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/thalassemia-haemoglobinopathies.html" class="btn">View Dashboard</a>
+    <a href="code/thalassemia-haemoglobinopathies.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('thalassemia-haemoglobinopathies','Thalassemia &amp; Haemoglobinopathies')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-9">
+  <span class="num" aria-hidden="true">9</span>
+  <h3>Mental Health Desert</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/mental-health-desert.html" class="btn">View Dashboard</a>
+    <a href="code/mental-health-desert.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('mental-health-desert','Mental Health Desert')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-10">
+  <span class="num" aria-hidden="true">10</span>
+  <h3>Childhood Pneumonia &amp; Diarrhoea</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/childhood-pneumonia-diarrhoea.html" class="btn">View Dashboard</a>
+    <a href="code/childhood-pneumonia-diarrhoea.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('childhood-pneumonia-diarrhoea','Childhood Pneumonia &amp; Diarrhoea')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-11">
+  <span class="num" aria-hidden="true">11</span>
+  <h3>Cancer Trial Disparity</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/cancer-trial-disparity.html" class="btn">View Dashboard</a>
+    <a href="code/cancer-trial-disparity.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('cancer-trial-disparity','Cancer Trial Disparity')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-12">
+  <span class="num" aria-hidden="true">12</span>
+  <h3>Rheumatic Heart Disease</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/rheumatic-heart-disease.html" class="btn">View Dashboard</a>
+    <a href="code/rheumatic-heart-disease.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('rheumatic-heart-disease','Rheumatic Heart Disease')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-13">
+  <span class="num" aria-hidden="true">13</span>
+  <h3>Chronic Kidney Disease</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/chronic-kidney-disease.html" class="btn">View Dashboard</a>
+    <a href="code/chronic-kidney-disease.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('chronic-kidney-disease','Chronic Kidney Disease')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-14">
+  <span class="num" aria-hidden="true">14</span>
+  <h3>Neonatal Mortality Focus</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/neonatal-mortality-focus.html" class="btn">View Dashboard</a>
+    <a href="code/neonatal-mortality-focus.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('neonatal-mortality-focus','Neonatal Mortality Focus')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-15">
+  <span class="num" aria-hidden="true">15</span>
+  <h3>Malnutrition &amp; Stunting</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/malnutrition-stunting.html" class="btn">View Dashboard</a>
+    <a href="code/malnutrition-stunting.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('malnutrition-stunting','Malnutrition &amp; Stunting')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-16">
+  <span class="num" aria-hidden="true">16</span>
+  <h3>Antimicrobial Resistance</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/antimicrobial-resistance.html" class="btn">View Dashboard</a>
+    <a href="code/antimicrobial-resistance.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('antimicrobial-resistance','Antimicrobial Resistance')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-17">
+  <span class="num" aria-hidden="true">17</span>
+  <h3>Snakebite Neglected Crisis</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/snakebite-neglected-crisis.html" class="btn">View Dashboard</a>
+    <a href="code/snakebite-neglected-crisis.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('snakebite-neglected-crisis','Snakebite Neglected Crisis')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-18">
+  <span class="num" aria-hidden="true">18</span>
+  <h3>Leishmaniasis (Kala-azar)</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/leishmaniasis-kala-azar.html" class="btn">View Dashboard</a>
+    <a href="code/leishmaniasis-kala-azar.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('leishmaniasis-kala-azar','Leishmaniasis (Kala-azar)')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-19">
+  <span class="num" aria-hidden="true">19</span>
+  <h3>Air Pollution &amp; Respiratory</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/air-pollution-respiratory.html" class="btn">View Dashboard</a>
+    <a href="code/air-pollution-respiratory.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('air-pollution-respiratory','Air Pollution &amp; Respiratory')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-20">
+  <span class="num" aria-hidden="true">20</span>
+  <h3>Hypertension Awareness Gap</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/hypertension-awareness-gap.html" class="btn">View Dashboard</a>
+    <a href="code/hypertension-awareness-gap.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('hypertension-awareness-gap','Hypertension Awareness Gap')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-21">
+  <span class="num" aria-hidden="true">21</span>
+  <h3>HIV Low-Prevalence Paradox</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/hiv-low-prevalence-paradox.html" class="btn">View Dashboard</a>
+    <a href="code/hiv-low-prevalence-paradox.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('hiv-low-prevalence-paradox','HIV Low-Prevalence Paradox')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-22">
+  <span class="num" aria-hidden="true">22</span>
+  <h3>Surgical Trial Scarcity</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/surgical-trial-scarcity.html" class="btn">View Dashboard</a>
+    <a href="code/surgical-trial-scarcity.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('surgical-trial-scarcity','Surgical Trial Scarcity')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-23">
+  <span class="num" aria-hidden="true">23</span>
+  <h3>Eye Health &amp; Blindness</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/eye-health-blindness.html" class="btn">View Dashboard</a>
+    <a href="code/eye-health-blindness.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('eye-health-blindness','Eye Health &amp; Blindness')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-24">
+  <span class="num" aria-hidden="true">24</span>
+  <h3>Oral Health Neglect</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/oral-health-neglect.html" class="btn">View Dashboard</a>
+    <a href="code/oral-health-neglect.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('oral-health-neglect','Oral Health Neglect')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-25">
+  <span class="num" aria-hidden="true">25</span>
+  <h3>Reproductive Health &amp; Contraception</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/reproductive-health-contraception.html" class="btn">View Dashboard</a>
+    <a href="code/reproductive-health-contraception.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('reproductive-health-contraception','Reproductive Health &amp; Contraception')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Theil Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-26">
+  <span class="num" aria-hidden="true">26</span>
+  <h3>NCD vs Communicable Balance</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/ncd-communicable-balance.html" class="btn">View Dashboard</a>
+    <a href="code/ncd-communicable-balance.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('ncd-communicable-balance','NCD vs Communicable Balance')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-27">
+  <span class="num" aria-hidden="true">27</span>
+  <h3>Rare Disease Orphan Gap</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/rare-disease-orphan-gap.html" class="btn">View Dashboard</a>
+    <a href="code/rare-disease-orphan-gap.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('rare-disease-orphan-gap','Rare Disease Orphan Gap')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-28">
+  <span class="num" aria-hidden="true">28</span>
+  <h3>Traditional Medicine Trials</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/traditional-medicine-trials.html" class="btn">View Dashboard</a>
+    <a href="code/traditional-medicine-trials.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('traditional-medicine-trials','Traditional Medicine Trials')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Singh JA. &quot;India, Sri Lanka and clinical trials.&quot; Indian J Med Ethics. 2018;3:221-228.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-29">
+  <span class="num" aria-hidden="true">29</span>
+  <h3>Vaccine Trial Pipeline</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/vaccine-trial-pipeline.html" class="btn">View Dashboard</a>
+    <a href="code/vaccine-trial-pipeline.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('vaccine-trial-pipeline','Vaccine Trial Pipeline')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-30">
+  <span class="num" aria-hidden="true">30</span>
+  <h3>Palliative Care Evidence</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/palliative-care-evidence.html" class="btn">View Dashboard</a>
+    <a href="code/palliative-care-evidence.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('palliative-care-evidence','Palliative Care Evidence')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-31">
+  <span class="num" aria-hidden="true">31</span>
+  <h3>Adolescent Health Gap</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/adolescent-health-gap.html" class="btn">View Dashboard</a>
+    <a href="code/adolescent-health-gap.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('adolescent-health-gap','Adolescent Health Gap')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-32">
+  <span class="num" aria-hidden="true">32</span>
+  <h3>Geriatric Trial Exclusion</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/geriatric-trial-exclusion.html" class="btn">View Dashboard</a>
+    <a href="code/geriatric-trial-exclusion.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('geriatric-trial-exclusion','Geriatric Trial Exclusion')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-33">
+  <span class="num" aria-hidden="true">33</span>
+  <h3>Occupational Health</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/occupational-health.html" class="btn">View Dashboard</a>
+    <a href="code/occupational-health.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('occupational-health','Occupational Health')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-34">
+  <span class="num" aria-hidden="true">34</span>
+  <h3>Burn &amp; Trauma Trials</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/burn-trauma-trials.html" class="btn">View Dashboard</a>
+    <a href="code/burn-trauma-trials.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('burn-trauma-trials','Burn &amp; Trauma Trials')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-35">
+  <span class="num" aria-hidden="true">35</span>
+  <h3>Disease Burden Concordance Index</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/disease-burden-concordance-index.html" class="btn">View Dashboard</a>
+    <a href="code/disease-burden-concordance-index.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('disease-burden-concordance-index','Disease Burden Concordance Index')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+
+
+<details>
+  <summary>E156 Format Rules (click to expand)</summary>
+  <ol>
+    <li>Exactly 7 sentences (S1-S7), at most 156 words, single paragraph.</li>
+    <li>No citations, links, or metadata inside the body text.</li>
+    <li>S1 = Question (population, intervention, endpoint).</li>
+    <li>S2 = Dataset (studies, participants, scope).</li>
+    <li>S3 = Method (synthesis model, effect scale).</li>
+    <li>S4 = Result (lead estimate + confidence interval).</li>
+    <li>S5 = Robustness (heterogeneity, sensitivity).</li>
+    <li>S6 = Interpretation (plain-language meaning).</li>
+    <li>S7 = Boundary (main limitation).</li>
+  </ol>
+</details>
+
+</div>
+<script>
+function downloadMd(slug, title) {
+  var card = document.getElementById('paper-' + slug) ||
+             event.target.closest('.paper-card');
+  var body = card ? card.querySelector('.paper-body').textContent : '';
+  var md = '# ' + (title || slug) + '\n\n' + body.trim() + '\n';
+  var blob = new Blob([md], {type: 'text/markdown'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = slug + '.md';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

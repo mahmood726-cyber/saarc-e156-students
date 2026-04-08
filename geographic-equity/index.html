@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geographic Equity &amp; Spatial Justice — SAARC E156</title>
+<meta property="og:title" content="Geographic Equity &amp; Spatial Justice — SAARC Clinical Trial Equity">
+<meta property="og:description" content="Spatial distribution, access barriers, and geographic concentration of clinical trials across SAARC nations.">
+<meta property="og:type" content="website">
+<style>
+
+:root {
+    --bg: #f8f6f1;
+    --paper: #fffdf8;
+    --ink: #1d2430;
+    --muted: #5f6b7a;
+    --line: #d8cfbf;
+    --accent: #0d6b57;
+    --serif: Georgia,'Times New Roman',serif;
+    --mono: Consolas,SFMono-Regular,Menlo,monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0; padding: 0;
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1, h2, h3, h4 { margin-top: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Paper card */
+.paper-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+.paper-card .num {
+    display: inline-block;
+    width: 2rem; height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+.paper-card h3 {
+    display: inline; vertical-align: middle;
+    font-size: 1.15rem;
+}
+.sent-strip {
+    display: flex; gap: 2px;
+    margin: 0.8rem 0;
+    height: 8px; border-radius: 3px; overflow: hidden;
+}
+.sent-strip .seg { flex: 1; }
+.paper-body {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+.actions {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--serif);
+}
+.btn:hover { background: #f0ede5; text-decoration: none; }
+.refs { margin-bottom: 1rem; }
+.refs h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.refs ol { margin: 0; padding-left: 1.4rem; font-size: 0.85rem; color: var(--muted); }
+.note-block {
+    background: #f4f1ea;
+    border-left: 3px solid var(--accent);
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0 4px 4px 0;
+}
+.note-block .row {
+    display: flex; gap: 0.4rem; padding: 0.15rem 0;
+}
+.note-block .key {
+    font-weight: 700; min-width: 90px;
+}
+
+/* Masthead */
+.masthead {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 2rem;
+}
+.masthead h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+.masthead p { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+
+/* Instructions panel */
+.instructions {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.instructions h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.instructions ol { padding-left: 1.4rem; font-size: 0.95rem; }
+.instructions li { margin-bottom: 0.3rem; }
+
+/* E156 rules collapsible */
+details {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+details ol { font-size: 0.9rem; padding-left: 1.4rem; }
+
+.masthead { border-bottom-color: #1b4f72; }
+.paper-card .num { background: #1b4f72; }
+.note-block { border-left-color: #1b4f72; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="masthead">
+  <h1 style="color:#1b4f72">Geographic Equity &amp; Spatial Justice</h1>
+  <p>Spatial distribution, access barriers, and geographic concentration of clinical trials across SAARC nations.</p>
+  <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted)">
+    35 papers &middot; SAARC Clinical Trial Equity &middot; 8 SAARC nations
+  </p>
+</div>
+
+<div class="instructions">
+  <h2>Student Workflow — Ziauddin Medical University</h2>
+  <ol>
+    <li>Read the AI-drafted abstract carefully (the grey body text).</li>
+    <li>Open the interactive dashboard to explore charts and numbers.</li>
+    <li>Download the Python code to reproduce the analysis yourself.</li>
+    <li>Write your own 7-sentence, at-most-156-word E156 micro-paper.</li>
+    <li>Compare your version against the AI draft — where do they diverge?</li>
+    <li>Review the suggested references and add any you find relevant.</li>
+    <li>Submit your final E156 via the course portal before the deadline.</li>
+  </ol>
+</div>
+
+<article class="paper-card" id="paper-1">
+  <span class="num" aria-hidden="true">1</span>
+  <h3>SAARC Trial Density Map</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/saarc-trial-density-map.html" class="btn">View Dashboard</a>
+    <a href="code/saarc-trial-density-map.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('saarc-trial-density-map','SAARC Trial Density Map')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-2">
+  <span class="num" aria-hidden="true">2</span>
+  <h3>India Dominance Index</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/india-dominance-index.html" class="btn">View Dashboard</a>
+    <a href="code/india-dominance-index.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('india-dominance-index','India Dominance Index')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Singh JA. &quot;India, Sri Lanka and clinical trials.&quot; Indian J Med Ethics. 2018;3:221-228.</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-3">
+  <span class="num" aria-hidden="true">3</span>
+  <h3>Pakistan Per-Capita Deficit</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/pakistan-per-capita-deficit.html" class="btn">View Dashboard</a>
+    <a href="code/pakistan-per-capita-deficit.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('pakistan-per-capita-deficit','Pakistan Per-Capita Deficit')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drug Regulatory Authority of Pakistan. &quot;DRAP Annual Report.&quot; Islamabad, 2024.</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-4">
+  <span class="num" aria-hidden="true">4</span>
+  <h3>Bangladesh Growth Trajectory</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/bangladesh-growth-trajectory.html" class="btn">View Dashboard</a>
+    <a href="code/bangladesh-growth-trajectory.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('bangladesh-growth-trajectory','Bangladesh Growth Trajectory')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-5">
+  <span class="num" aria-hidden="true">5</span>
+  <h3>Sri Lanka Punch-Above-Weight</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/sri-lanka-punch-above-weight.html" class="btn">View Dashboard</a>
+    <a href="code/sri-lanka-punch-above-weight.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('sri-lanka-punch-above-weight','Sri Lanka Punch-Above-Weight')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Singh JA. &quot;India, Sri Lanka and clinical trials.&quot; Indian J Med Ethics. 2018;3:221-228.</li><li>Lang T, Siribaddana S. &quot;Clinical trials have gone global: is this a good thing?&quot; PLoS Med. 2012;9:e1001228.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-6">
+  <span class="num" aria-hidden="true">6</span>
+  <h3>Nepal Mountain Access Barrier</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/nepal-mountain-access-barrier.html" class="btn">View Dashboard</a>
+    <a href="code/nepal-mountain-access-barrier.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('nepal-mountain-access-barrier','Nepal Mountain Access Barrier')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Morans I</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-7">
+  <span class="num" aria-hidden="true">7</span>
+  <h3>Afghanistan Conflict Zone Trials</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/afghanistan-conflict-zone-trials.html" class="btn">View Dashboard</a>
+    <a href="code/afghanistan-conflict-zone-trials.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('afghanistan-conflict-zone-trials','Afghanistan Conflict Zone Trials')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-8">
+  <span class="num" aria-hidden="true">8</span>
+  <h3>Bhutan Micro-State Research</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/bhutan-micro-state-research.html" class="btn">View Dashboard</a>
+    <a href="code/bhutan-micro-state-research.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('bhutan-micro-state-research','Bhutan Micro-State Research')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-9">
+  <span class="num" aria-hidden="true">9</span>
+  <h3>Maldives Island Isolation</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/maldives-island-isolation.html" class="btn">View Dashboard</a>
+    <a href="code/maldives-island-isolation.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('maldives-island-isolation','Maldives Island Isolation')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-10">
+  <span class="num" aria-hidden="true">10</span>
+  <h3>Capital City Monopoly Index</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/capital-city-monopoly-index.html" class="btn">View Dashboard</a>
+    <a href="code/capital-city-monopoly-index.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('capital-city-monopoly-index','Capital City Monopoly Index')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-11">
+  <span class="num" aria-hidden="true">11</span>
+  <h3>Cross-Border Trial Networks</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/cross-border-trial-networks.html" class="btn">View Dashboard</a>
+    <a href="code/cross-border-trial-networks.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('cross-border-trial-networks','Cross-Border Trial Networks')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>Lang T, Siribaddana S. &quot;Clinical trials have gone global: is this a good thing?&quot; PLoS Med. 2012;9:e1001228.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Network Centrality</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-12">
+  <span class="num" aria-hidden="true">12</span>
+  <h3>Urban-Rural Site Distribution</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/urban-rural-site-distribution.html" class="btn">View Dashboard</a>
+    <a href="code/urban-rural-site-distribution.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('urban-rural-site-distribution','Urban-Rural Site Distribution')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-13">
+  <span class="num" aria-hidden="true">13</span>
+  <h3>Spatial Gini Coefficient</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/spatial-gini-coefficient.html" class="btn">View Dashboard</a>
+    <a href="code/spatial-gini-coefficient.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('spatial-gini-coefficient','Spatial Gini Coefficient')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-14">
+  <span class="num" aria-hidden="true">14</span>
+  <h3>Herfindahl Site Concentration</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/herfindahl-site-concentration.html" class="btn">View Dashboard</a>
+    <a href="code/herfindahl-site-concentration.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('herfindahl-site-concentration','Herfindahl Site Concentration')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-15">
+  <span class="num" aria-hidden="true">15</span>
+  <h3>Regional Clustering Patterns</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/regional-clustering-patterns.html" class="btn">View Dashboard</a>
+    <a href="code/regional-clustering-patterns.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('regional-clustering-patterns','Regional Clustering Patterns')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Morans I</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-16">
+  <span class="num" aria-hidden="true">16</span>
+  <h3>Coastal vs Interior Disparity</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/coastal-vs-interior-disparity.html" class="btn">View Dashboard</a>
+    <a href="code/coastal-vs-interior-disparity.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('coastal-vs-interior-disparity','Coastal vs Interior Disparity')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-17">
+  <span class="num" aria-hidden="true">17</span>
+  <h3>Population-Weighted Trial Gap</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/population-weighted-trial-gap.html" class="btn">View Dashboard</a>
+    <a href="code/population-weighted-trial-gap.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('population-weighted-trial-gap','Population-Weighted Trial Gap')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-18">
+  <span class="num" aria-hidden="true">18</span>
+  <h3>Border Region Research Deserts</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/border-region-research-deserts.html" class="btn">View Dashboard</a>
+    <a href="code/border-region-research-deserts.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('border-region-research-deserts','Border Region Research Deserts')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Morans I</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-19">
+  <span class="num" aria-hidden="true">19</span>
+  <h3>Megacity Trial Absorption</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/megacity-trial-absorption.html" class="btn">View Dashboard</a>
+    <a href="code/megacity-trial-absorption.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('megacity-trial-absorption','Megacity Trial Absorption')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Hhi Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-20">
+  <span class="num" aria-hidden="true">20</span>
+  <h3>Second-Tier City Emergence</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/second-tier-city-emergence.html" class="btn">View Dashboard</a>
+    <a href="code/second-tier-city-emergence.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('second-tier-city-emergence','Second-Tier City Emergence')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-21">
+  <span class="num" aria-hidden="true">21</span>
+  <h3>Rural Reach Coefficient</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/rural-reach-coefficient.html" class="btn">View Dashboard</a>
+    <a href="code/rural-reach-coefficient.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('rural-reach-coefficient','Rural Reach Coefficient')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-22">
+  <span class="num" aria-hidden="true">22</span>
+  <h3>Site Fragmentation Index</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/site-fragmentation-index.html" class="btn">View Dashboard</a>
+    <a href="code/site-fragmentation-index.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('site-fragmentation-index','Site Fragmentation Index')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-23">
+  <span class="num" aria-hidden="true">23</span>
+  <h3>Landlocked Penalty (Nepal/Bhutan)</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/landlocked-penalty-nepal-bhutan.html" class="btn">View Dashboard</a>
+    <a href="code/landlocked-penalty-nepal-bhutan.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('landlocked-penalty-nepal-bhutan','Landlocked Penalty (Nepal/Bhutan)')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-24">
+  <span class="num" aria-hidden="true">24</span>
+  <h3>Monsoon Belt Trial Seasonality</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/monsoon-belt-trial-seasonality.html" class="btn">View Dashboard</a>
+    <a href="code/monsoon-belt-trial-seasonality.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('monsoon-belt-trial-seasonality','Monsoon Belt Trial Seasonality')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Chi Squared</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-25">
+  <span class="num" aria-hidden="true">25</span>
+  <h3>Economic Corridor Alignment</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/economic-corridor-alignment.html" class="btn">View Dashboard</a>
+    <a href="code/economic-corridor-alignment.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('economic-corridor-alignment','Economic Corridor Alignment')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-26">
+  <span class="num" aria-hidden="true">26</span>
+  <h3>Conflict-Stability Trial Gradient</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/conflict-stability-trial-gradient.html" class="btn">View Dashboard</a>
+    <a href="code/conflict-stability-trial-gradient.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('conflict-stability-trial-gradient','Conflict-Stability Trial Gradient')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-27">
+  <span class="num" aria-hidden="true">27</span>
+  <h3>Diaspora Return Research</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/diaspora-return-research.html" class="btn">View Dashboard</a>
+    <a href="code/diaspora-return-research.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('diaspora-return-research','Diaspora Return Research')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>Hedt-Gauthier BL, et al. &quot;Stuck in the middle: authorship in collaborative health research.&quot; BMJ Glob Health. 2019;4:e001853.</li><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Network Centrality</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-28">
+  <span class="num" aria-hidden="true">28</span>
+  <h3>SEZ &amp; Medical Tourism Sites</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/sez-medical-tourism-sites.html" class="btn">View Dashboard</a>
+    <a href="code/sez-medical-tourism-sites.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('sez-medical-tourism-sites','SEZ &amp; Medical Tourism Sites')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Singh JA. &quot;India, Sri Lanka and clinical trials.&quot; Indian J Med Ethics. 2018;3:221-228.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Rate Ratio</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-29">
+  <span class="num" aria-hidden="true">29</span>
+  <h3>Regional Health Expenditure Match</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/regional-health-expenditure-match.html" class="btn">View Dashboard</a>
+    <a href="code/regional-health-expenditure-match.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('regional-health-expenditure-match','Regional Health Expenditure Match')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Spearman Correlation</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-30">
+  <span class="num" aria-hidden="true">30</span>
+  <h3>Altitude &amp; Access Barriers</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/altitude-access-barriers.html" class="btn">View Dashboard</a>
+    <a href="code/altitude-access-barriers.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('altitude-access-barriers','Altitude &amp; Access Barriers')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Morans I</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-31">
+  <span class="num" aria-hidden="true">31</span>
+  <h3>Delta &amp; Floodplain Populations</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/delta-floodplain-populations.html" class="btn">View Dashboard</a>
+    <a href="code/delta-floodplain-populations.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('delta-floodplain-populations','Delta &amp; Floodplain Populations')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Poisson Rate</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-32">
+  <span class="num" aria-hidden="true">32</span>
+  <h3>Spatial Entropy Index</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/spatial-entropy-index.html" class="btn">View Dashboard</a>
+    <a href="code/spatial-entropy-index.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('spatial-entropy-index','Spatial Entropy Index')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Shannon Entropy</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-33">
+  <span class="num" aria-hidden="true">33</span>
+  <h3>Distance-to-Trial Burden</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/distance-to-trial-burden.html" class="btn">View Dashboard</a>
+    <a href="code/distance-to-trial-burden.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('distance-to-trial-burden','Distance-to-Trial Burden')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Gini Coefficient</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-34">
+  <span class="num" aria-hidden="true">34</span>
+  <h3>Intra-SAARC Disparity Ratio</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/intra-saarc-disparity-ratio.html" class="btn">View Dashboard</a>
+    <a href="code/intra-saarc-disparity-ratio.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('intra-saarc-disparity-ratio','Intra-SAARC Disparity Ratio')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li><li>GBD 2021 Collaborators. &quot;Global burden of disease study 2021.&quot; Lancet. 2024.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Theil Index</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+<article class="paper-card" id="paper-35">
+  <span class="num" aria-hidden="true">35</span>
+  <h3>Geographic Equity Trend</h3>
+  <div class="sent-strip"><div class="seg" style="background:#1b4f72;" title=""></div><div class="seg" style="background:#0e6251;" title=""></div><div class="seg" style="background:#4a235a;" title=""></div><div class="seg" style="background:#922b21;" title=""></div><div class="seg" style="background:#7e5109;" title=""></div><div class="seg" style="background:#0b5345;" title=""></div><div class="seg" style="background:#566573;" title=""></div></div>
+  <div class="paper-body"><em>Body text will appear after generation.</em></div>
+  <div class="actions">
+    <a href="dashboards/geographic-equity-trend.html" class="btn">View Dashboard</a>
+    <a href="code/geographic-equity-trend.py" class="btn" download>Download Code</a>
+    <button class="btn" onclick="downloadMd('geographic-equity-trend','Geographic Equity Trend')">Download Paper</button>
+  </div>
+  <div class="refs"><h4>Suggested References</h4><ol><li>ClinicalTrials.gov API v2 Documentation. U.S. National Library of Medicine. https://clinicaltrials.gov/data-api/about-api</li><li>World Health Organization. &quot;WHO South-East Asia Region: Health Topics.&quot; https://www.who.int/southeastasia</li><li>Drain PK, et al. &quot;Global migration of clinical trials.&quot; Nat Rev Drug Discov. 2018;17:765-766.</li></ol></div>
+  <div class="note-block">
+    <div class="row"><span class="key">Estimand</span><span>Linear Regression</span></div>
+    <div class="row"><span class="key">Data</span><span>ClinicalTrials.gov API v2</span></div>
+    <div class="row"><span class="key">Certainty</span><span>LOW–MODERATE</span></div>
+  </div>
+</article>
+
+
+<details>
+  <summary>E156 Format Rules (click to expand)</summary>
+  <ol>
+    <li>Exactly 7 sentences (S1-S7), at most 156 words, single paragraph.</li>
+    <li>No citations, links, or metadata inside the body text.</li>
+    <li>S1 = Question (population, intervention, endpoint).</li>
+    <li>S2 = Dataset (studies, participants, scope).</li>
+    <li>S3 = Method (synthesis model, effect scale).</li>
+    <li>S4 = Result (lead estimate + confidence interval).</li>
+    <li>S5 = Robustness (heterogeneity, sensitivity).</li>
+    <li>S6 = Interpretation (plain-language meaning).</li>
+    <li>S7 = Boundary (main limitation).</li>
+  </ol>
+</details>
+
+</div>
+<script>
+function downloadMd(slug, title) {
+  var card = document.getElementById('paper-' + slug) ||
+             event.target.closest('.paper-card');
+  var body = card ? card.querySelector('.paper-body').textContent : '';
+  var md = '# ' + (title || slug) + '\n\n' + body.trim() + '\n';
+  var blob = new Blob([md], {type: 'text/markdown'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = slug + '.md';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
