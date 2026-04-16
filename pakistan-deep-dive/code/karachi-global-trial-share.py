@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Karachi's Global Trial Share -- SAARC Clinical Trial Equity Analysis
+Karachi\'s Global Trial Share -- SAARC Clinical Trial Equity Analysis
 Group: pakistan-deep-dive | Paper #49
 
 Condition: all interventional
@@ -137,7 +137,7 @@ def linear_regression(x, y):
 
 def main():
     print("=" * 64)
-    print(f"  {'Karachi's Global Trial Share'}")
+    print(f"  {'Karachi\'s Global Trial Share'}")
     print(f"  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()

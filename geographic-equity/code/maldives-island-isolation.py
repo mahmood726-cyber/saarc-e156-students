@@ -99,14 +99,21 @@ def bootstrap_ci(data, n_boot=5000, seed=42):
 
 def permutation_test(group_a, group_b, n_perm=5000, seed=42):
     """Two-sample permutation test for difference in means."""
+    if not group_a or not group_b:
+        return 1.0  # Cannot test with empty group
     rng = random.Random(seed)
-    combined = group_a + group_b
+    combined = list(group_a) + list(group_b)
     obs_diff = abs(sum(group_a)/len(group_a) - sum(group_b)/len(group_b))
     n_a = len(group_a)
+    n_b = len(group_b)
     count = 0
     for _ in range(n_perm):
         rng.shuffle(combined)
-        perm_diff = abs(sum(combined[:n_a])/n_a - sum(combined[n_a:])/len(group_b))
+        perm_a = combined[:n_a]
+        perm_b = combined[n_a:]
+        if not perm_a or not perm_b:
+            continue
+        perm_diff = abs(sum(perm_a)/len(perm_a) - sum(perm_b)/len(perm_b))
         if perm_diff >= obs_diff:
             count += 1
     return count / n_perm
@@ -150,9 +157,12 @@ def main():
     est, lo, hi = bootstrap_ci(country_values)
     print(f"Bootstrap CI for mean: {est:.1f} [{lo:.1f}, {hi:.1f}]")
     # Permutation test: top-half vs bottom-half countries
-    mid = len(country_values) // 2
-    p = permutation_test(country_values[:mid], country_values[mid:])
-    print(f"Permutation test p-value: {p:.4f}")
+    mid = max(1, len(country_values) // 2)
+    if len(country_values) >= 2:
+        p = permutation_test(country_values[:mid], country_values[mid:])
+        print(f"Permutation test p-value: {p:.4f}")
+    else:
+        print("Permutation test: requires 2+ data points")
     # Rate ratio: India vs Pakistan per capita
     rr, lo, hi = rate_ratio(country_values[0], 1440000000, country_values[1] if len(country_values) > 1 else 1, 230000000)
     if rr: print(f"Rate ratio (India/Pakistan per capita): {rr:.4f} [{lo:.4f}, {hi:.4f}]")

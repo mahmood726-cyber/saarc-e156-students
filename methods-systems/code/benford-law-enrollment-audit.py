@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Benford's Law Enrollment Audit -- SAARC Clinical Trial Equity Analysis
+Benford\'s Law Enrollment Audit -- SAARC Clinical Trial Equity Analysis
 Group: methods-systems | Paper #31
 
 Condition: all interventional
@@ -134,7 +134,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 
 def main():
     print("=" * 64)
-    print(f"  {'Benford's Law Enrollment Audit'}")
+    print(f"  {'Benford\'s Law Enrollment Audit'}")
     print(f"  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
