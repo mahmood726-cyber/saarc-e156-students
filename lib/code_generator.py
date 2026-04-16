@@ -240,14 +240,21 @@ def cohens_d(mean1, sd1, n1, mean2, sd2, n2):
     "permutation_test": '''
 def permutation_test(group_a, group_b, n_perm=5000, seed=42):
     """Two-sample permutation test for difference in means."""
+    if not group_a or not group_b:
+        return 1.0  # Cannot test with empty group
     rng = random.Random(seed)
-    combined = group_a + group_b
+    combined = list(group_a) + list(group_b)
     obs_diff = abs(sum(group_a)/len(group_a) - sum(group_b)/len(group_b))
     n_a = len(group_a)
+    n_b = len(group_b)
     count = 0
     for _ in range(n_perm):
         rng.shuffle(combined)
-        perm_diff = abs(sum(combined[:n_a])/n_a - sum(combined[n_a:])/len(group_b))
+        perm_a = combined[:n_a]
+        perm_b = combined[n_a:]
+        if not perm_a or not perm_b:
+            continue
+        perm_diff = abs(sum(perm_a)/len(perm_a) - sum(perm_b)/len(perm_b))
         if perm_diff >= obs_diff:
             count += 1
     return count / n_perm
@@ -380,7 +387,7 @@ def generate_code_script(paper_def, data, stats_results):
         Complete Python script as a string.
     """
     slug = paper_def["slug"]
-    title = paper_def["title"]
+    title = paper_def["title"].replace("'", "\\'")  # Escape apostrophes for f-string safety
     group = paper_def["group"]
 
     q = paper_def.get("query", {})
@@ -515,9 +522,12 @@ def generate_code_script(paper_def, data, stats_results):
             analysis_lines.append('    print(f"Cohen\'s d (high vs low trial countries): {d:.3f}")')
         elif m == "permutation_test":
             analysis_lines.append('    # Permutation test: top-half vs bottom-half countries')
-            analysis_lines.append('    mid = len(country_values) // 2')
-            analysis_lines.append('    p = permutation_test(country_values[:mid], country_values[mid:])')
-            analysis_lines.append('    print(f"Permutation test p-value: {p:.4f}")')
+            analysis_lines.append('    mid = max(1, len(country_values) // 2)')
+            analysis_lines.append('    if len(country_values) >= 2:')
+            analysis_lines.append('        p = permutation_test(country_values[:mid], country_values[mid:])')
+            analysis_lines.append('        print(f"Permutation test p-value: {p:.4f}")')
+            analysis_lines.append('    else:')
+            analysis_lines.append('        print("Permutation test: requires 2+ data points")')
         elif m == "bayesian_rate":
             analysis_lines.append('    post_mean, lo, hi = bayesian_rate(saarc_total, max(saarc_total, global_count))')
             analysis_lines.append('    print(f"Bayesian posterior rate (SAARC/global): {post_mean:.4f} [{lo:.4f}, {hi:.4f}]")')
@@ -605,7 +615,7 @@ def fetch_trials(condition=None, location=None):
         resp.raise_for_status()
         return resp.json().get("totalCount", 0)
     except Exception as e:
-        print(f"API error: {{e}}")
+        print(f"API error: {e}")
         return 0
 
 
