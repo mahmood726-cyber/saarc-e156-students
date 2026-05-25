@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python network-analysis-investigators.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +124,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Network Analysis of Investigators'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

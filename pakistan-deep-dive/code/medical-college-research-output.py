@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python medical-college-research-output.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -129,7 +127,7 @@ def concentration_index(values):
 def main():
     print("=" * 64)
     print(f"  {'Medical College Research Output'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

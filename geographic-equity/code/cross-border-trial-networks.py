@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python cross-border-trial-networks.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -130,7 +128,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Cross-Border Trial Networks'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

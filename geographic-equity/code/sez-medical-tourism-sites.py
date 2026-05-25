@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python sez-medical-tourism-sites.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -125,7 +123,7 @@ def odds_ratio_2x2(a, b, c, d):
 def main():
     print("=" * 64)
     print(f"  {'SEZ & Medical Tourism Sites'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

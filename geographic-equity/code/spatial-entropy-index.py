@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python spatial-entropy-index.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -140,7 +138,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Spatial Entropy Index'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

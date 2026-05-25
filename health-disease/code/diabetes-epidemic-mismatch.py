@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python diabetes-epidemic-mismatch.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -142,7 +140,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Diabetes Epidemic Mismatch'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

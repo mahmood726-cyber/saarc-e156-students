@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pak-oral-cancer-naswar-gutka.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +124,7 @@ def chi_squared(observed, expected):
 def main():
     print("=" * 64)
     print(f"  {'Oral Cancer & Naswar/Gutka'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

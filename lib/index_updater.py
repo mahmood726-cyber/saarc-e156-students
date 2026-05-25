@@ -8,7 +8,7 @@ Handles:
 """
 from html import escape
 
-from lib.paper_manifest import GROUPS, ROLE_COLORS, PAPERS
+from lib.paper_manifest import GROUPS, ROLE_COLORS
 
 # Group accent colours (not in manifest — defined here for page rendering)
 GROUP_COLORS = {

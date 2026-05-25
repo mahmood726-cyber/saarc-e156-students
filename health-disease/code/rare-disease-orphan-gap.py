@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python rare-disease-orphan-gap.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -130,7 +128,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Rare Disease Orphan Gap'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

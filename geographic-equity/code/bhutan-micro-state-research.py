@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python bhutan-micro-state-research.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -129,7 +127,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Bhutan Micro-State Research'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

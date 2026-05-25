@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python surgical-trial-scarcity.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +124,7 @@ def odds_ratio_2x2(a, b, c, d):
 def main():
     print("=" * 64)
     print(f"  {'Surgical Trial Scarcity'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

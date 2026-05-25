@@ -11,10 +11,7 @@ Generated for Ziauddin Medical University students.
 Run: python colonial-research-legacy.py
 """
 
-import json
-import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +123,7 @@ def hhi_index(values):
 def main():
     print("=" * 64)
     print(f"  {'Colonial Research Legacy'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

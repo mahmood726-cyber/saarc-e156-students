@@ -1,14 +1,14 @@
 """Tests for index_updater.py — validates HTML assembly for group and landing pages."""
 
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from html import escape
 
-from lib.index_updater import make_paper_card, make_group_page, make_landing_page
-from lib.paper_manifest import PAPERS, GROUPS
-
+from lib.index_updater import make_group_page, make_landing_page, make_paper_card
+from lib.paper_manifest import GROUPS, PAPERS
 
 # ── Sample fixtures ───────────────────────────────────────
 

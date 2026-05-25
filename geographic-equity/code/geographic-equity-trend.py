@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python geographic-equity-trend.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -148,7 +146,7 @@ def theil_index(values):
 def main():
     print("=" * 64)
     print(f"  {'Geographic Equity Trend'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

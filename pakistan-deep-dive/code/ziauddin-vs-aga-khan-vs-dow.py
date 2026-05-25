@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python ziauddin-vs-aga-khan-vs-dow.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -121,7 +119,7 @@ def degree_centrality(adjacency):
 def main():
     print("=" * 64)
     print(f"  {'Ziauddin vs Aga Khan vs Dow'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python composite-endpoint-prevalence.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +124,7 @@ def chi_squared(observed, expected):
 def main():
     print("=" * 64)
     print(f"  {'Composite Endpoint Prevalence'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

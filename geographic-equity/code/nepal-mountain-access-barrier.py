@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python nepal-mountain-access-barrier.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -145,7 +143,7 @@ def lorenz_area(values):
 def main():
     print("=" * 64)
     print(f"  {'Nepal Mountain Access Barrier'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

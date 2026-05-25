@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python patient-reported-outcome-use.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -132,7 +130,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Patient-Reported Outcome Use'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

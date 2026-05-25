@@ -7,7 +7,6 @@ Rate-limited with random delays between requests.
 import json
 import random
 import time
-import sys
 from pathlib import Path
 
 try:

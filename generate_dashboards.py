@@ -1,12 +1,14 @@
 """Regenerate all 190 HTML dashboards from cached data."""
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).parent))
-from lib.paper_manifest import PAPERS
-from lib.data_fetcher import _read_cache
+from build import GROUP_DIRS, compute_stats
 from lib.body_generator import generate_body
 from lib.dashboard_generator import generate_dashboard
-from build import compute_stats, GROUP_DIRS
+from lib.data_fetcher import _read_cache
+from lib.paper_manifest import PAPERS
+
 
 def main():
     count = 0

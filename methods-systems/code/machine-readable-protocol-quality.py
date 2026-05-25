@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python machine-readable-protocol-quality.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -127,7 +125,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Machine-Readable Protocol Quality'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

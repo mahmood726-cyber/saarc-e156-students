@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python population-weighted-trial-gap.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def linear_regression(x, y):
 def main():
     print("=" * 64)
     print(f"  {'Population-Weighted Trial Gap'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

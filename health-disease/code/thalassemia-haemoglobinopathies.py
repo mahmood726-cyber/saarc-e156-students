@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python thalassemia-haemoglobinopathies.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -136,7 +134,7 @@ def lorenz_area(values):
 def main():
     print("=" * 64)
     print(f"  {'Thalassemia & Haemoglobinopathies'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

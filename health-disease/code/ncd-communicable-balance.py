@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python ncd-communicable-balance.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -133,7 +131,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'NCD vs Communicable Balance'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

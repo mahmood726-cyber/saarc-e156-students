@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pragmatic-vs-explanatory.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -133,7 +131,7 @@ def kl_divergence(p_vals, q_vals):
 def main():
     print("=" * 64)
     print(f"  {'Pragmatic vs Explanatory'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

@@ -1,17 +1,32 @@
 """Tests for chart_library — 16 SVG chart generators with SAARC and Pakistan maps."""
-import sys, os
+import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from lib.chart_library import (
     CHART_TYPE_MAP,
-    choropleth_saarc, choropleth_pakistan,
-    lorenz_chart, forest_plot, violin_plot, heatmap_chart,
-    network_graph, timeseries_chart, waterfall_chart, sankey_chart,
-    radar_chart, bubble_chart, slope_chart, ridge_plot,
-    funnel_plot, kaplan_meier_chart,
-    _fmt, _lerp_color, _axis_ticks, _gaussian_kde,
+    _axis_ticks,
+    _fmt,
+    _gaussian_kde,
+    _lerp_color,
+    bubble_chart,
+    choropleth_pakistan,
+    choropleth_saarc,
+    forest_plot,
+    funnel_plot,
+    heatmap_chart,
+    kaplan_meier_chart,
+    lorenz_chart,
+    network_graph,
+    radar_chart,
+    ridge_plot,
+    sankey_chart,
+    slope_chart,
+    timeseries_chart,
+    violin_plot,
+    waterfall_chart,
 )
-
 
 # ---------------------------------------------------------------------------
 # Helpers

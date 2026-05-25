@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python sovereignty-composite-score.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -142,7 +140,7 @@ def atkinson_index(values, epsilon=0.5):
 def main():
     print("=" * 64)
     print(f"  {'Sovereignty Composite Score'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

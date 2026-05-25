@@ -1,18 +1,18 @@
 """Tests for data_fetcher.py — no network calls required."""
 
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from lib.data_fetcher import (
-    SAARC_COUNTRIES,
-    CACHE_DIR,
     BASE_URL,
+    CACHE_DIR,
+    SAARC_COUNTRIES,
     _read_cache,
     _write_cache,
     extract_study_metrics,
 )
-
 
 # ═══════════════════════════════════════════════════════════
 #  SAMPLE STUDY RECORD (mimics CT.gov API v2 response shape)

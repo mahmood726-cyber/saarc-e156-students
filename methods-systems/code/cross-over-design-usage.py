@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python cross-over-design-usage.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -122,7 +120,7 @@ def cohens_d(mean1, sd1, n1, mean2, sd2, n2):
 def main():
     print("=" * 64)
     print(f"  {'Cross-Over Design Usage'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

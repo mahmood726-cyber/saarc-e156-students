@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pak-hepatitis-c-epidemic.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -134,7 +132,7 @@ def kaplan_meier_survival(event_times, censored=None):
 def main():
     print("=" * 64)
     print(f"  {'Hepatitis C Epidemic'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

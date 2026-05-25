@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python data-sovereignty-gap.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -126,7 +124,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Data Sovereignty Gap'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

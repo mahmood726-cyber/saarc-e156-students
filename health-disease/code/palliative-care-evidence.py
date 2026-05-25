@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python palliative-care-evidence.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -132,7 +130,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 def main():
     print("=" * 64)
     print(f"  {'Palliative Care Evidence'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

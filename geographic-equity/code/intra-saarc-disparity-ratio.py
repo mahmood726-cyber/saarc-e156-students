@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python intra-saarc-disparity-ratio.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -142,7 +140,7 @@ def rate_ratio(count_a, pop_a, count_b, pop_b):
 def main():
     print("=" * 64)
     print(f"  {'Intra-SAARC Disparity Ratio'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

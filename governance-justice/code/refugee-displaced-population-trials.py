@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python refugee-displaced-population-trials.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -131,7 +129,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 def main():
     print("=" * 64)
     print(f"  {'Refugee & Displaced Population Trials'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

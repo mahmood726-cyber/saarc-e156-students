@@ -10,7 +10,7 @@ Group 5 (pakistan-deep-dive) uses Pakistan green (#006600) accent.
 import random
 from html import escape
 
-from lib.paper_manifest import ROLE_COLORS, SAARC_COUNTRIES, PAKISTAN_PROVINCES
+from lib.paper_manifest import ROLE_COLORS, SAARC_COUNTRIES
 
 # Role names for sentence breakdown (S1-S7)
 ROLE_NAMES = [
@@ -116,7 +116,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             }
             return cl.choropleth_saarc(cv, f"{title_short} by Country")
 
-        elif chart_type == "choropleth_pakistan":
+        if chart_type == "choropleth_pakistan":
             pv = province_counts if province_counts else {
                 "Punjab": 480, "Sindh": 350, "Khyber Pakhtunkhwa": 60,
                 "Balochistan": 15, "Islamabad Capital Territory": 120,
@@ -124,13 +124,13 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             }
             return cl.choropleth_pakistan(pv, f"{title_short} by Province")
 
-        elif chart_type == "lorenz":
+        if chart_type == "lorenz":
             vals = list(country_counts.values()) if country_counts else enrollment[:20]
             if not vals or len(vals) < 2:
                 vals = [saarc, india, us, _safe(data.get("pakistan_count"), 50)]
             return cl.lorenz_chart(vals, f"{title_short} Lorenz Curve")
 
-        elif chart_type == "forest":
+        if chart_type == "forest":
             regions = [
                 {"label": "India", "effect": india,
                  "ci_lower": india * 0.85, "ci_upper": india * 1.15},
@@ -146,7 +146,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             ]
             return cl.forest_plot(regions, "Regional Comparison")
 
-        elif chart_type == "violin":
+        if chart_type == "violin":
             groups = {}
             if enrollment:
                 mid = len(enrollment) // 2
@@ -158,7 +158,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                 groups["Reference"] = [rng.randint(50, 800) for _ in range(20)]
             return cl.violin_plot(groups, "Enrollment Distribution")
 
-        elif chart_type == "heatmap":
+        if chart_type == "heatmap":
             rows = ["Phase 1", "Phase 2", "Phase 3", "Phase 4"]
             cols = ["India", "Pakistan", "Others"]
             ph_vals = phases if phases else {
@@ -174,7 +174,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                 ])
             return cl.heatmap_chart(matrix, rows, cols, "Phase Distribution")
 
-        elif chart_type == "network":
+        if chart_type == "network":
             node_names = list(country_counts.keys())[:8] if country_counts else list(SAARC_COUNTRIES)
             nodes = [
                 {"id": n, "label": n[:6],
@@ -190,7 +190,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                     })
             return cl.network_graph(nodes, edges, "Research Network")
 
-        elif chart_type == "timeseries":
+        if chart_type == "timeseries":
             if temporal:
                 series = {}
                 for epoch in sorted(temporal.keys()):
@@ -200,13 +200,12 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                         yr = int(epoch) if str(epoch).isdigit() else 2010
                         series[region].append((yr, temporal[epoch].get(region, 0)))
                 return cl.timeseries_chart(series, "Temporal Trend")
-            else:
-                series = {
-                    "SAARC": [(y, rng.randint(100, 3000)) for y in range(2005, 2026, 5)],
-                }
-                return cl.timeseries_chart(series, "Growth Trend")
+            series = {
+                "SAARC": [(y, rng.randint(100, 3000)) for y in range(2005, 2026, 5)],
+            }
+            return cl.timeseries_chart(series, "Growth Trend")
 
-        elif chart_type == "waterfall":
+        if chart_type == "waterfall":
             items = [
                 {"label": "India", "value": 24500},
                 {"label": "Pakistan", "value": 1800},
@@ -222,7 +221,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                     items.append({"label": "Others", "value": rest})
             return cl.waterfall_chart(items, "Contribution Breakdown")
 
-        elif chart_type == "sankey":
+        if chart_type == "sankey":
             flows = [
                 {"source": "Global", "target": "India", "value": india},
                 {"source": "Global", "target": "Pakistan", "value": _safe(data.get("pakistan_count"), 1800)},
@@ -234,7 +233,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                     flows.append({"source": "SAARC", "target": k[:8], "value": v})
             return cl.sankey_chart(flows, "Trial Flow")
 
-        elif chart_type == "radar":
+        if chart_type == "radar":
             dims = {
                 "Volume": min(1.0, saarc / max(us, 1)),
                 "Growth": rng.uniform(0.4, 0.9),
@@ -247,7 +246,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                 dims["Equity"] = max(0.0, 1.0 - gini)
             return cl.radar_chart(dims, "Research Profile")
 
-        elif chart_type == "bubble":
+        if chart_type == "bubble":
             points = [
                 {"x": india, "y": total_saarc, "size": 20, "label": "India", "color": "#FF9933"},
                 {"x": _safe(data.get("pakistan_count"), 1800), "y": total_saarc * 0.06,
@@ -257,7 +256,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             ]
             return cl.bubble_chart(points, "Burden vs Investment")
 
-        elif chart_type == "slope":
+        if chart_type == "slope":
             pairs = [
                 {"label": "India", "left": india * 0.3, "right": float(india)},
                 {"label": "Pakistan", "left": _safe(data.get("pakistan_count"), 1800) * 0.2,
@@ -267,7 +266,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             ]
             return cl.slope_chart(pairs, "Growth 2010-2026")
 
-        elif chart_type == "ridge":
+        if chart_type == "ridge":
             dists = {
                 "SAARC": enrollment[:20] if len(enrollment) >= 5
                 else [rng.randint(20, 300) for _ in range(20)],
@@ -275,7 +274,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
             dists["Reference"] = [v * rng.uniform(1.5, 4.0) for v in dists["SAARC"]]
             return cl.ridge_plot(dists, "Enrollment Density")
 
-        elif chart_type == "funnel":
+        if chart_type == "funnel":
             effects = [
                 {"effect": saarc / max(total_saarc, 1) * 100,
                  "se": rng.uniform(0.5, 2.0), "label": "Overall"},
@@ -288,7 +287,7 @@ def _prepare_chart_data(chart_type, paper_def, data, stats_results, rng):
                     })
             return cl.funnel_plot(effects, "Funnel Analysis")
 
-        elif chart_type == "kaplan_meier":
+        if chart_type == "kaplan_meier":
             curves = {}
             years = list(range(2000, 2027))
             cum = 0

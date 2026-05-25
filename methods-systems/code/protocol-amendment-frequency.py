@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python protocol-amendment-frequency.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -132,7 +130,7 @@ def chi_squared(observed, expected):
 def main():
     print("=" * 64)
     print(f"  {'Protocol Amendment Frequency'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

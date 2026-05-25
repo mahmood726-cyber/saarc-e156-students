@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python disease-burden-concordance-index.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -143,7 +141,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Disease Burden Concordance Index'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

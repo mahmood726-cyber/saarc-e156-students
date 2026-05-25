@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python benford-law-enrollment-audit.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -135,7 +133,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 def main():
     print("=" * 64)
     print(f"  {'Benford\'s Law Enrollment Audit'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

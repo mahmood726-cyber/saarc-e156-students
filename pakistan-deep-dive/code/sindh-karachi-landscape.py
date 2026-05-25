@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python sindh-karachi-landscape.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -127,7 +125,7 @@ def rate_ratio(count_a, pop_a, count_b, pop_b):
 def main():
     print("=" * 64)
     print(f"  {'Sindh & Karachi Landscape'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

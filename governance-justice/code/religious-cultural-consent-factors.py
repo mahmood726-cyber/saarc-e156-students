@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python religious-cultural-consent-factors.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -129,7 +127,7 @@ def odds_ratio_2x2(a, b, c, d):
 def main():
     print("=" * 64)
     print(f"  {'Religious & Cultural Consent Factors'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

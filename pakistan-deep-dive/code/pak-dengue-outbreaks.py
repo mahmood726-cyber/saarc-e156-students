@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pak-dengue-outbreaks.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -135,7 +133,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Dengue Outbreaks'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

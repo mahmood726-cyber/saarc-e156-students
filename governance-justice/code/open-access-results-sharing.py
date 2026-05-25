@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python open-access-results-sharing.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -131,7 +129,7 @@ def odds_ratio_2x2(a, b, c, d):
 def main():
     print("=" * 64)
     print(f"  {'Open Access Results Sharing'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

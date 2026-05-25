@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python afghanistan-conflict-zone-trials.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -138,7 +136,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 def main():
     print("=" * 64)
     print(f"  {'Afghanistan Conflict Zone Trials'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

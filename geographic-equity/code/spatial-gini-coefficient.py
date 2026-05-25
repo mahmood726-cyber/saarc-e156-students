@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python spatial-gini-coefficient.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -144,7 +142,7 @@ def atkinson_index(values, epsilon=0.5):
 def main():
     print("=" * 64)
     print(f"  {'Spatial Gini Coefficient'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

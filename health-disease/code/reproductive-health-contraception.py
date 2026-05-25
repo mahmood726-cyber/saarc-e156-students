@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python reproductive-health-contraception.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -136,7 +134,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Reproductive Health & Contraception'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

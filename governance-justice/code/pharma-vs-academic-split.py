@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pharma-vs-academic-split.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -130,7 +128,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Pharma vs Academic Split'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

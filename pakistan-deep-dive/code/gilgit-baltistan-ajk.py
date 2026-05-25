@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python gilgit-baltistan-ajk.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -129,7 +127,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Gilgit-Baltistan & AJK'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

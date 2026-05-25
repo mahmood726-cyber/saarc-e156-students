@@ -4,28 +4,56 @@ Tests for stats_library.py — 31+ pure-Python statistical methods.
 Covers all 21 required public functions plus internal helpers.
 """
 
-import sys
-import os
 import math
+import os
+import sys
 
 # Ensure lib/ is importable
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'lib'))
 
 from stats_library import (
-    _normal_cdf, _normal_ppf, _chi2_cdf, _chi2_ppf,
-    _mean, _var, _std, _rank, _gaussian_kde,
-    gini_coefficient, shannon_entropy, herfindahl_hirschman_index,
-    theil_index, atkinson_index, kl_divergence,
-    bootstrap_ci, poisson_rate, rate_ratio, bayesian_rate,
-    chi_squared, morans_i, spearman_correlation, linear_regression,
-    network_centrality, kaplan_meier_survival, odds_ratio, cohens_d,
-    permutation_test, concentration_index, lorenz_area,
-    normalized_entropy, lorenz_curve, interrupted_time_series,
-    changepoint_detection, power_law_fit, jaccard_similarity,
-    mutual_information, zero_inflated_poisson_em,
-    logistic_growth_fit, arima_forecast, benford_test,
+    _chi2_cdf,
+    _chi2_ppf,
+    _gaussian_kde,
+    _mean,
+    _normal_cdf,
+    _normal_ppf,
+    _rank,
+    _std,
+    _var,
+    arima_forecast,
+    atkinson_index,
+    bayesian_rate,
+    benford_test,
+    bootstrap_ci,
+    changepoint_detection,
+    chi_squared,
+    cohens_d,
+    concentration_index,
+    gini_coefficient,
+    herfindahl_hirschman_index,
+    interrupted_time_series,
+    jaccard_similarity,
+    kaplan_meier_survival,
+    kl_divergence,
+    linear_regression,
+    logistic_growth_fit,
+    lorenz_area,
+    lorenz_curve,
+    morans_i,
+    mutual_information,
+    network_centrality,
+    normalized_entropy,
+    odds_ratio,
+    permutation_test,
+    poisson_rate,
+    power_law_fit,
+    rate_ratio,
+    shannon_entropy,
+    spearman_correlation,
+    theil_index,
+    zero_inflated_poisson_em,
 )
-
 
 # ===== Internal helpers =====
 

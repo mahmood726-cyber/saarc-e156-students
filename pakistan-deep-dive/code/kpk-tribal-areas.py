@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python kpk-tribal-areas.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -138,7 +136,7 @@ def permutation_test(group_a, group_b, n_perm=5000, seed=42):
 def main():
     print("=" * 64)
     print(f"  {'KPK & Tribal Areas'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

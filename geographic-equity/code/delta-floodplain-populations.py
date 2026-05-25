@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python delta-floodplain-populations.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -125,7 +123,7 @@ def chi_squared(observed, expected):
 def main():
     print("=" * 64)
     print(f"  {'Delta & Floodplain Populations'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

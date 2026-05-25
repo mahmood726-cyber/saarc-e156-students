@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python vulnerable-population-protections.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -131,7 +129,7 @@ def rate_ratio(count_a, pop_a, count_b, pop_b):
 def main():
     print("=" * 64)
     print(f"  {'Vulnerable Population Protections'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python lmic-authorship-position.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -124,7 +122,7 @@ def degree_centrality(adjacency):
 def main():
     print("=" * 64)
     print(f"  {'LMIC Authorship Position'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

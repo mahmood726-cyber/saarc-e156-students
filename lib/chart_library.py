@@ -945,8 +945,8 @@ def sankey_chart(flows: list, title: str, width=440, height=300) -> str:
                  f'font-weight="700" fill="{_INK}">{_escape(title)}</text>')
 
     # Flow paths
-    src_offsets = {s: 0.0 for s in sources}
-    tgt_offsets = {t: 0.0 for t in targets}
+    src_offsets = dict.fromkeys(sources, 0.0)
+    tgt_offsets = dict.fromkeys(targets, 0.0)
     for fi, flow in enumerate(flows):
         s, t, v = flow["source"], flow["target"], flow["value"]
         if s not in src_pos or t not in tgt_pos:

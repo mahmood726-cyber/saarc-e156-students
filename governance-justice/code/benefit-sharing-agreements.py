@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python benefit-sharing-agreements.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -125,7 +123,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Benefit-Sharing Agreements'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python regional-clustering-patterns.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -136,7 +134,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Regional Clustering Patterns'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

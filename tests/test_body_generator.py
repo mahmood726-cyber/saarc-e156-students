@@ -1,18 +1,12 @@
 """Tests for body_generator.py — validates E156 7-sentence micro-paper generation."""
 
-import sys
 import os
-import re
+import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from lib.body_generator import (
-    generate_body,
-    _word_count,
-    _sentence_count,
-    _trim_to_limit,
     _fmt,
-    _pick_estimand,
     _gen_s1,
     _gen_s2,
     _gen_s3,
@@ -20,8 +14,12 @@ from lib.body_generator import (
     _gen_s5,
     _gen_s6,
     _gen_s7_variants,
+    _pick_estimand,
+    _sentence_count,
+    _trim_to_limit,
+    _word_count,
+    generate_body,
 )
-
 
 # ---------------------------------------------------------------------------
 # Mock data fixtures — one per group

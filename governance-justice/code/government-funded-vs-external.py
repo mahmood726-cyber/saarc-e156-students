@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python government-funded-vs-external.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -134,7 +132,7 @@ def theil_index(values):
 def main():
     print("=" * 64)
     print(f"  {'Government-Funded vs External'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

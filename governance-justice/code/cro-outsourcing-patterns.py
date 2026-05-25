@@ -11,10 +11,7 @@ Generated for Ziauddin Medical University students.
 Run: python cro-outsourcing-patterns.py
 """
 
-import json
-import math
 import random
-import sys
 
 try:
     import requests
@@ -128,7 +125,7 @@ def concentration_index(values):
 def main():
     print("=" * 64)
     print(f"  {'CRO Outsourcing Patterns'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

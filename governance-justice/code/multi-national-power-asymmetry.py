@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python multi-national-power-asymmetry.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -128,7 +126,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Multi-National Power Asymmetry'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

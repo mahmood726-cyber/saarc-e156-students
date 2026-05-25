@@ -15,16 +15,16 @@ from pathlib import Path
 # ── Project imports ──
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from lib.paper_manifest import PAPERS, GROUPS
-from lib.data_fetcher import fetch_paper_data
 import lib.stats_library as sl
 from lib.body_generator import generate_body
-from lib.dashboard_generator import generate_dashboard
 from lib.code_generator import generate_code_script
+from lib.dashboard_generator import generate_dashboard
+from lib.data_fetcher import fetch_paper_data
+from lib.paper_manifest import PAPERS
 
 # index_updater may still be under construction — import defensively
 try:
-    from lib.index_updater import make_paper_card, make_group_page, make_landing_page
+    from lib.index_updater import make_group_page, make_landing_page, make_paper_card
     HAS_INDEX_UPDATER = True
 except ImportError:
     HAS_INDEX_UPDATER = False

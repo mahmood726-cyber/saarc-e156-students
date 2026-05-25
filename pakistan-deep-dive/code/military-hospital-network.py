@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python military-hospital-network.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -121,7 +119,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Military Hospital Network'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

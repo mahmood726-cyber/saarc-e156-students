@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python megacity-trial-absorption.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -129,7 +127,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Megacity Trial Absorption'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

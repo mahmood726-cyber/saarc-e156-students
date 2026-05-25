@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python landlocked-penalty-nepal-bhutan.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -131,7 +129,7 @@ def bayesian_rate(successes, trials, prior_a=1, prior_b=1):
 def main():
     print("=" * 64)
     print(f"  {'Landlocked Penalty (Nepal/Bhutan)'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

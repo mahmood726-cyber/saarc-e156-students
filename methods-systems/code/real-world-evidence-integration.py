@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python real-world-evidence-integration.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Real-World Evidence Integration'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

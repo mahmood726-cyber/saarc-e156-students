@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python ethics-committee-capacity.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -134,7 +132,7 @@ def linear_regression(x, y):
 def main():
     print("=" * 64)
     print(f"  {'Ethics Committee Capacity'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pakistan-per-capita-deficit.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -131,7 +129,7 @@ def concentration_index(values):
 def main():
     print("=" * 64)
     print(f"  {'Pakistan Per-Capita Deficit'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

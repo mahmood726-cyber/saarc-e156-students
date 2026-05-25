@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python traditional-medicine-trials.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -127,7 +125,7 @@ def rate_ratio(count_a, pop_a, count_b, pop_b):
 def main():
     print("=" * 64)
     print(f"  {'Traditional Medicine Trials'}")
-    print(f"  SAARC E156 | Group: health-disease")
+    print("  SAARC E156 | Group: health-disease")
     print("=" * 64)
     print()
 

@@ -1,18 +1,19 @@
 """Tests for dashboard_generator — self-contained HTML dashboards with SVG charts."""
-import sys, os
+import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from lib.dashboard_generator import (
-    generate_dashboard,
+    ROLE_NAMES,
+    _fmt,
+    _prepare_chart_data,
+    _safe,
     _split_sentences,
     _word_count,
-    _fmt,
-    _safe,
-    _prepare_chart_data,
-    ROLE_NAMES,
+    generate_dashboard,
 )
-from lib.paper_manifest import MANIFEST, ROLE_COLORS, GROUPS
-
+from lib.paper_manifest import MANIFEST, ROLE_COLORS
 
 # ---------------------------------------------------------------------------
 # Fixtures

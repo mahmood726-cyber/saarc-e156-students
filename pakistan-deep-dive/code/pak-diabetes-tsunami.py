@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pak-diabetes-tsunami.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -142,7 +140,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Diabetes Tsunami'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

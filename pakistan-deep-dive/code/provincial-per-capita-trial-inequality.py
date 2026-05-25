@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python provincial-per-capita-trial-inequality.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -144,7 +142,7 @@ def lorenz_area(values):
 def main():
     print("=" * 64)
     print(f"  {'Provincial Per-Capita Trial Inequality'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

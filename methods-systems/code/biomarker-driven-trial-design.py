@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python biomarker-driven-trial-design.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def linear_regression(x, y):
 def main():
     print("=" * 64)
     print(f"  {'Biomarker-Driven Trial Design'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

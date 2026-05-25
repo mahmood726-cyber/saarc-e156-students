@@ -1,10 +1,11 @@
 """Tests for lib/code_generator.py -- SAARC Python script generator."""
 
-import sys, os
+import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from lib.code_generator import generate_code_script, _METHOD_SNIPPETS
-
+from lib.code_generator import _METHOD_SNIPPETS, generate_code_script
 
 # ── Fixtures ──────────────────────────────────────────────────────
 

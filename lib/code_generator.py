@@ -5,7 +5,7 @@ Each script is self-contained (~100-150 lines), uses only stdlib + requests,
 and demonstrates the statistical methods relevant to the paper's topic.
 Adapted for SAARC clinical trial equity analysis (Ziauddin Medical University).
 """
-import random
+import json
 
 
 def _safe_div(a, b, default=0.0):
@@ -387,8 +387,10 @@ def generate_code_script(paper_def, data, stats_results):
         Complete Python script as a string.
     """
     slug = paper_def["slug"]
-    title = paper_def["title"].replace("'", "\\'")  # Escape apostrophes for f-string safety
+    title = paper_def["title"]
     group = paper_def["group"]
+    title_literal = json.dumps(title)
+    group_literal = json.dumps(group)
 
     q = paper_def.get("query", {})
     condition = q.get("condition")
@@ -415,13 +417,13 @@ def generate_code_script(paper_def, data, stats_results):
     # Build API query params
     api_params = []
     if condition:
-        api_params.append(f'    params["query.cond"] = "{condition}"')
+        api_params.append(f'    params["query.cond"] = {json.dumps(condition)}')
     # Location filter for SAARC countries
     countries_str = " OR ".join(countries)
-    api_params.append(f'    params["query.locn"] = "{countries_str}"')
+    api_params.append(f'    params["query.locn"] = {json.dumps(countries_str)}')
     other = q.get("other")
     if other:
-        api_params.append(f'    params["query.term"] = "{other}"')
+        api_params.append(f'    params["query.term"] = {json.dumps(other)}')
 
     api_block = '\n'.join(api_params)
 
@@ -615,7 +617,7 @@ def fetch_trials(condition=None, location=None):
         resp.raise_for_status()
         return resp.json().get("totalCount", 0)
     except Exception as e:
-        print(f"API error: {e}")
+        print("API error:", e)
         return 0
 
 
@@ -626,8 +628,8 @@ def fetch_trials(condition=None, location=None):
 
 def main():
     print("=" * 64)
-    print(f"  {{'{title}'}}")
-    print(f"  SAARC E156 | Group: {group}")
+    print("  " + {title_literal})
+    print("  SAARC E156 | Group: " + {group_literal})
     print("=" * 64)
     print()
 

@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python systematic-review-coverage.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -127,7 +125,7 @@ def poisson_rate(count, exposure):
 def main():
     print("=" * 64)
     print(f"  {'Systematic Review Coverage'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

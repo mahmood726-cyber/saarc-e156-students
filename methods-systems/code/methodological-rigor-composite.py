@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python methodological-rigor-composite.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -142,7 +140,7 @@ def atkinson_index(values, epsilon=0.5):
 def main():
     print("=" * 64)
     print(f"  {'Methodological Rigor Composite'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

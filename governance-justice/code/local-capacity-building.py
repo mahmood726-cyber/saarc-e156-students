@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python local-capacity-building.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Local Capacity Building'}")
-    print(f"  SAARC E156 | Group: governance-justice")
+    print("  SAARC E156 | Group: governance-justice")
     print("=" * 64)
     print()
 

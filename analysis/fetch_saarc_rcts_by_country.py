@@ -1,5 +1,8 @@
 """Fetch clinical trial counts for all 8 SAARC nations from ClinicalTrials.gov."""
-import json, time, random
+import json
+import random
+import time
+
 try:
     import requests
 except ImportError:
@@ -31,7 +34,7 @@ def main():
         print(f"{c}: {count} trials ({results[c]['per_million']}/M)")
     with open("analysis/saarc_country_data.json", "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\nSaved to analysis/saarc_country_data.json")
+    print("\nSaved to analysis/saarc_country_data.json")
 
 if __name__ == "__main__":
     main()

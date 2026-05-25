@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python dropout-attrition-patterns.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -140,7 +138,7 @@ def linear_regression(x, y):
 def main():
     print("=" * 64)
     print(f"  {'Dropout & Attrition Patterns'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

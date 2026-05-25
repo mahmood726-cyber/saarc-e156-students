@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python pak-pi-gender-distribution.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -134,7 +132,7 @@ def linear_regression(x, y):
 def main():
     print("=" * 64)
     print(f"  {'PI Gender Distribution'}")
-    print(f"  SAARC E156 | Group: pakistan-deep-dive")
+    print("  SAARC E156 | Group: pakistan-deep-dive")
     print("=" * 64)
     print()
 

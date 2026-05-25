@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python herfindahl-site-concentration.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -133,7 +131,7 @@ def shannon_entropy(values):
 def main():
     print("=" * 64)
     print(f"  {'Herfindahl Site Concentration'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

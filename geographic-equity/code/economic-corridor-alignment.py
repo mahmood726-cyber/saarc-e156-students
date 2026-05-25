@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python economic-corridor-alignment.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -146,7 +144,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Economic Corridor Alignment'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 

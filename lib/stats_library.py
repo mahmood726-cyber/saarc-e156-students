@@ -91,17 +91,16 @@ def _normal_ppf(p):
         num = (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5])
         den = ((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1.0
         return q * num / den
+    if p < p_low:
+        q = math.sqrt(-2.0 * math.log(p))
     else:
-        if p < p_low:
-            q = math.sqrt(-2.0 * math.log(p))
-        else:
-            q = math.sqrt(-2.0 * math.log(1.0 - p))
-        num = (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5])
-        den = (((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1.0
-        result = num / den
-        if p < p_low:
-            return -result
-        return result
+        q = math.sqrt(-2.0 * math.log(1.0 - p))
+    num = (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5])
+    den = (((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1.0
+    result = num / den
+    if p < p_low:
+        return -result
+    return result
 
 
 def _chi2_cdf(x, df):
@@ -1701,7 +1700,7 @@ def benford_test(values):
 
     benford_probs = {d: math.log10(1 + 1 / d) for d in range(1, 10)}
 
-    digit_counts = {d: 0 for d in range(1, 10)}
+    digit_counts = dict.fromkeys(range(1, 10), 0)
     for v in values:
         av = abs(v)
         if av == 0:

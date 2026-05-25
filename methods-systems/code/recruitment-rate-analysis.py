@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python recruitment-rate-analysis.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def rank_data(values):
 def main():
     print("=" * 64)
     print(f"  {'Recruitment Rate Analysis'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

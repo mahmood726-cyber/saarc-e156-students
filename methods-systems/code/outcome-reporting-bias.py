@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python outcome-reporting-bias.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -127,7 +125,7 @@ def bayesian_rate(successes, trials, prior_a=1, prior_b=1):
 def main():
     print("=" * 64)
     print(f"  {'Outcome Reporting Bias'}")
-    print(f"  SAARC E156 | Group: methods-systems")
+    print("  SAARC E156 | Group: methods-systems")
     print("=" * 64)
     print()
 

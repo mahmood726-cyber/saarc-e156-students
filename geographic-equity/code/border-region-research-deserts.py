@@ -11,10 +11,8 @@ Generated for Ziauddin Medical University students.
 Run: python border-region-research-deserts.py
 """
 
-import json
 import math
 import random
-import sys
 
 try:
     import requests
@@ -141,7 +139,7 @@ def gini_coefficient(values):
 def main():
     print("=" * 64)
     print(f"  {'Border Region Research Deserts'}")
-    print(f"  SAARC E156 | Group: geographic-equity")
+    print("  SAARC E156 | Group: geographic-equity")
     print("=" * 64)
     print()
 
