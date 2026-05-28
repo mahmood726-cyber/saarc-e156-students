@@ -33,7 +33,8 @@ except ImportError:
 #  CONSTANTS
 # ═══════════════════════════════════════════════════════════
 
-OUT = Path("C:/saarc-e156-students")
+PROJECT_ROOT = Path(__file__).resolve().parent
+OUT = PROJECT_ROOT
 GITHUB_PAGES = "https://mahmood789.github.io/saarc-e156-students"
 
 GROUP_DIRS = {

@@ -35,9 +35,9 @@ def test_build_has_group_dirs():
 
 
 def test_build_output_path():
-    """OUT contains 'saarc-e156-students'."""
+    """OUT resolves to the repository root, not a hardcoded machine path."""
     import build
-    assert "saarc-e156-students" in str(build.OUT)
+    assert build.OUT == Path(build.__file__).resolve().parent
     assert isinstance(build.OUT, Path)
 
 
