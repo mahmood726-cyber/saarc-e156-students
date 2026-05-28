@@ -1,6 +1,7 @@
 """Tests for index_updater.py — validates HTML assembly for group and landing pages."""
 
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
@@ -210,7 +211,7 @@ def test_landing_page_has_group_links():
 def test_landing_page_has_github_link():
     """Landing page has a GitHub repository link."""
     html = make_landing_page()
-    assert "github.com" in html.lower()
+    assert re.search(r'https?://github\.com/[\w.-]+', html, re.IGNORECASE)
 
 
 def test_landing_page_has_paper_counts():
